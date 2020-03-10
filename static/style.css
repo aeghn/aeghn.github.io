@@ -83,6 +83,10 @@ div.footer {
     font-size: 0.9rem
 }
 
+ul {
+	padding: 1em 0em 1em 0em;
+}
+
 #other_posts {
     padding: 0.5rem 0rem 1.5rem 0;
     color: #555;
