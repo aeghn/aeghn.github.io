@@ -37,11 +37,15 @@ body {
 	margin-top: 4em;
 }
 
+#single-tag-list {
+	padding-left: 2em;
+	font-size: 120%;
+}
 
-h1.post-title {
-    font-size: 220%;
+h1 {
+    font-size: 180%;
     line-height: 1.1;
-    margin: 0.3rem 0rem 0.1rem 0rem;
+    margin: 1.5rem 0rem 0.1rem 0rem;
     padding-top: 0.02em;
 }
 
