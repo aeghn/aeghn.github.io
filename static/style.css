@@ -4,6 +4,7 @@ body {
 	padding: 2em;
 	text-align: justify;
 	line-height: 1.6;
+	font-family: sans-serif;
 }
 
 .header {
@@ -135,7 +136,6 @@ pre {
     padding: 1em;
     margin-bottom: 20px;
     vertical-align: text-bottom;
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 figcaption {
