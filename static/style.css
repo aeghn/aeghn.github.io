@@ -130,6 +130,11 @@ a:visited {
     color: #663221;
 }
 
+a.post-tag:before {
+	position: relative;
+	content: "#";
+}
+
 pre {
     font-size:0.8rem;
     background: #f5f7f9;
