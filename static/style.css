@@ -1,10 +1,10 @@
 body {
-	max-width: 60em;
-	margin: auto;
-	padding: 2em;
-	text-align: justify;
-	line-height: 1.6;
-	font-family: sans-serif;
+    max-width: 60em;
+    margin: auto;
+    padding: 2em;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: sans-serif;
 }
 
 .header {
@@ -19,9 +19,9 @@ body {
 
 
 #table-of-contents {
-	font-size: 90%;
-	margin: 2em 0em 2em 0em;
-	padding-left: 1rem;
+    font-size: 90%;
+    margin: 2em 0em 2em 0em;
+    padding-left: 0.1rem;
 }
 
 #other_posts {
@@ -30,17 +30,21 @@ body {
     font-size: 1rem
 }
 
+#preamble {
+    padding: 0.5em 0em 1em 0em;
+}
+
 #postamble {
     padding: 1em 0em 0em 0em;
 }
 
 #blog-tail {
-	margin-top: 4em;
+    margin-top: 4em;
 }
 
 #single-tag-list {
-	padding-left: 2em;
-	font-size: 120%;
+    padding-left: 2em;
+    font-size: 120%;
 }
 
 h1 {
@@ -50,14 +54,15 @@ h1 {
     padding-top: 0.02em;
 }
 
-h2.post-title {
-	margin: 0em 0em 1em 0em;
+h3.post-title {
+    margin: 0em 0em 1rem 0em;
 }
 
 aside {
+    margin: 1rem 0em 0em 0em;
     font-style: italic;
     font-size: 0.9rem;
-	font-family: serif;
+    font-family: serif;
     line-height: 1.40;
     color: #667;
 }
@@ -110,7 +115,7 @@ img {
 
 a {
     text-decoration: none;
-	color: #3749a1;
+    color: #a05320;
 }
 
 
@@ -124,15 +129,15 @@ a:active {
 
 a:hover {
     text-decoration: underline;
-	color: #4169e1;
+    color: #4169e1;
 }
 a:visited {
     color: #663221;
 }
 
 a.post-tag:before {
-	position: relative;
-	content: "#";
+    position: relative;
+    content: "#";
 }
 
 pre {
