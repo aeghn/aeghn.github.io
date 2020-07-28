@@ -26,25 +26,25 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgff824dd">1. 编辑默认快捷键</a>
+<li><a href="#org703a8af">1. 编辑默认快捷键</a>
 <ul>
-<li><a href="#org2731156">1.1. 得到 omni.ja 文件</a></li>
-<li><a href="#org3c850ba">1.2. 解压 omni.ja 文件</a></li>
-<li><a href="#orgdad2792">1.3. 编辑快捷键</a>
+<li><a href="#orgb0d0004">1.1. 得到 omni.ja 文件</a></li>
+<li><a href="#org7b07d05">1.2. 解压 omni.ja 文件</a></li>
+<li><a href="#org21fe213">1.3. 编辑快捷键</a>
 <ul>
-<li><a href="#orgad0e8ff">1.3.1. 两个文件</a></li>
-<li><a href="#orgd39a93e">1.3.2. 一个例子，使用 &lt;C-s&gt; 搜索</a></li>
-<li><a href="#orga522aa1">1.3.3. 又一个例子，使用 &lt;M-n&gt; 到下一个标签</a></li>
-<li><a href="#orgfe4fd15">1.3.4. 其他</a></li>
+<li><a href="#orge4110a8">1.3.1. 两个文件</a></li>
+<li><a href="#org982f78b">1.3.2. 一个例子，使用 &lt;C-s&gt; 搜索</a></li>
+<li><a href="#org4c8f26e">1.3.3. 又一个例子，使用 &lt;M-n&gt; 到下一个标签</a></li>
+<li><a href="#org1e1b8c2">1.3.4. 其他</a></li>
 </ul>
 </li>
-<li><a href="#orgd041a08">1.4. 重新打包</a></li>
-<li><a href="#org185c291">1.5. 启动 firefox</a></li>
+<li><a href="#orgccbc8fe">1.4. 重新打包</a></li>
+<li><a href="#orgf7f4e30">1.5. 启动 firefox</a></li>
 </ul>
 </li>
-<li><a href="#org834260b">2. 配置 Vimium</a></li>
-<li><a href="#org5acc1e8">3. 后话</a></li>
-<li><a href="#org8d07d6e">4. 参考</a></li>
+<li><a href="#org98980cb">2. 配置 Vimium</a></li>
+<li><a href="#org38bb198">3. 后话</a></li>
+<li><a href="#org25fceff">4. 参考</a></li>
 </ul>
 </div>
 </nav>
@@ -52,15 +52,15 @@
 继昨天也能用 rofi 转跳 firefox 标签之后，我决定逃回 firefox 了，但是还有一点习惯问题就是我习惯使用 <code>Ctrl-n</code> 来向下导航，firefox 中的该键是用来创建新窗口的，不能忍，改了它！
 </p>
 
-<div id="outline-container-orgff824dd" class="outline-2">
-<h2 id="orgff824dd"><span class="section-number-2">1</span> 编辑默认快捷键</h2>
+<div id="outline-container-org703a8af" class="outline-2">
+<h2 id="org703a8af"><span class="section-number-2">1</span> 编辑默认快捷键</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 如果想要编辑 firefox 量子的默认快捷键，比较方便的是编辑 omni.ja 。
 </p>
 </div>
-<div id="outline-container-org2731156" class="outline-3">
-<h3 id="org2731156"><span class="section-number-3">1.1</span> 得到 omni.ja 文件</h3>
+<div id="outline-container-orgb0d0004" class="outline-3">
+<h3 id="orgb0d0004"><span class="section-number-3">1.1</span> 得到 omni.ja 文件</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 在 Archlinux 下可以通过
@@ -76,8 +76,8 @@ firefox /usr/lib/firefox/omni.ja
 </p>
 </div>
 </div>
-<div id="outline-container-org3c850ba" class="outline-3">
-<h3 id="org3c850ba"><span class="section-number-3">1.2</span> 解压 omni.ja 文件</h3>
+<div id="outline-container-org7b07d05" class="outline-3">
+<h3 id="org7b07d05"><span class="section-number-3">1.2</span> 解压 omni.ja 文件</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 注意：请备份 omni.ja 文件
@@ -95,12 +95,12 @@ $ unzip ../omni.ja.bak
 </div>
 </div>
 </div>
-<div id="outline-container-orgdad2792" class="outline-3">
-<h3 id="orgdad2792"><span class="section-number-3">1.3</span> 编辑快捷键</h3>
+<div id="outline-container-org21fe213" class="outline-3">
+<h3 id="org21fe213"><span class="section-number-3">1.3</span> 编辑快捷键</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-orgad0e8ff" class="outline-4">
-<h4 id="orgad0e8ff"><span class="section-number-4">1.3.1</span> 两个文件</h4>
+<div id="outline-container-orge4110a8" class="outline-4">
+<h4 id="orge4110a8"><span class="section-number-4">1.3.1</span> 两个文件</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 现在就进入了正题，要开始编辑快捷键了。
@@ -134,8 +134,8 @@ chrome/browser/content/browser/browser.xhtml
 </p>
 </div>
 </div>
-<div id="outline-container-orgd39a93e" class="outline-4">
-<h4 id="orgd39a93e"><span class="section-number-4">1.3.2</span> 一个例子，使用 &lt;C-s&gt; 搜索</h4>
+<div id="outline-container-org982f78b" class="outline-4">
+<h4 id="org982f78b"><span class="section-number-4">1.3.2</span> 一个例子，使用 &lt;C-s&gt; 搜索</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 如果想使用 &lt;C-s&gt; 进行类似 Emacs 中的向下搜索，在 firefox 中这个动作的默认快捷键是 &lt;C-g&gt;, 既然 ff 中有还有字母的这个快捷键，那么在 <code>localization/en-US/browser/browserSets.ftl</code> 就应该有 <code>G</code> 这个定义，要做的就变成了中找到 <code>G</code> 并改成 <code>S</code>, 结果如下：
@@ -153,8 +153,8 @@ search-find-again-shortcut =
 </pre>
 </div>
 </div>
-<div id="outline-container-orga522aa1" class="outline-4">
-<h4 id="orga522aa1"><span class="section-number-4">1.3.3</span> 又一个例子，使用 &lt;M-n&gt; 到下一个标签</h4>
+<div id="outline-container-org4c8f26e" class="outline-4">
+<h4 id="org4c8f26e"><span class="section-number-4">1.3.3</span> 又一个例子，使用 &lt;M-n&gt; 到下一个标签</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 这个例子相对就麻烦一些，因为在 <code>chrome/browser/content/browser/browser.xhtml</code> 中默认没有 &lt;M-j&gt; 类似的快捷键。就不能直接在 <code>localization/en-US/browser/browserSets.ftl</code> 直接修改定义来完成这个了。
@@ -188,8 +188,8 @@ window-new-shortcut =
 </p>
 </div>
 </div>
-<div id="outline-container-orgfe4fd15" class="outline-4">
-<h4 id="orgfe4fd15"><span class="section-number-4">1.3.4</span> 其他</h4>
+<div id="outline-container-org1e1b8c2" class="outline-4">
+<h4 id="org1e1b8c2"><span class="section-number-4">1.3.4</span> 其他</h4>
 <div class="outline-text-4" id="text-1-3-4">
 <p>
 不想要的直接注释掉就好了
@@ -201,8 +201,8 @@ window-new-shortcut =
 </div>
 </div>
 </div>
-<div id="outline-container-orgd041a08" class="outline-3">
-<h3 id="orgd041a08"><span class="section-number-3">1.4</span> 重新打包</h3>
+<div id="outline-container-orgccbc8fe" class="outline-3">
+<h3 id="orgccbc8fe"><span class="section-number-3">1.4</span> 重新打包</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 等到修改满意以后要做的就是怎么拿出来怎么送回去了。
@@ -215,8 +215,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 </div>
-<div id="outline-container-org185c291" class="outline-3">
-<h3 id="org185c291"><span class="section-number-3">1.5</span> 启动 firefox</h3>
+<div id="outline-container-orgf7f4e30" class="outline-3">
+<h3 id="orgf7f4e30"><span class="section-number-3">1.5</span> 启动 firefox</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 首先需要使用 <code>firefox --purgecaches</code> 来重载 omni.ja, 这样修改的才会生效。
@@ -225,8 +225,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 
-<div id="outline-container-org834260b" class="outline-2">
-<h2 id="org834260b"><span class="section-number-2">2</span> 配置 Vimium</h2>
+<div id="outline-container-org98980cb" class="outline-2">
+<h2 id="org98980cb"><span class="section-number-2">2</span> 配置 Vimium</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 页面内导航，我选用了 vimium, 然后将 Vimium 的快捷键修改了一下。
@@ -238,17 +238,17 @@ map p scrollUp
 map &lt;a-v&gt; scrollToTop
 map &lt;c-v&gt; scrollToBottom
 map &lt;a-w&gt; copyCurrentUrl
-map &lt;m-v&gt; enterVisualMode
-map &lt;m-V&gt; enterVisualLineMode
-map &lt;j&gt; LinkHints.activateMode
+map &lt;a-c&gt; enterVisualMode
+map &lt;a-C&gt; enterVisualLineMode
+map j LinkHints.activateMode
 map &lt;a-j&gt; LinkHints.activateModeToOpenInNewTab
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5acc1e8" class="outline-2">
-<h2 id="org5acc1e8"><span class="section-number-2">3</span> 后话</h2>
+<div id="outline-container-org38bb198" class="outline-2">
+<h2 id="org38bb198"><span class="section-number-2">3</span> 后话</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快地使用了。
@@ -256,8 +256,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-org8d07d6e" class="outline-2">
-<h2 id="org8d07d6e"><span class="section-number-2">4</span> 参考</h2>
+<div id="outline-container-org25fceff" class="outline-2">
+<h2 id="org25fceff"><span class="section-number-2">4</span> 参考</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)</a></li>
