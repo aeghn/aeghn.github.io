@@ -73,7 +73,7 @@ p {
 }
 
 ul,ol {
-    margin: 0.2em 0em 0em 0.2em;
+    margin: 0em 0em 0em 0em;
     /* padding-left: 2em; */
 }
 
@@ -146,6 +146,7 @@ pre {
     padding: 1em;
     margin-bottom: 20px;
     vertical-align: text-bottom;
+    overflow-x: auto;
 }
 
 figcaption {
