@@ -4,259 +4,36 @@
 <title><![CDATA[Aeghn]]></title>
 <description><![CDATA[Aeghn]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Tue, 28 Jul 2020 17:02:41 +0800</lastBuildDate>
+<lastBuildDate>Sun, 07 Feb 2021 12:00:25 +0800</lastBuildDate>
 <item>
-  <title><![CDATA[Firefox 的快捷键修改]]></title>
+  <title><![CDATA[保存网页]]></title>
   <description><![CDATA[
-<aside><span>28 Jul 2020  /  </span><a class="post-tag" href="/tag-firefox.html">firefox</a> </aside></div>
-<nav id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org1746e0a">1. 编辑默认快捷键</a>
-<ul>
-<li><a href="#org889567e">1.1. 得到 omni.ja 文件</a></li>
-<li><a href="#org2e69e75">1.2. 解压 omni.ja 文件</a></li>
-<li><a href="#org95d5a3f">1.3. 编辑快捷键</a>
-<ul>
-<li><a href="#org78cc8ef">1.3.1. 两个文件</a></li>
-<li><a href="#orgc96029e">1.3.2. 一个例子，使用 &lt;C-s&gt; 搜索</a></li>
-<li><a href="#org2d71b43">1.3.3. 又一个例子，使用 &lt;M-n&gt; 到下一个标签</a></li>
-<li><a href="#org2790958">1.3.4. 其他</a></li>
-</ul>
-</li>
-<li><a href="#org177e474">1.4. 重新打包</a></li>
-<li><a href="#org64cf560">1.5. 启动 firefox</a></li>
-</ul>
-</li>
-<li><a href="#orgf8e517b">2. 配置 Vimium</a></li>
-<li><a href="#orgb4fbd11">3. 后话</a></li>
-<li><a href="#org6f642d8">4. 参考</a></li>
-</ul>
-</div>
-</nav>
+<aside><span>07 Feb 2021  /  </span><a class="post-tag" href="/tag-linux.html">linux</a> </aside></div>
 <p>
-继昨天也能用 rofi 转跳 firefox 标签之后，我决定逃回 firefox 了，但是还有一点习惯问题就是我习惯使用 <code>Ctrl-n</code> 来向下导航，firefox 中的该键是用来创建新窗口的，不能忍，改了它！
+最近发现了一个用来保存网页的命令行小工具 <code>monolith</code>, 很好用。
 </p>
 
-<div id="outline-container-org1746e0a" class="outline-2">
-<h2 id="org1746e0a"><span class="section-number-2">1</span> 编辑默认快捷键</h2>
-<div class="outline-text-2" id="text-1">
 <p>
-如果想要编辑 firefox 量子的默认快捷键，比较方便的是编辑 omni.ja 。
+几行脚本，保存网页到指定目录。
 </p>
-</div>
-<div id="outline-container-org889567e" class="outline-3">
-<h3 id="org889567e"><span class="section-number-3">1.1</span> 得到 omni.ja 文件</h3>
-<div class="outline-text-3" id="text-1-1">
-<p>
-在 Archlinux 下可以通过
-</p>
+
 <div class="org-src-container">
-<pre class="src src-bash">$ pacman -Ql firefox | grep omni.ja
-firefox /usr/lib/firefox/browser/omni.ja
-firefox /usr/lib/firefox/omni.ja
-</pre>
-</div>
-<p>
-如上得到了两个 omni.ja 文件，我们只需要编辑第一个文件就可以了。
-</p>
-</div>
-</div>
-<div id="outline-container-org2e69e75" class="outline-3">
-<h3 id="org2e69e75"><span class="section-number-3">1.2</span> 解压 omni.ja 文件</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-注意：请备份 omni.ja 文件
-</p>
+<pre class="src src-bash">#!/usr/bin/env bash
 
-<p>
-omni.ja 可以直接通过 <code>unzip</code> 进行解压，在 Linux 下不妨参照如下命令：
-</p>
-<div class="org-src-container">
-<pre class="src src-bash">$ cp /usr/lib/firefox/browser/omni.ja $HOME/omni.ja.bak
-$ mkdir -p $HOME/temp_omni_ja # 创建临时文件夹
-$ cd $HOME/temp_omni_ja
-$ unzip ../omni.ja.bak
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-org95d5a3f" class="outline-3">
-<h3 id="org95d5a3f"><span class="section-number-3">1.3</span> 编辑快捷键</h3>
-<div class="outline-text-3" id="text-1-3">
-</div>
-<div id="outline-container-org78cc8ef" class="outline-4">
-<h4 id="org78cc8ef"><span class="section-number-4">1.3.1</span> 两个文件</h4>
-<div class="outline-text-4" id="text-1-3-1">
-<p>
-现在就进入了正题，要开始编辑快捷键了。
-</p>
+WEB_PAGE_DIR=$HOME/Documents/reader_webpage
 
-<p>
-需要注意两个文件：
-</p>
-<pre class="example">
-localization/en-US/browser/browserSets.ftl
-</pre>
-<p>
-这个里面存放的是诸如 
-</p>
-<pre class="example">
-window-minimize-shortcut =
- .key = M
-</pre>
-<p>
-这样的定义，相当于为每个 key 取了一个名称，例子中的 M 就是键盘上的 M 键。
-</p>
+URL="$1"
 
-<p>
-还有就是
-</p>
-<pre class="example">
-chrome/browser/content/browser/browser.xhtml
-</pre>
-<p>
-这个文件了，这个里面就是我们需要着重修改的地方。
-</p>
-</div>
-</div>
-<div id="outline-container-orgc96029e" class="outline-4">
-<h4 id="orgc96029e"><span class="section-number-4">1.3.2</span> 一个例子，使用 &lt;C-s&gt; 搜索</h4>
-<div class="outline-text-4" id="text-1-3-2">
-<p>
-如果想使用 &lt;C-s&gt; 进行类似 Emacs 中的向下搜索，在 firefox 中这个动作的默认快捷键是 &lt;C-g&gt;, 既然 ff 中有还有字母的这个快捷键，那么在 <code>localization/en-US/browser/browserSets.ftl</code> 就应该有 <code>G</code> 这个定义，要做的就变成了中找到 <code>G</code> 并改成 <code>S</code>, 结果如下：
-</p>
-<pre class="example">
-search-find-again-shortcut =
-       .key = G
-</pre>
-<p>
-将它修改成
-</p>
-<pre class="example">
-search-find-again-shortcut =
-       .key = S
-</pre>
-</div>
-</div>
-<div id="outline-container-org2d71b43" class="outline-4">
-<h4 id="org2d71b43"><span class="section-number-4">1.3.3</span> 又一个例子，使用 &lt;M-n&gt; 到下一个标签</h4>
-<div class="outline-text-4" id="text-1-3-3">
-<p>
-这个例子相对就麻烦一些，因为在 <code>chrome/browser/content/browser/browser.xhtml</code> 中默认没有 &lt;M-j&gt; 类似的快捷键。就不能直接在 <code>localization/en-US/browser/browserSets.ftl</code> 直接修改定义来完成这个了。
-</p>
+mkdir -p "$WEB_PAGE_DIR"
+cd "$WEB_PAGE_DIR"
 
-<p>
-但是通过阅读文件，发现该文件中存在着切换到下一个标签的命令
-</p>
-<div class="org-src-container">
-<pre class="src src-xhtml">&lt;command id="Browser:NextTab" oncommand="gBrowser.tabContainer.advanceSelectedTab(1, true);"/&gt;
+proxychains -q monolith "$URL" -o $(echo "$URL" | sed 's/[^[:alpha:]]/_/g').html
 </pre>
-</div>
-<p>
-那么要做的就变成了添加快捷键，照猫画虎，在 <code>&lt;keyset id="mainKeyset"&gt;</code> 一节中添加如下命令即可：
-</p>
-<pre class="example">
-&lt;key id="goNextTabKb"
-     data-l10n-id="window-new-shortcut"
-     command="Browser:NextTab"
-     modifiers="alt"/&gt;
-</pre>
-<p>
-需要说明的是， <code>data-l10n-id</code> 就是在 <code>localization/en-US/browser/browserSets.ftl</code> 中定义的 key, 在该文件中有
-</p>
-<pre class="example">
-window-new-shortcut = 
-      .key = N
-</pre>
-<p>
-我需要的是 &lt;M-n&gt; 切换到下一个标签，然后就偷了懒，没有改名称，直接拿过来用了。剩下的几个就是字面意思，没啥好说的。
-</p>
-</div>
-</div>
-<div id="outline-container-org2790958" class="outline-4">
-<h4 id="org2790958"><span class="section-number-4">1.3.4</span> 其他</h4>
-<div class="outline-text-4" id="text-1-3-4">
-<p>
-不想要的直接注释掉就好了
-</p>
-
-<p>
-我的修改记录在这： <a href="https://pastebin.com/G7aLMqsv">https://pastebin.com/G7aLMqsv</a>
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org177e474" class="outline-3">
-<h3 id="org177e474"><span class="section-number-3">1.4</span> 重新打包</h3>
-<div class="outline-text-3" id="text-1-4">
-<p>
-等到修改满意以后要做的就是怎么拿出来怎么送回去了。
-官方推荐的是 <code>zip -qr9XD omni.ja *</code> 这样进行打包，所以
-</p>
-<div class="org-src-container">
-<pre class="src src-bash">$ zip -qr9XD $HOME/omni.ja *
-$ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-org64cf560" class="outline-3">
-<h3 id="org64cf560"><span class="section-number-3">1.5</span> 启动 firefox</h3>
-<div class="outline-text-3" id="text-1-5">
-<p>
-首先需要使用 <code>firefox --purgecaches</code> 来重载 omni.ja, 这样修改的才会生效。
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgf8e517b" class="outline-2">
-<h2 id="orgf8e517b"><span class="section-number-2">2</span> 配置 Vimium</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-页面内导航，我选用了 vimium, 然后将 Vimium 的快捷键修改了一下。
-</p>
-<div class="org-src-container">
-<pre class="src src-bash">unmapAll
-map n scrollDown
-map p scrollUp
-map &lt;a-v&gt; scrollToTop
-map &lt;c-v&gt; scrollToBottom
-map &lt;a-w&gt; copyCurrentUrl
-map &lt;a-c&gt; enterVisualMode
-map &lt;a-C&gt; enterVisualLineMode
-map j LinkHints.activateMode
-map &lt;a-j&gt; LinkHints.activateModeToOpenInNewTab
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgb4fbd11" class="outline-2">
-<h2 id="orgb4fbd11"><span class="section-number-2">3</span> 后话</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快地使用了。
-</p>
-</div>
-</div>
-
-<div id="outline-container-org6f642d8" class="outline-2">
-<h2 id="org6f642d8"><span class="section-number-2">4</span> 参考</h2>
-<div class="outline-text-2" id="text-4">
-<ul class="org-ul">
-<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)</a></li>
-<li><a href="https://superuser.com/questions/1533417/configure-disable-firefox-keyboard-shortcuts">https://superuser.com/questions/1533417/configure-disable-firefox-keyboard-shortcuts</a></li>
-<li><a href="https://github.com/philc/vimium">https://github.com/philc/vimium</a></li>
-</ul>
-</div>
 </div>
 ]]></description>
-  <category><![CDATA[firefox]]></category>
-  <link>https://wangz.me/2020-07-28-firefox.html</link>
-  <pubDate>Tue, 28 Jul 2020 15:54:00 +0800</pubDate>
+  <category><![CDATA[linux]]></category>
+  <link>https://wangz.me/2021-02-07-download-webpage-in-one-file.html</link>
+  <pubDate>Sun, 07 Feb 2021 08:00:00 +0800</pubDate>
 </item>
 <item>
   <title><![CDATA[制作手机铃声]]></title>

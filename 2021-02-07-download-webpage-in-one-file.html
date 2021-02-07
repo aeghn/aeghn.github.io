@@ -6,24 +6,47 @@
       type="application/rss+xml"
       href="https://wangz.me/rss.xml"
       title="RSS feed for https://wangz.me/"/>
-<title>Aeghn</title>
+<title>保存网页</title>
 <meta name="author" content="Aeghn">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href= "static/style.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="static/favicon.ico"></head>
 <body>
-<div id="preamble"><div id="blog-nav">
+<div id="preamble">
+<div id="blog-nav">
   <a href="/">WANGZ's blog </a>
   <span>/ </span>
   <a href="/tags.html">Tags </a>
 </div><hr/></div>
 <div id="content">
-<h2 class="title">Posts tagged "linux":</h2><ul id="single-tag-list">
-<li><a href="/2021-02-07-download-webpage-in-one-file.html">保存网页</a></li>
-<li><a href="/2020-03-11-Make-a-ringtone.html">制作手机铃声</a></li>
-</ul>
+<div class="post-info">
+<h1 class="post-title"><a href="/2021-02-07-download-webpage-in-one-file.html">保存网页</a></h1>
+<aside><span>07 Feb 2021  /  </span><a class="post-tag" href="/tag-linux.html">linux</a> </aside></div>
+<p>
+最近发现了一个用来保存网页的命令行小工具 <code>monolith</code>, 很好用。
+</p>
+
+<p>
+几行脚本，保存网页到指定目录。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">#!/usr/bin/env bash
+
+WEB_PAGE_DIR=$HOME/Documents/reader_webpage
+
+URL="$1"
+
+mkdir -p "$WEB_PAGE_DIR"
+cd "$WEB_PAGE_DIR"
+
+proxychains -q monolith "$URL" -o $(echo "$URL" | sed 's/[^[:alpha:]]/_/g').html
+</pre>
 </div>
-<div id="postamble"><hr/>
+</div>
+<div id="postamble">
+<hr/>
+<a id="other_posts" href="/">Other posts</a>
 <div id="blog-tail">
 <center><span> Powered by Org-mode and</span> <a href="https://github.com/aeghn/org-static-blog"> a fork</a><span> of</span><a href="https://github.com/bastibe/org-static-blog"> org-static-blog</a> </center>
 </div></div>
