@@ -4,7 +4,329 @@
 <title><![CDATA[Aeghn]]></title>
 <description><![CDATA[Aeghn]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Mon, 08 Feb 2021 13:20:32 +0800</lastBuildDate>
+<lastBuildDate>Wed, 17 Mar 2021 22:15:57 +0800</lastBuildDate>
+<item>
+  <title><![CDATA[windows 下的开发环境搭建（零）]]></title>
+  <description><![CDATA[
+<aside><span>17 Mar 2021  /  </span><a class="post-tag" href="/tag-windows.html">windows</a> <a class="post-tag" href="/tag-linux.html">linux</a> <a class="post-tag" href="/tag-emacs.html">emacs</a> <a class="post-tag" href="/tag-terminal.html">terminal</a> </aside></div>
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org4ad1dfc">1. 键位设置</a>
+<ul>
+<li><a href="#org0c0e152">1.1. 系统快捷键位</a>
+<ul>
+<li><a href="#org81e011d">1.1.1. 将 caps 键位映射成 ctrl</a></li>
+<li><a href="#org9249e9f">1.1.2. 禁用 win+l</a></li>
+</ul>
+</li>
+<li><a href="#org4b5f9a5">1.2. autoHotKey</a>
+<ul>
+<li><a href="#orge0a51bf">1.2.1. 解决 ctrl-space 问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga128048">2. 终端</a>
+<ul>
+<li><a href="#org48e23d8">2.1. install windows terminal</a></li>
+<li><a href="#org4dd9285">2.2. install msys2</a>
+<ul>
+<li><a href="#org9ea1888">2.2.1. 下载包</a></li>
+<li><a href="#org148145d">2.2.2. 将 msys2 塞入 windows terminal</a></li>
+<li><a href="#org3c0a60c">2.2.3. 设置清华源</a></li>
+<li><a href="#org1b91f88">2.2.4. 更新</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgeefe3e2">3. emacs</a>
+<ul>
+<li><a href="#orgf5d0123">3.1. 安装 gccemacs</a>
+<ul>
+<li><a href="#org4209d15">3.1.1. 下载源</a></li>
+<li><a href="#org99b5b08">3.1.2. 安装 MINGW64 依赖</a></li>
+<li><a href="#org204a0b4">3.1.3. 编译</a></li>
+<li><a href="#orgcd9b256">3.1.4. 启动</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+
+<div id="outline-container-org4ad1dfc" class="outline-2">
+<h2 id="org4ad1dfc"><span class="section-number-2">1</span> 键位设置</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org0c0e152" class="outline-3">
+<h3 id="org0c0e152"><span class="section-number-3">1.1</span> 系统快捷键位</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org81e011d" class="outline-4">
+<h4 id="org81e011d"><span class="section-number-4">1.1.1</span> 将 caps 键位映射成 ctrl</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<div class="org-src-container">
+<pre class="src src-reg">Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9249e9f" class="outline-4">
+<h4 id="org9249e9f"><span class="section-number-4">1.1.2</span> 禁用 win+l</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<div class="org-src-container">
+<pre class="src src-reg">Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableLockWorkstation"=dword:00000001
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4b5f9a5" class="outline-3">
+<h3 id="org4b5f9a5"><span class="section-number-3">1.2</span> autoHotKey</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orge0a51bf" class="outline-4">
+<h4 id="orge0a51bf"><span class="section-number-4">1.2.1</span> 解决 ctrl-space 问题</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<div class="org-src-container">
+<pre class="src src-ahk">#IfWinActive ahk_class Emacs   ; if in emacs
+^Space::^+2 ;(Ctrl＋Shift + 2)
+#IfWinActive                   ; end if in emacs
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga128048" class="outline-2">
+<h2 id="orga128048"><span class="section-number-2">2</span> 终端</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org48e23d8" class="outline-3">
+<h3 id="org48e23d8"><span class="section-number-3">2.1</span> install windows terminal</h3>
+</div>
+<div id="outline-container-org4dd9285" class="outline-3">
+<h3 id="org4dd9285"><span class="section-number-3">2.2</span> install msys2</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org9ea1888" class="outline-4">
+<h4 id="org9ea1888"><span class="section-number-4">2.2.1</span> 下载包</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+<a href="https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64">https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org148145d" class="outline-4">
+<h4 id="org148145d"><span class="section-number-4">2.2.2</span> 将 msys2 塞入 windows terminal</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<div class="org-src-container">
+<pre class="src src-json">// This makes MINGW64 the default shell
+"defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+"profiles": {
+    "list":
+    [
+        // ...
+        {
+            "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+            "name": "MINGW64 / MSYS2",
+            "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
+            "startingDirectory": "C:/msys64/home/%USERNAME%",
+            "icon": "C:/msys64/mingw64.ico",
+            "fontFace": "Lucida Console",
+            "fontSize": 9
+        },
+        {
+            "guid": "{2d51fdc4-a03b-4efe-81bc-722b7f6f3820}",
+            "name": "MINGW32 / MSYS2",
+            "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
+            "startingDirectory": "C:/msys64/home/%USERNAME%",
+            "icon": "C:/msys64/mingw32.ico",
+            "fontFace": "Lucida Console",
+            "fontSize": 9
+        },
+        {
+            "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+            "name": "MSYS / MSYS2",
+            "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+            "startingDirectory": "C:/msys64/home/%USERNAME%",
+            "icon": "C:/msys64/msys2.ico",
+            "fontFace": "Lucida Console",
+            "fontSize": 9
+        },
+        // ...
+    ]
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c0a60c" class="outline-4">
+<h4 id="org3c0a60c"><span class="section-number-4">2.2.3</span> 设置清华源</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<div class="org-src-container">
+<pre class="src src-bash">sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/i686' /etc/pacman.d/mirrorlist.mingw32
+sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/x86_64' /etc/pacman.d/mirrorlist.mingw64
+sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc/pacman.d/mirrorlist.msys
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b91f88" class="outline-4">
+<h4 id="org1b91f88"><span class="section-number-4">2.2.4</span> 更新</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<div class="org-src-container">
+<pre class="src src-bash">pacman -Syu
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgeefe3e2" class="outline-2">
+<h2 id="orgeefe3e2"><span class="section-number-2">3</span> emacs</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf5d0123" class="outline-3">
+<h3 id="orgf5d0123"><span class="section-number-3">3.1</span> 安装 gccemacs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org4209d15" class="outline-4">
+<h4 id="org4209d15"><span class="section-number-4">3.1.1</span> 下载源</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<div class="org-src-container">
+<pre class="src src-bash">git clone -b feature/native-comp --depth=1 https://gitee.com/mirrors/emacs.git
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org99b5b08" class="outline-4">
+<h4 id="org99b5b08"><span class="section-number-4">3.1.2</span> 安装 MINGW64 依赖</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<div class="org-src-container">
+<pre class="src src-bash">$ pacman -S --needed base-devel \
+  mingw-w64-x86_64-toolchain \
+  mingw-w64-x86_64-xpm-nox \
+  mingw-w64-x86_64-libtiff \
+  mingw-w64-x86_64-giflib \
+  mingw-w64-x86_64-libpng \
+  mingw-w64-x86_64-libjpeg-turbo \
+  mingw-w64-x86_64-librsvg \
+  mingw-w64-x86_64-lcms2 \
+  mingw-w64-x86_64-jansson \
+  mingw-w64-x86_64-libxml2 \
+  mingw-w64-x86_64-gnutls \
+  mingw-w64-x86_64-zlib \
+  mingw-w64-x86_64-harfbuzz
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org204a0b4" class="outline-4">
+<h4 id="org204a0b4"><span class="section-number-4">3.1.3</span> 编译</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<div class="org-src-container">
+<pre class="src src-bash">./autogen.sh
+./configure --without-dbus --without-pop --with-native-compilation
+make -j$(nproc) # or make NATIVE_FULL_AOT=1 -j$(nproc) // longer
+make install
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcd9b256" class="outline-4">
+<h4 id="orgcd9b256"><span class="section-number-4">3.1.4</span> 启动</h4>
+<div class="outline-text-4" id="text-3-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org6c28a2f"></a>创建 emacsclientw.exe 的快捷方式<br>
+<div class="outline-text-5" id="text-3-1-4-1">
+<p>
+值为
+</p>
+<pre class="example">
+C:\msys64\mingw64\bin\emacsclientw.exe -n -c -a ""
+</pre>
+</div>
+</li>
+<li><a id="org4129626"></a>init.el 中添加环境变量<br>
+<div class="outline-text-5" id="text-3-1-4-2">
+<div class="org-src-container">
+<pre class="src src-elisp">(let ((msys2root "C:\\msys64"))
+  (setenv "PATH" (concat
+                  msys2root "mingw64\\bin" ";"
+                  msys2root "usr\\bin" ";"
+                  (getenv "PATH")))
+  ;;without this the new added $PATH value won't be inherite by exec-path
+  (setq exec-path (split-string (getenv "PATH") path-separator)))
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+]]></description>
+  <category><![CDATA[windows]]></category>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[terminal]]></category>
+  <link>https://wangz.me/2021-03-17-envir.html</link>
+  <pubDate>Wed, 17 Mar 2021 22:14:00 +0800</pubDate>
+</item>
+<item>
+  <title><![CDATA[简单的终端词典]]></title>
+  <description><![CDATA[
+<aside><span>08 Feb 2021  /  </span><a class="post-tag" href="/tag-linux.html">linux</a> <a class="post-tag" href="/tag-terminal.html">terminal</a> <a class="post-tag" href="/tag-study.html">study</a> </aside></div>
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0dbb410">1. 起因</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org0dbb410" class="outline-2">
+<h2 id="org0dbb410"><span class="section-number-2">1</span> 起因</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+本人英语太菜了，十分需要英语字典的帮衬才能网上冲浪。之前一直都是靠 goldendict 老师傅才能狗住。
+</p>
+
+<p>
+最近在清理系统软件，感觉 gd 有点累赘了。首先它给我引入了两个十分讨厌的依赖，其次这个软件不能跟随我亮暗色切换大策略，真说恼人地方就是这个他的快捷键有时候呼不出来页面。得想办法找个替换品。
+</p>
+
+<p>
+词典方面由于我一直用的都是 stardict 转换出来的词典，所以这方面问题不大。
+</p>
+
+<p>
+就剩下找一个合适的载体了。
+</p>
+</div>
+</div>
+]]></description>
+  <category><![CDATA[linux]]></category>
+  <category><![CDATA[terminal]]></category>
+  <category><![CDATA[study]]></category>
+  <link>https://wangz.me/2021-02-08-terminal-dictonary.html</link>
+  <pubDate>Mon, 08 Feb 2021 08:22:00 +0800</pubDate>
+</item>
 <item>
   <title><![CDATA[保存网页]]></title>
   <description><![CDATA[
