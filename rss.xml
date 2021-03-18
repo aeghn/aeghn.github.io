@@ -4,7 +4,7 @@
 <title><![CDATA[Aeghn]]></title>
 <description><![CDATA[Aeghn]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Wed, 17 Mar 2021 22:15:57 +0800</lastBuildDate>
+<lastBuildDate>Thu, 18 Mar 2021 17:58:12 +0800</lastBuildDate>
 <item>
   <title><![CDATA[windows 下的开发环境搭建（零）]]></title>
   <description><![CDATA[
@@ -13,42 +13,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4ad1dfc">1. 键位设置</a>
+<li><a href="#org897b1c0">1. 键位设置</a>
 <ul>
-<li><a href="#org0c0e152">1.1. 系统快捷键位</a>
+<li><a href="#orgb444870">1.1. 系统快捷键位</a>
 <ul>
-<li><a href="#org81e011d">1.1.1. 将 caps 键位映射成 ctrl</a></li>
-<li><a href="#org9249e9f">1.1.2. 禁用 win+l</a></li>
+<li><a href="#org3402855">1.1.1. 将 caps 键位映射成 ctrl</a></li>
+<li><a href="#org250ee78">1.1.2. 禁用 win+l</a></li>
 </ul>
 </li>
-<li><a href="#org4b5f9a5">1.2. autoHotKey</a>
+<li><a href="#orgcab00eb">1.2. autoHotKey</a>
 <ul>
-<li><a href="#orge0a51bf">1.2.1. 解决 ctrl-space 问题</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orga128048">2. 终端</a>
-<ul>
-<li><a href="#org48e23d8">2.1. install windows terminal</a></li>
-<li><a href="#org4dd9285">2.2. install msys2</a>
-<ul>
-<li><a href="#org9ea1888">2.2.1. 下载包</a></li>
-<li><a href="#org148145d">2.2.2. 将 msys2 塞入 windows terminal</a></li>
-<li><a href="#org3c0a60c">2.2.3. 设置清华源</a></li>
-<li><a href="#org1b91f88">2.2.4. 更新</a></li>
+<li><a href="#org598de84">1.2.1. 解决 ctrl-space 问题</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgeefe3e2">3. emacs</a>
+<li><a href="#org97bcda6">2. 终端</a>
 <ul>
-<li><a href="#orgf5d0123">3.1. 安装 gccemacs</a>
+<li><a href="#org02c5e09">2.1. install windows terminal</a></li>
+<li><a href="#org6befb8d">2.2. install msys2</a>
 <ul>
-<li><a href="#org4209d15">3.1.1. 下载源</a></li>
-<li><a href="#org99b5b08">3.1.2. 安装 MINGW64 依赖</a></li>
-<li><a href="#org204a0b4">3.1.3. 编译</a></li>
-<li><a href="#orgcd9b256">3.1.4. 启动</a></li>
+<li><a href="#org1ce15cc">2.2.1. 下载包</a></li>
+<li><a href="#org33fc9ac">2.2.2. 将 msys2 塞入 windows terminal</a></li>
+<li><a href="#org2fb0743">2.2.3. 设置清华源</a></li>
+<li><a href="#org80696e9">2.2.4. 更新</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3af6acd">3. emacs</a>
+<ul>
+<li><a href="#orgae09773">3.1. 安装 gccemacs</a>
+<ul>
+<li><a href="#org0c49ba0">3.1.1. 下载源</a></li>
+<li><a href="#org366db1e">3.1.2. 安装 MINGW64 依赖</a></li>
+<li><a href="#org273fd7a">3.1.3. 编译</a></li>
+<li><a href="#org43bb62d">3.1.4. 启动</a></li>
 </ul>
 </li>
 </ul>
@@ -57,17 +57,16 @@
 </div>
 </nav>
 
-
-<div id="outline-container-org4ad1dfc" class="outline-2">
-<h2 id="org4ad1dfc"><span class="section-number-2">1</span> 键位设置</h2>
+<div id="outline-container-org897b1c0" class="outline-2">
+<h2 id="org897b1c0"><span class="section-number-2">1</span> 键位设置</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org0c0e152" class="outline-3">
-<h3 id="org0c0e152"><span class="section-number-3">1.1</span> 系统快捷键位</h3>
+<div id="outline-container-orgb444870" class="outline-3">
+<h3 id="orgb444870"><span class="section-number-3">1.1</span> 系统快捷键位</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org81e011d" class="outline-4">
-<h4 id="org81e011d"><span class="section-number-4">1.1.1</span> 将 caps 键位映射成 ctrl</h4>
+<div id="outline-container-org3402855" class="outline-4">
+<h4 id="org3402855"><span class="section-number-4">1.1.1</span> 将 caps 键位映射成 ctrl</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <div class="org-src-container">
 <pre class="src src-reg">Windows Registry Editor Version 5.00
@@ -78,8 +77,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9249e9f" class="outline-4">
-<h4 id="org9249e9f"><span class="section-number-4">1.1.2</span> 禁用 win+l</h4>
+<div id="outline-container-org250ee78" class="outline-4">
+<h4 id="org250ee78"><span class="section-number-4">1.1.2</span> 禁用 win+l</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <div class="org-src-container">
 <pre class="src src-reg">Windows Registry Editor Version 5.00
@@ -91,13 +90,17 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org4b5f9a5" class="outline-3">
-<h3 id="org4b5f9a5"><span class="section-number-3">1.2</span> autoHotKey</h3>
+<div id="outline-container-orgcab00eb" class="outline-3">
+<h3 id="orgcab00eb"><span class="section-number-3">1.2</span> autoHotKey</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orge0a51bf" class="outline-4">
-<h4 id="orge0a51bf"><span class="section-number-4">1.2.1</span> 解决 ctrl-space 问题</h4>
+<div id="outline-container-org598de84" class="outline-4">
+<h4 id="org598de84"><span class="section-number-4">1.2.1</span> 解决 ctrl-space 问题</h4>
 <div class="outline-text-4" id="text-1-2-1">
+<pre class="example">
+LINK: https://www.zhihu.com/question/22288432/answer/502086049
+</pre>
+
 <div class="org-src-container">
 <pre class="src src-ahk">#IfWinActive ahk_class Emacs   ; if in emacs
 ^Space::^+2 ;(Ctrl＋Shift + 2)
@@ -108,28 +111,32 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orga128048" class="outline-2">
-<h2 id="orga128048"><span class="section-number-2">2</span> 终端</h2>
+<div id="outline-container-org97bcda6" class="outline-2">
+<h2 id="org97bcda6"><span class="section-number-2">2</span> 终端</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org48e23d8" class="outline-3">
-<h3 id="org48e23d8"><span class="section-number-3">2.1</span> install windows terminal</h3>
+<div id="outline-container-org02c5e09" class="outline-3">
+<h3 id="org02c5e09"><span class="section-number-3">2.1</span> install windows terminal</h3>
 </div>
-<div id="outline-container-org4dd9285" class="outline-3">
-<h3 id="org4dd9285"><span class="section-number-3">2.2</span> install msys2</h3>
+<div id="outline-container-org6befb8d" class="outline-3">
+<h3 id="org6befb8d"><span class="section-number-3">2.2</span> install msys2</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org9ea1888" class="outline-4">
-<h4 id="org9ea1888"><span class="section-number-4">2.2.1</span> 下载包</h4>
+<div id="outline-container-org1ce15cc" class="outline-4">
+<h4 id="org1ce15cc"><span class="section-number-4">2.2.1</span> 下载包</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 <a href="https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64">https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org148145d" class="outline-4">
-<h4 id="org148145d"><span class="section-number-4">2.2.2</span> 将 msys2 塞入 windows terminal</h4>
+<div id="outline-container-org33fc9ac" class="outline-4">
+<h4 id="org33fc9ac"><span class="section-number-4">2.2.2</span> 将 msys2 塞入 windows terminal</h4>
 <div class="outline-text-4" id="text-2-2-2">
+<pre class="example">
+LINK: https://www.msys2.org/docs/terminals/
+</pre>
+
 <div class="org-src-container">
 <pre class="src src-json">// This makes MINGW64 the default shell
 "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
@@ -171,8 +178,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org3c0a60c" class="outline-4">
-<h4 id="org3c0a60c"><span class="section-number-4">2.2.3</span> 设置清华源</h4>
+<div id="outline-container-org2fb0743" class="outline-4">
+<h4 id="org2fb0743"><span class="section-number-4">2.2.3</span> 设置清华源</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <div class="org-src-container">
 <pre class="src src-bash">sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/i686' /etc/pacman.d/mirrorlist.mingw32
@@ -182,8 +189,8 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 </div>
 </div>
-<div id="outline-container-org1b91f88" class="outline-4">
-<h4 id="org1b91f88"><span class="section-number-4">2.2.4</span> 更新</h4>
+<div id="outline-container-org80696e9" class="outline-4">
+<h4 id="org80696e9"><span class="section-number-4">2.2.4</span> 更新</h4>
 <div class="outline-text-4" id="text-2-2-4">
 <div class="org-src-container">
 <pre class="src src-bash">pacman -Syu
@@ -195,16 +202,19 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 
 
-<div id="outline-container-orgeefe3e2" class="outline-2">
-<h2 id="orgeefe3e2"><span class="section-number-2">3</span> emacs</h2>
+<div id="outline-container-org3af6acd" class="outline-2">
+<h2 id="org3af6acd"><span class="section-number-2">3</span> emacs</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgf5d0123" class="outline-3">
-<h3 id="orgf5d0123"><span class="section-number-3">3.1</span> 安装 gccemacs</h3>
+<div id="outline-container-orgae09773" class="outline-3">
+<h3 id="orgae09773"><span class="section-number-3">3.1</span> 安装 gccemacs</h3>
 <div class="outline-text-3" id="text-3-1">
+<pre class="example">
+LINK: https://emacs.stackexchange.com/questions/61775/is-there-a-gccemacs-native-comp-build-for-ms-windows
+</pre>
 </div>
-<div id="outline-container-org4209d15" class="outline-4">
-<h4 id="org4209d15"><span class="section-number-4">3.1.1</span> 下载源</h4>
+<div id="outline-container-org0c49ba0" class="outline-4">
+<h4 id="org0c49ba0"><span class="section-number-4">3.1.1</span> 下载源</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <div class="org-src-container">
 <pre class="src src-bash">git clone -b feature/native-comp --depth=1 https://gitee.com/mirrors/emacs.git
@@ -212,8 +222,8 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 </div>
 </div>
-<div id="outline-container-org99b5b08" class="outline-4">
-<h4 id="org99b5b08"><span class="section-number-4">3.1.2</span> 安装 MINGW64 依赖</h4>
+<div id="outline-container-org366db1e" class="outline-4">
+<h4 id="org366db1e"><span class="section-number-4">3.1.2</span> 安装 MINGW64 依赖</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <div class="org-src-container">
 <pre class="src src-bash">$ pacman -S --needed base-devel \
@@ -234,8 +244,8 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 </div>
 </div>
-<div id="outline-container-org204a0b4" class="outline-4">
-<h4 id="org204a0b4"><span class="section-number-4">3.1.3</span> 编译</h4>
+<div id="outline-container-org273fd7a" class="outline-4">
+<h4 id="org273fd7a"><span class="section-number-4">3.1.3</span> 编译</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <div class="org-src-container">
 <pre class="src src-bash">./autogen.sh
@@ -246,12 +256,12 @@ make install
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd9b256" class="outline-4">
-<h4 id="orgcd9b256"><span class="section-number-4">3.1.4</span> 启动</h4>
+<div id="outline-container-org43bb62d" class="outline-4">
+<h4 id="org43bb62d"><span class="section-number-4">3.1.4</span> 启动</h4>
 <div class="outline-text-4" id="text-3-1-4">
 </div>
 <ol class="org-ol">
-<li><a id="org6c28a2f"></a>创建 emacsclientw.exe 的快捷方式<br>
+<li><a id="orgaec9022"></a>创建 emacsclientw.exe 的快捷方式<br>
 <div class="outline-text-5" id="text-3-1-4-1">
 <p>
 值为
@@ -261,8 +271,12 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -c -a ""
 </pre>
 </div>
 </li>
-<li><a id="org4129626"></a>init.el 中添加环境变量<br>
+<li><a id="org3f5c68b"></a>init.el 中添加环境变量<br>
 <div class="outline-text-5" id="text-3-1-4-2">
+<pre class="example">
+LINK: https://emacs-china.org/t/windows-msys2-native-comp/16269
+</pre>
+
 <div class="org-src-container">
 <pre class="src src-elisp">(let ((msys2root "C:\\msys64"))
   (setenv "PATH" (concat
@@ -295,13 +309,13 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -c -a ""
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0dbb410">1. 起因</a></li>
+<li><a href="#org76048e4">1. 起因</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org0dbb410" class="outline-2">
-<h2 id="org0dbb410"><span class="section-number-2">1</span> 起因</h2>
+<div id="outline-container-org76048e4" class="outline-2">
+<h2 id="org76048e4"><span class="section-number-2">1</span> 起因</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 本人英语太菜了，十分需要英语字典的帮衬才能网上冲浪。之前一直都是靠 goldendict 老师傅才能狗住。
@@ -365,56 +379,56 @@ proxychains -q monolith "$URL" -o $(echo "$URL" | sed 's/[^[:alpha:]]/_/g').html
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga39fd8e">1. 基本配置</a>
+<li><a href="#orgd9ac870">1. 基本配置</a>
 <ul>
-<li><a href="#org4c0d323">1.1. 隐藏 tabbar</a>
+<li><a href="#org163439b">1.1. 隐藏 tabbar</a>
 <ul>
-<li><a href="#orgf10ed9e">1.1.1. 配置 <code>about:config</code></a></li>
-<li><a href="#org552c1dc">1.1.2. 配置 <code>userChrome.css</code></a></li>
+<li><a href="#org450460a">1.1.1. 配置 <code>about:config</code></a></li>
+<li><a href="#orgbf6721e">1.1.2. 配置 <code>userChrome.css</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgb973dd0">2. DarkMaker</a>
+<li><a href="#org5fcb977">2. DarkMaker</a>
 <ul>
-<li><a href="#org939f710">2.1. implemention.js</a></li>
+<li><a href="#org5318eae">2.1. implemention.js</a></li>
 </ul>
 </li>
-<li><a href="#orga296472">3. 修改快捷键</a>
+<li><a href="#orgaeeba13">3. 修改快捷键</a>
 <ul>
-<li><a href="#org6a544da">3.1. 编辑默认快捷键</a>
+<li><a href="#org2e7c2f2">3.1. 编辑默认快捷键</a>
 <ul>
-<li><a href="#orgf6532bb">3.1.1. 得到 omni.ja 文件</a></li>
-<li><a href="#org959f273">3.1.2. 解压 omni.ja 文件</a></li>
-<li><a href="#org20d9937">3.1.3. 编辑快捷键</a></li>
-<li><a href="#org55f9c26">3.1.4. 重新打包</a></li>
-<li><a href="#org8cfa356">3.1.5. 启动 firefox</a></li>
+<li><a href="#orgb6febd5">3.1.1. 得到 omni.ja 文件</a></li>
+<li><a href="#org675ca20">3.1.2. 解压 omni.ja 文件</a></li>
+<li><a href="#orgbecbc4e">3.1.3. 编辑快捷键</a></li>
+<li><a href="#org2b5b5d7">3.1.4. 重新打包</a></li>
+<li><a href="#orga24e917">3.1.5. 启动 firefox</a></li>
 </ul>
 </li>
-<li><a href="#orgada6ac1">3.2. 配置 Vimium</a></li>
-<li><a href="#org7c7c4ca">3.3. 后话</a></li>
-<li><a href="#orgdacfe1f">3.4. 参考</a></li>
+<li><a href="#org47de08d">3.2. 配置 Vimium</a></li>
+<li><a href="#org5edfcc8">3.3. 后话</a></li>
+<li><a href="#org352a28b">3.4. 参考</a></li>
 </ul>
 </li>
-<li><a href="#org1ed8aca">4. 添加 WebExtension API</a>
+<li><a href="#orgdbf085e">4. 添加 WebExtension API</a>
 <ul>
-<li><a href="#orgf50b472">4.1. 123</a></li>
+<li><a href="#org7daf5f9">4.1. 123</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orga39fd8e" class="outline-2">
-<h2 id="orga39fd8e"><span class="section-number-2">1</span> 基本配置</h2>
+<div id="outline-container-orgd9ac870" class="outline-2">
+<h2 id="orgd9ac870"><span class="section-number-2">1</span> 基本配置</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4c0d323" class="outline-3">
-<h3 id="org4c0d323"><span class="section-number-3">1.1</span> 隐藏 tabbar</h3>
+<div id="outline-container-org163439b" class="outline-3">
+<h3 id="org163439b"><span class="section-number-3">1.1</span> 隐藏 tabbar</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgf10ed9e" class="outline-4">
-<h4 id="orgf10ed9e"><span class="section-number-4">1.1.1</span> 配置 <code>about:config</code></h4>
+<div id="outline-container-org450460a" class="outline-4">
+<h4 id="org450460a"><span class="section-number-4">1.1.1</span> 配置 <code>about:config</code></h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 都是 true
@@ -425,8 +439,8 @@ browser.tabs.drawInTitlebar
 </pre>
 </div>
 </div>
-<div id="outline-container-org552c1dc" class="outline-4">
-<h4 id="org552c1dc"><span class="section-number-4">1.1.2</span> 配置 <code>userChrome.css</code></h4>
+<div id="outline-container-orgbf6721e" class="outline-4">
+<h4 id="orgbf6721e"><span class="section-number-4">1.1.2</span> 配置 <code>userChrome.css</code></h4>
 <div class="outline-text-4" id="text-1-1-2">
 <div class="org-src-container">
 <pre class="src src-css">/* Hide sidebar title */
@@ -449,8 +463,8 @@ browser.tabs.drawInTitlebar
 </div>
 </div>
 </div>
-<div id="outline-container-orgb973dd0" class="outline-2">
-<h2 id="orgb973dd0"><span class="section-number-2">2</span> DarkMaker</h2>
+<div id="outline-container-org5fcb977" class="outline-2">
+<h2 id="org5fcb977"><span class="section-number-2">2</span> DarkMaker</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 ui.systemUsesDarkTheme
@@ -458,8 +472,8 @@ browser.in-content.dark-mode
 extensions.activeThemeID
 </p>
 </div>
-<div id="outline-container-org939f710" class="outline-3">
-<h3 id="org939f710"><span class="section-number-3">2.1</span> implemention.js</h3>
+<div id="outline-container-org5318eae" class="outline-3">
+<h3 id="org5318eae"><span class="section-number-3">2.1</span> implemention.js</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-js">const { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
@@ -489,23 +503,23 @@ this.ProfileManager = class extends ExtensionAPI {
 </div>
 </div>
 </div>
-<div id="outline-container-orga296472" class="outline-2">
-<h2 id="orga296472"><span class="section-number-2">3</span> 修改快捷键</h2>
+<div id="outline-container-orgaeeba13" class="outline-2">
+<h2 id="orgaeeba13"><span class="section-number-2">3</span> 修改快捷键</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 继昨天也能用 rofi 转跳 firefox 标签之后，我决定逃回 firefox 了，但是还有一点习惯问题就是我习惯使用 <code>Ctrl-n</code> 来向下导航，firefox 中的该键是用来创建新窗口的，不能忍，改了它！
 </p>
 </div>
 
-<div id="outline-container-org6a544da" class="outline-3">
-<h3 id="org6a544da"><span class="section-number-3">3.1</span> 编辑默认快捷键</h3>
+<div id="outline-container-org2e7c2f2" class="outline-3">
+<h3 id="org2e7c2f2"><span class="section-number-3">3.1</span> 编辑默认快捷键</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 如果想要编辑 firefox 量子的默认快捷键，比较方便的是编辑 omni.ja 。
 </p>
 </div>
-<div id="outline-container-orgf6532bb" class="outline-4">
-<h4 id="orgf6532bb"><span class="section-number-4">3.1.1</span> 得到 omni.ja 文件</h4>
+<div id="outline-container-orgb6febd5" class="outline-4">
+<h4 id="orgb6febd5"><span class="section-number-4">3.1.1</span> 得到 omni.ja 文件</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 在 Archlinux 下可以通过
@@ -521,8 +535,8 @@ firefox /usr/lib/firefox/omni.ja
 </p>
 </div>
 </div>
-<div id="outline-container-org959f273" class="outline-4">
-<h4 id="org959f273"><span class="section-number-4">3.1.2</span> 解压 omni.ja 文件</h4>
+<div id="outline-container-org675ca20" class="outline-4">
+<h4 id="org675ca20"><span class="section-number-4">3.1.2</span> 解压 omni.ja 文件</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <p>
 注意：请备份 omni.ja 文件
@@ -540,12 +554,12 @@ $ unzip ../omni.ja.bak
 </div>
 </div>
 </div>
-<div id="outline-container-org20d9937" class="outline-4">
-<h4 id="org20d9937"><span class="section-number-4">3.1.3</span> 编辑快捷键</h4>
+<div id="outline-container-orgbecbc4e" class="outline-4">
+<h4 id="orgbecbc4e"><span class="section-number-4">3.1.3</span> 编辑快捷键</h4>
 <div class="outline-text-4" id="text-3-1-3">
 </div>
 <ol class="org-ol">
-<li><a id="orga7b61b6"></a>两个文件<br>
+<li><a id="orga67af48"></a>两个文件<br>
 <div class="outline-text-5" id="text-3-1-3-1">
 <p>
 现在就进入了正题，要开始编辑快捷键了。
@@ -579,7 +593,7 @@ chrome/browser/content/browser/browser.xhtml
 </p>
 </div>
 </li>
-<li><a id="org28f44fb"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
+<li><a id="org5fb5b17"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
 <div class="outline-text-5" id="text-3-1-3-2">
 <p>
 如果想使用 &lt;C-s&gt; 进行类似 Emacs 中的向下搜索，在 firefox 中这个动作的默认快捷键是 &lt;C-g&gt;, 既然 ff 中有还有字母的这个快捷键，那么在 <code>localization/en-US/browser/browserSets.ftl</code> 就应该有 <code>G</code> 这个定义，要做的就变成了中找到 <code>G</code> 并改成 <code>S</code>, 结果如下：
@@ -597,7 +611,7 @@ search-find-again-shortcut =
 </pre>
 </div>
 </li>
-<li><a id="org57f6c29"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
+<li><a id="orge856532"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
 <div class="outline-text-5" id="text-3-1-3-3">
 <p>
 这个例子相对就麻烦一些，因为在 <code>chrome/browser/content/browser/browser.xhtml</code> 中默认没有 &lt;M-j&gt; 类似的快捷键。就不能直接在 <code>localization/en-US/browser/browserSets.ftl</code> 直接修改定义来完成这个了。
@@ -631,7 +645,7 @@ window-new-shortcut =
 </p>
 </div>
 </li>
-<li><a id="orgdc6af34"></a>其他<br>
+<li><a id="orgf4c9215"></a>其他<br>
 <div class="outline-text-5" id="text-3-1-3-4">
 <p>
 不想要的直接注释掉就好了
@@ -644,8 +658,8 @@ window-new-shortcut =
 </li>
 </ol>
 </div>
-<div id="outline-container-org55f9c26" class="outline-4">
-<h4 id="org55f9c26"><span class="section-number-4">3.1.4</span> 重新打包</h4>
+<div id="outline-container-org2b5b5d7" class="outline-4">
+<h4 id="org2b5b5d7"><span class="section-number-4">3.1.4</span> 重新打包</h4>
 <div class="outline-text-4" id="text-3-1-4">
 <p>
 等到修改满意以后要做的就是怎么拿出来怎么送回去了。
@@ -658,8 +672,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 </div>
-<div id="outline-container-org8cfa356" class="outline-4">
-<h4 id="org8cfa356"><span class="section-number-4">3.1.5</span> 启动 firefox</h4>
+<div id="outline-container-orga24e917" class="outline-4">
+<h4 id="orga24e917"><span class="section-number-4">3.1.5</span> 启动 firefox</h4>
 <div class="outline-text-4" id="text-3-1-5">
 <p>
 首先需要使用 <code>firefox --purgecaches</code> 来重载 omni.ja, 这样修改的才会生效。
@@ -668,8 +682,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 
-<div id="outline-container-orgada6ac1" class="outline-3">
-<h3 id="orgada6ac1"><span class="section-number-3">3.2</span> 配置 Vimium</h3>
+<div id="outline-container-org47de08d" class="outline-3">
+<h3 id="org47de08d"><span class="section-number-3">3.2</span> 配置 Vimium</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 页面内导航，我选用了 vimium, 然后将 Vimium 的快捷键修改了一下。
@@ -690,8 +704,8 @@ map &lt;a-j&gt; LinkHints.activateModeToOpenInNewTab
 </div>
 </div>
 
-<div id="outline-container-org7c7c4ca" class="outline-3">
-<h3 id="org7c7c4ca"><span class="section-number-3">3.3</span> 后话</h3>
+<div id="outline-container-org5edfcc8" class="outline-3">
+<h3 id="org5edfcc8"><span class="section-number-3">3.3</span> 后话</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快地使用了。
@@ -699,8 +713,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-orgdacfe1f" class="outline-3">
-<h3 id="orgdacfe1f"><span class="section-number-3">3.4</span> 参考</h3>
+<div id="outline-container-org352a28b" class="outline-3">
+<h3 id="org352a28b"><span class="section-number-3">3.4</span> 参考</h3>
 <div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)</a></li>
@@ -710,12 +724,12 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 </div>
-<div id="outline-container-org1ed8aca" class="outline-2">
-<h2 id="org1ed8aca"><span class="section-number-2">4</span> 添加 WebExtension API</h2>
+<div id="outline-container-orgdbf085e" class="outline-2">
+<h2 id="orgdbf085e"><span class="section-number-2">4</span> 添加 WebExtension API</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgf50b472" class="outline-3">
-<h3 id="orgf50b472"><span class="section-number-3">4.1</span> 123</h3>
+<div id="outline-container-org7daf5f9" class="outline-3">
+<h3 id="org7daf5f9"><span class="section-number-3">4.1</span> 123</h3>
 </div>
 </div>
 ]]></description>
@@ -731,16 +745,16 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd461c7c">1. 准备</a></li>
-<li><a href="#org7f85f66">2. 增大音量</a></li>
-<li><a href="#org9f1e54c">3. 选择区域</a></li>
-<li><a href="#orgc8ea16c">4. 导出音乐</a></li>
+<li><a href="#org155ad5e">1. 准备</a></li>
+<li><a href="#orgffcb1e1">2. 增大音量</a></li>
+<li><a href="#org6d86bba">3. 选择区域</a></li>
+<li><a href="#org2fd2571">4. 导出音乐</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgd461c7c" class="outline-2">
-<h2 id="orgd461c7c"><span class="section-number-2">1</span> 准备</h2>
+<div id="outline-container-org155ad5e" class="outline-2">
+<h2 id="org155ad5e"><span class="section-number-2">1</span> 准备</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 安装 Audacity
@@ -755,8 +769,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-org7f85f66" class="outline-2">
-<h2 id="org7f85f66"><span class="section-number-2">2</span> 增大音量</h2>
+<div id="outline-container-orgffcb1e1" class="outline-2">
+<h2 id="orgffcb1e1"><span class="section-number-2">2</span> 增大音量</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>使用 audacity 导入音乐后，首先 <code>C-a</code> 全选全部。</li>
@@ -766,8 +780,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-org9f1e54c" class="outline-2">
-<h2 id="org9f1e54c"><span class="section-number-2">3</span> 选择区域</h2>
+<div id="outline-container-org6d86bba" class="outline-2">
+<h2 id="org6d86bba"><span class="section-number-2">3</span> 选择区域</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 依次使用菜单栏中的 
@@ -783,8 +797,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-orgc8ea16c" class="outline-2">
-<h2 id="orgc8ea16c"><span class="section-number-2">4</span> 导出音乐</h2>
+<div id="outline-container-org2fd2571" class="outline-2">
+<h2 id="org2fd2571"><span class="section-number-2">4</span> 导出音乐</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 通过 <i>File -&gt; Export</i> 来导出铃声，建议选择 wav 制作无损铃声。
