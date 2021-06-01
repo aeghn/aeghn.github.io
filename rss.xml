@@ -4,7 +4,7 @@
 <title><![CDATA[Aeghn]]></title>
 <description><![CDATA[Aeghn]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Tue, 01 Jun 2021 15:48:45 +0800</lastBuildDate>
+<lastBuildDate>Tue, 01 Jun 2021 17:48:07 +0800</lastBuildDate>
 <item>
   <title><![CDATA[windows 下的开发环境搭建（零）]]></title>
   <description><![CDATA[
@@ -379,90 +379,101 @@ proxychains -q monolith "$URL" -o $(echo "$URL" | sed 's/[^[:alpha:]]/_/g').html
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge0cb586">1. 预览图</a></li>
-<li><a href="#org89f3b64">2. 插件推荐</a>
+<li><a href="#orgd948967">1. 预览图</a></li>
+<li><a href="#orgf43155a">2. 各种设置</a>
 <ul>
-<li><a href="#orga2da626">2.1. 树状标签栏</a>
+<li><a href="#org0e94276">2.1. 树状标签栏</a>
 <ul>
-<li><a href="#orgae5a7d1">2.1.1. 隐藏 tabbar</a></li>
+<li><a href="#orga4ab195">2.1.1. 依赖插件</a></li>
+<li><a href="#org5affebf">2.1.2. 隐藏 tabbar</a></li>
 </ul>
 </li>
-<li><a href="#org4e1847c">2.2. 暗色网页</a>
+<li><a href="#orgd1737da">2.2. 暗色网页</a>
 <ul>
-<li><a href="#org14e02c5">2.2.1. 修改 toolbar 颜色和 about:blank 颜色</a></li>
+<li><a href="#org43f72e5">2.2.1. 依赖插件</a></li>
+<li><a href="#orgdac50bc">2.2.2. 修改 toolbar 颜色和 about:blank 颜色</a></li>
 </ul>
 </li>
-<li><a href="#orgb3d71c1">2.3. rss 工具</a></li>
-<li><a href="#orgeef239c">2.4. 下载网页 singlefile</a></li>
-<li><a href="#org4197d62">2.5. 去广告 ublock origin</a></li>
-<li><a href="#org4e7cbe3">2.6. 隐藏网页图片 hide-images</a></li>
-<li><a href="#org21659ef">2.7. 其他修改</a></li>
+<li><a href="#org8190f85">2.3. rss 工具</a>
+<ul>
+<li><a href="#org1678364">2.3.1. 依赖插件</a></li>
 </ul>
 </li>
-<li><a href="#org27614fe">3. 其他修改</a>
+<li><a href="#org9f4df35">2.4. 下载网页</a>
 <ul>
-<li><a href="#org40972a4">3.1. 窗口内全屏</a></li>
+<li><a href="#org1527947">2.4.1. 依赖插件</a></li>
 </ul>
 </li>
-<li><a href="#orgcead720">4. 快捷键修改</a>
+<li><a href="#org60426f9">2.5. 去广告</a>
 <ul>
-<li><a href="#orgef980aa">4.1. 编辑默认快捷键</a>
-<ul>
-<li><a href="#orge2a4133">4.1.1. 得到 omni.ja 文件</a></li>
-<li><a href="#org210f6ea">4.1.2. 解压 omni.ja 文件</a></li>
-<li><a href="#orgf1a27a4">4.1.3. 编辑快捷键</a></li>
-<li><a href="#orgbf83377">4.1.4. 重新打包</a></li>
-<li><a href="#org0040080">4.1.5. 启动 firefox</a></li>
+<li><a href="#org73b55fe">2.5.1. 依赖插件</a></li>
 </ul>
 </li>
-<li><a href="#org3775819">4.2. 配置 Vimium</a></li>
-<li><a href="#org0b55a2c">4.3. 后话</a></li>
-<li><a href="#orgb692b53">4.4. 参考</a></li>
+<li><a href="#org058a09d">2.6. 隐藏网页图片</a>
+<ul>
+<li><a href="#org9b6fb7f">2.6.1. 依赖插件</a></li>
+</ul>
+</li>
+<li><a href="#org2cee3e1">2.7. 窗口内全屏</a></li>
+<li><a href="#orgfcdc68f">2.8. Vanilla Emacs 键位</a>
+<ul>
+<li><a href="#org6e350c0">2.8.1. 编辑默认快捷键</a></li>
+<li><a href="#org4ccaebf">2.8.2. 配置 Vimium</a></li>
+<li><a href="#org389f75d">2.8.3. 后话</a></li>
+<li><a href="#org282ca80">2.8.4. 参考</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orge0cb586" class="outline-2">
-<h2 id="orge0cb586"><span class="section-number-2">1</span> 预览图</h2>
+<div id="outline-container-orgd948967" class="outline-2">
+<h2 id="orgd948967"><span class="section-number-2">1</span> 预览图</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://wangz.me/pics/firefox_screenshot.png">firefox 截图</a>
 </p>
 </div>
 </div>
-
-<div id="outline-container-org89f3b64" class="outline-2">
-<h2 id="org89f3b64"><span class="section-number-2">2</span> 插件推荐</h2>
+<div id="outline-container-orgf43155a" class="outline-2">
+<h2 id="orgf43155a"><span class="section-number-2">2</span> 各种设置</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orga2da626" class="outline-3">
-<h3 id="orga2da626"><span class="section-number-3">2.1</span> 树状标签栏</h3>
+<div id="outline-container-org0e94276" class="outline-3">
+<h3 id="org0e94276"><span class="section-number-3">2.1</span> 树状标签栏</h3>
 <div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orga4ab195" class="outline-4">
+<h4 id="orga4ab195"><span class="section-number-4">2.1.1</span> 依赖插件</h4>
+<div class="outline-text-4" id="text-2-1-1">
 <p>
 原来使用的 Tree Style Tabs, 现在发现 sidebery 更好看，操作也更友好一些。
 以上两个插件都是开源的。
+sidebery 地址：<a href="https://github.com/mbnuqw/sidebery">https://github.com/mbnuqw/sidebery</a>
 </p>
 </div>
-<div id="outline-container-orgae5a7d1" class="outline-4">
-<h4 id="orgae5a7d1"><span class="section-number-4">2.1.1</span> 隐藏 tabbar</h4>
-<div class="outline-text-4" id="text-2-1-1">
+</div>
+<div id="outline-container-org5affebf" class="outline-4">
+<h4 id="org5affebf"><span class="section-number-4">2.1.2</span> 隐藏 tabbar</h4>
+<div class="outline-text-4" id="text-2-1-2">
 <p>
 既然使用侧边树状标签栏，就没必要使用 tabbar 了，浪费空间不说，还难用，直接留给我的 i3bar。
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgc67bea5"></a>配置 <code>about:config</code><br>
-<div class="outline-text-5" id="text-2-1-1-1">
-<pre class="example">
-toolkit.legacyUserProfileCustomizations.stylesheets --&gt; true
-browser.tabs.drawInTitlebar --&gt; true
+<li><a id="org30925bb"></a>配置 <code>about:config</code><br>
+<div class="outline-text-5" id="text-2-1-2-1">
+<div class="org-src-container">
+<pre class="src src-css">toolkit.legacyUserProfileCustomizations.stylesheets // 改成 true, 修改此行配置后，才会读取 chrome 文件夹中的配置
+                                                                                browser.tabs.drawInTitlebar // 改为 true
 </pre>
 </div>
+</div>
 </li>
-<li><a id="org1389936"></a>修改文件 <code>userChrome.css</code><br>
-<div class="outline-text-5" id="text-2-1-1-2">
+<li><a id="org4e6eafd"></a>修改文件 <code>userChrome.css</code><br>
+<div class="outline-text-5" id="text-2-1-2-2">
 <p>
 隐藏标签栏主要是以下几行 css 在发挥作用，文件位于 <code>${FIREFOX_PROFILE}/chrome/userChrome.css</code>
 </p>
@@ -496,23 +507,32 @@ browser.tabs.drawInTitlebar --&gt; true
 </ol>
 </div>
 </div>
-<div id="outline-container-org4e1847c" class="outline-3">
-<h3 id="org4e1847c"><span class="section-number-3">2.2</span> 暗色网页</h3>
+<div id="outline-container-orgd1737da" class="outline-3">
+<h3 id="orgd1737da"><span class="section-number-3">2.2</span> 暗色网页</h3>
 <div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org43f72e5" class="outline-4">
+<h4 id="org43f72e5"><span class="section-number-4">2.2.1</span> 依赖插件</h4>
+<div class="outline-text-4" id="text-2-2-1">
 <p>
 Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以根据 firefox 主题自动切换亮暗色。
 </p>
+
+<p>
+地址：<a href="https://github.com/darkreader/darkreader">https://github.com/darkreader/darkreader</a>
+</p>
 </div>
-<div id="outline-container-org14e02c5" class="outline-4">
-<h4 id="org14e02c5"><span class="section-number-4">2.2.1</span> 修改 toolbar 颜色和 about:blank 颜色</h4>
-<div class="outline-text-4" id="text-2-2-1">
+</div>
+<div id="outline-container-orgdac50bc" class="outline-4">
+<h4 id="orgdac50bc"><span class="section-number-4">2.2.2</span> 修改 toolbar 颜色和 about:blank 颜色</h4>
+<div class="outline-text-4" id="text-2-2-2">
 <p>
 我用的火狐主题是继承的 GTK 主题，为了保持亮暗色下 toolbar 和 about:blank 页面的颜色统一，修改了以下文件，同样是在 chrome1 文件夹下。
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgac75120"></a>配置 <code>userChrome.css</code><br>
-<div class="outline-text-5" id="text-2-2-1-1">
+<li><a id="org7416027"></a>配置 <code>userChrome.css</code><br>
+<div class="outline-text-5" id="text-2-2-2-1">
 <div class="org-src-container">
 <pre class="src src-css">#urlbar #urlbar-background,
 #urlbar, #urlbar-input-container,
@@ -535,8 +555,8 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </div>
 </div>
 </li>
-<li><a id="orgd4c83e5"></a>配置 <code>userContent.css</code><br>
-<div class="outline-text-5" id="text-2-2-1-2">
+<li><a id="org134f058"></a>配置 <code>userContent.css</code><br>
+<div class="outline-text-5" id="text-2-2-2-2">
 <div class="org-src-container">
 <pre class="src src-css">@media (prefers-color-scheme: dark) {
     @-moz-document url("about:newtab"), url("about:home") {
@@ -557,9 +577,13 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </div>
 </div>
 
-<div id="outline-container-orgb3d71c1" class="outline-3">
-<h3 id="orgb3d71c1"><span class="section-number-3">2.3</span> rss 工具</h3>
+<div id="outline-container-org8190f85" class="outline-3">
+<h3 id="org8190f85"><span class="section-number-3">2.3</span> rss 工具</h3>
 <div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org1678364" class="outline-4">
+<h4 id="org1678364"><span class="section-number-4">2.3.1</span> 依赖插件</h4>
+<div class="outline-text-4" id="text-2-3-1">
 <p>
 rss 个人还是感觉和浏览器一直用方便，更新及时，还能直接搭配 ff 的其他插件。
 </p>
@@ -567,75 +591,91 @@ rss 个人还是感觉和浏览器一直用方便，更新及时，还能直接�
 <p>
 此类工具个人体验下来比较好的是 feedbro 和 brief。feedbro 提供了三栏布局，使用上可能更好一点，但是最终选择了 brief ，因为后者开源。
 </p>
+
+<p>
+地址：<a href="https://github.com/brief-rss/brief">https://github.com/brief-rss/brief</a>
+</p>
 </div>
 </div>
-<div id="outline-container-orgeef239c" class="outline-3">
-<h3 id="orgeef239c"><span class="section-number-3">2.4</span> 下载网页 singlefile</h3>
+</div>
+<div id="outline-container-org9f4df35" class="outline-3">
+<h3 id="org9f4df35"><span class="section-number-3">2.4</span> 下载网页</h3>
 <div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org1527947" class="outline-4">
+<h4 id="org1527947"><span class="section-number-4">2.4.1</span> 依赖插件</h4>
+<div class="outline-text-4" id="text-2-4-1">
 <p>
 singlefile，将整个网页下载到一个文件，适合我这样有收藏癖的人（不过现在主要用浏览器外的 monilith 了）。
 </p>
+
+<p>
+地址：<a href="https://github.com/gildas-lormeau/SingleFile">https://github.com/gildas-lormeau/SingleFile</a>
+</p>
 </div>
 </div>
-<div id="outline-container-org4197d62" class="outline-3">
-<h3 id="org4197d62"><span class="section-number-3">2.5</span> 去广告 ublock origin</h3>
+</div>
+<div id="outline-container-org60426f9" class="outline-3">
+<h3 id="org60426f9"><span class="section-number-3">2.5</span> 去广告</h3>
 <div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-org73b55fe" class="outline-4">
+<h4 id="org73b55fe"><span class="section-number-4">2.5.1</span> 依赖插件</h4>
+<div class="outline-text-4" id="text-2-5-1">
 <p>
-简单好用，足够稳定。
+ublock origin 简单好用，足够稳定。
+</p>
+
+<p>
+地址：<a href="https://github.com/gorhill/uBlock">https://github.com/gorhill/uBlock</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org4e7cbe3" class="outline-3">
-<h3 id="org4e7cbe3"><span class="section-number-3">2.6</span> 隐藏网页图片 hide-images</h3>
+</div>
+<div id="outline-container-org058a09d" class="outline-3">
+<h3 id="org058a09d"><span class="section-number-3">2.6</span> 隐藏网页图片</h3>
 <div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-org9b6fb7f" class="outline-4">
+<h4 id="org9b6fb7f"><span class="section-number-4">2.6.1</span> 依赖插件</h4>
+<div class="outline-text-4" id="text-2-6-1">
 <p>
-划水必备插件。
+hide-images 划水必备插件。
+</p>
+
+<p>
+地址：<a href="https://github.com/sur98ke/hide-images-ff-quantum">https://github.com/sur98ke/hide-images-ff-quantum</a>
 </p>
 </div>
 </div>
-
-<div id="outline-container-org21659ef" class="outline-3">
-<h3 id="org21659ef"><span class="section-number-3">2.7</span> 其他修改</h3>
+</div>
+<div id="outline-container-org2cee3e1" class="outline-3">
+<h3 id="org2cee3e1"><span class="section-number-3">2.7</span> 窗口内全屏</h3>
 <div class="outline-text-3" id="text-2-7">
-<p>
-以上部分功能需要修改 chrome 文件夹里的配置，我的配置是这样的
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org27614fe" class="outline-2">
-<h2 id="org27614fe"><span class="section-number-2">3</span> 其他修改</h2>
-<div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org40972a4" class="outline-3">
-<h3 id="org40972a4"><span class="section-number-3">3.1</span> 窗口内全屏</h3>
-<div class="outline-text-3" id="text-3-1">
 <p>
 如果需要在窗口内全屏的话，即隐藏 toolbar 和 tabbar 的话，那么可以使用以下 <code>about:config</code> 中的 flag:
 将 <code>full-screen-api.ignore-widgets</code> 改为 <code>true</code> 。
+用来小窗看视频还是挺方便的。
 </p>
 </div>
 </div>
-</div>
-<div id="outline-container-orgcead720" class="outline-2">
-<h2 id="orgcead720"><span class="section-number-2">4</span> 快捷键修改</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgfcdc68f" class="outline-3">
+<h3 id="orgfcdc68f"><span class="section-number-3">2.8</span> Vanilla Emacs 键位</h3>
+<div class="outline-text-3" id="text-2-8">
 <p>
 继昨天也能用 rofi 转跳 firefox 标签之后，我决定逃回 firefox 了，但是还有一点习惯问题就是我习惯使用 <code>Ctrl-n</code> 来向下导航，firefox 中的该键是用来创建新窗口的，不能忍，改了它！
 </p>
 </div>
-
-<div id="outline-container-orgef980aa" class="outline-3">
-<h3 id="orgef980aa"><span class="section-number-3">4.1</span> 编辑默认快捷键</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-org6e350c0" class="outline-4">
+<h4 id="org6e350c0"><span class="section-number-4">2.8.1</span> 编辑默认快捷键</h4>
+<div class="outline-text-4" id="text-2-8-1">
 <p>
 如果想要编辑 firefox 量子的默认快捷键，比较方便的是编辑 omni.ja 。
 </p>
 </div>
-<div id="outline-container-orge2a4133" class="outline-4">
-<h4 id="orge2a4133"><span class="section-number-4">4.1.1</span> 得到 omni.ja 文件</h4>
-<div class="outline-text-4" id="text-4-1-1">
+<ol class="org-ol">
+<li><a id="org9665d05"></a>得到 omni.ja 文件<br>
+<div class="outline-text-5" id="text-2-8-1-1">
 <p>
 在 Archlinux 下可以通过
 </p>
@@ -649,10 +689,9 @@ firefox /usr/lib/firefox/omni.ja
 如上得到了两个 omni.ja 文件，我们只需要编辑第一个文件就可以了。
 </p>
 </div>
-</div>
-<div id="outline-container-org210f6ea" class="outline-4">
-<h4 id="org210f6ea"><span class="section-number-4">4.1.2</span> 解压 omni.ja 文件</h4>
-<div class="outline-text-4" id="text-4-1-2">
+</li>
+<li><a id="orgc4f24eb"></a>解压 omni.ja 文件<br>
+<div class="outline-text-5" id="text-2-8-1-2">
 <p>
 注意：请备份 omni.ja 文件
 </p>
@@ -668,14 +707,11 @@ $ unzip ../omni.ja.bak
 </pre>
 </div>
 </div>
-</div>
-<div id="outline-container-orgf1a27a4" class="outline-4">
-<h4 id="orgf1a27a4"><span class="section-number-4">4.1.3</span> 编辑快捷键</h4>
-<div class="outline-text-4" id="text-4-1-3">
-</div>
+</li>
+<li><a id="orga73ea99"></a>编辑快捷键<br>
 <ol class="org-ol">
-<li><a id="orga1a70c2"></a>两个文件<br>
-<div class="outline-text-5" id="text-4-1-3-1">
+<li><a id="orge8abbe0"></a>两个文件<br>
+<div class="outline-text-6" id="text-2-8-1-3-1">
 <p>
 现在就进入了正题，要开始编辑快捷键了。
 </p>
@@ -708,8 +744,8 @@ chrome/browser/content/browser/browser.xhtml
 </p>
 </div>
 </li>
-<li><a id="org00bde7a"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
-<div class="outline-text-5" id="text-4-1-3-2">
+<li><a id="org706a403"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
+<div class="outline-text-6" id="text-2-8-1-3-2">
 <p>
 如果想使用 &lt;C-s&gt; 进行类似 Emacs 中的向下搜索，在 firefox 中这个动作的默认快捷键是 &lt;C-g&gt;, 既然 ff 中有还有字母的这个快捷键，那么在 <code>localization/en-US/browser/browserSets.ftl</code> 就应该有 <code>G</code> 这个定义，要做的就变成了中找到 <code>G</code> 并改成 <code>S</code>, 结果如下：
 </p>
@@ -726,8 +762,8 @@ search-find-again-shortcut =
 </pre>
 </div>
 </li>
-<li><a id="orga3cd665"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
-<div class="outline-text-5" id="text-4-1-3-3">
+<li><a id="orgcbc05d0"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
+<div class="outline-text-6" id="text-2-8-1-3-3">
 <p>
 这个例子相对就麻烦一些，因为在 <code>chrome/browser/content/browser/browser.xhtml</code> 中默认没有 &lt;M-j&gt; 类似的快捷键。就不能直接在 <code>localization/en-US/browser/browserSets.ftl</code> 直接修改定义来完成这个了。
 </p>
@@ -760,8 +796,8 @@ window-new-shortcut =
 </p>
 </div>
 </li>
-<li><a id="org68e7f53"></a>其他<br>
-<div class="outline-text-5" id="text-4-1-3-4">
+<li><a id="orgeac7a8d"></a>其他<br>
+<div class="outline-text-6" id="text-2-8-1-3-4">
 <p>
 不想要的直接注释掉就好了
 </p>
@@ -772,10 +808,9 @@ window-new-shortcut =
 </div>
 </li>
 </ol>
-</div>
-<div id="outline-container-orgbf83377" class="outline-4">
-<h4 id="orgbf83377"><span class="section-number-4">4.1.4</span> 重新打包</h4>
-<div class="outline-text-4" id="text-4-1-4">
+</li>
+<li><a id="orgf173060"></a>重新打包<br>
+<div class="outline-text-5" id="text-2-8-1-4">
 <p>
 等到修改满意以后要做的就是怎么拿出来怎么送回去了。
 官方推荐的是 <code>zip -qr9XD omni.ja *</code> 这样进行打包，所以
@@ -786,20 +821,20 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </pre>
 </div>
 </div>
-</div>
-<div id="outline-container-org0040080" class="outline-4">
-<h4 id="org0040080"><span class="section-number-4">4.1.5</span> 启动 firefox</h4>
-<div class="outline-text-4" id="text-4-1-5">
+</li>
+<li><a id="org12e5458"></a>启动 firefox<br>
+<div class="outline-text-5" id="text-2-8-1-5">
 <p>
 首先需要使用 <code>firefox --purgecaches</code> 来重载 omni.ja, 这样修改的才会生效。
 </p>
 </div>
-</div>
+</li>
+</ol>
 </div>
 
-<div id="outline-container-org3775819" class="outline-3">
-<h3 id="org3775819"><span class="section-number-3">4.2</span> 配置 Vimium</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-org4ccaebf" class="outline-4">
+<h4 id="org4ccaebf"><span class="section-number-4">2.8.2</span> 配置 Vimium</h4>
+<div class="outline-text-4" id="text-2-8-2">
 <p>
 页面内导航，我选用了 vimium, 然后将 Vimium 的快捷键修改了一下。
 </p>
@@ -819,23 +854,24 @@ map &lt;a-j&gt; LinkHints.activateModeToOpenInNewTab
 </div>
 </div>
 
-<div id="outline-container-org0b55a2c" class="outline-3">
-<h3 id="org0b55a2c"><span class="section-number-3">4.3</span> 后话</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-org389f75d" class="outline-4">
+<h4 id="org389f75d"><span class="section-number-4">2.8.3</span> 后话</h4>
+<div class="outline-text-4" id="text-2-8-3">
 <p>
 firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快地使用了。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb692b53" class="outline-3">
-<h3 id="orgb692b53"><span class="section-number-3">4.4</span> 参考</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-org282ca80" class="outline-4">
+<h4 id="org282ca80"><span class="section-number-4">2.8.4</span> 参考</h4>
+<div class="outline-text-4" id="text-2-8-4">
 <ul class="org-ul">
 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)</a></li>
 <li><a href="https://superuser.com/questions/1533417/configure-disable-firefox-keyboard-shortcuts">https://superuser.com/questions/1533417/configure-disable-firefox-keyboard-shortcuts</a></li>
 <li><a href="https://github.com/philc/vimium">https://github.com/philc/vimium</a></li>
 </ul>
+</div>
 </div>
 </div>
 </div>
