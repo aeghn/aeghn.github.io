@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8"/>
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://wangz.me/rss.xml"
+      title="RSS feed for https://wangz.me/"/>
+<title>Windows 开发环境搭建 -- wangz.me</title>
+<meta name="author" content="Aeghn"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href= "static/style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="static/favicon.ico"/></head>
+<body>
+<div id="preamble" class="status"><div id="blog-nav">
+  <a href="/">wangz's blog </a>
+  <span>/ </span>
+  <a href="/tags.html">Tags </a>
+</div><hr/></div>
+<div id="content">
+<div class="post-item">
+   <div class="post-date"><span class="day">27</span> <span class="month">Jun</span> <span class="year">2021</span></div>
+   <div class="post-title-and-tags">
+   <h1 class="post-title"><a href="https://wangz.me/2021-11-27-windows_dev_envir.html"> Windows 开发环境搭建 </a></h1>
+
+   <div class="post-tags"><a href="https://wangz.me/tag-windows.html">windows</a> <a href="https://wangz.me/tag-emacs.html">emacs</a> <a href="https://wangz.me/tag-terminal.html">terminal</a> <a href="https://wangz.me/tag-autohotkey.html">autohotkey</a> </div>
+   </div>
+   </div>
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgae92f76">1. 键位自定义</a>
+<ul>
+<li><a href="#org4f37972">1.1. Auto Hot Key</a></li>
+</ul>
+</li>
+<li><a href="#org706c8c4">2. 终端</a>
+<ul>
+<li><a href="#org1b11f99">2.1. 安装 Windows Terminal</a></li>
+<li><a href="#orgfaec068">2.2. 安装 msys2</a></li>
+</ul>
+</li>
+<li><a href="#org21cac63">3. Emacs</a>
+<ul>
+<li><a href="#orgef211ea">3.1. 安装 gccemacs</a></li>
+<li><a href="#org29ca2e0">3.2. 启动脚本</a></li>
+<li><a href="#orge2e5964">3.3. 在任务栏创建快捷启动方式</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orgae92f76" class="outline-2">
+<h2 id="orgae92f76"><span class="section-number-2">1.</span> 键位自定义</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4f37972" class="outline-3">
+<h3 id="org4f37972"><span class="section-number-3">1.1.</span> Auto Hot Key</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org816e216" class="outline-4">
+<h4 id="org816e216"><span class="section-number-4">1.1.1.</span> 解决 ctrl-space 问题</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+如果使用 Emacs 但不能使用 <code>C-SPACE</code> 来选择
+</p>
+
+<p>
+:LINK:     <a href="https://www.zhihu.com/question/22288432/answer/502086049">https://www.zhihu.com/question/22288432/answer/502086049</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-ahk">#IfWinActive ahk_class Emacs   ; if in emacs
+^Space::^+2 ;(Ctrl＋Shift + 2)
+#IfWinActive                   ; end if in emacs
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org706c8c4" class="outline-2">
+<h2 id="org706c8c4"><span class="section-number-2">2.</span> 终端</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1b11f99" class="outline-3">
+<h3 id="org1b11f99"><span class="section-number-3">2.1.</span> 安装 Windows Terminal</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Windows Terminal 确实是 Windows 下颜值比较高的终端软件了。直接在 Windows Store 中就可以安装。
+</p>
+</div>
+</div>
+<div id="outline-container-orgfaec068" class="outline-3">
+<h3 id="orgfaec068"><span class="section-number-3">2.2.</span> 安装 msys2</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+不会用 Windows 下的 Cmd 和 powershell。使用 bash 对我来说还是更舒适一些。
+</p>
+</div>
+<div id="outline-container-org10b3aad" class="outline-4">
+<h4 id="org10b3aad"><span class="section-number-4">2.2.1.</span> 下载包</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+下载 Msys2 安装包，国外下载太慢，万幸清华提供了该软件的镜像。
+</p>
+
+<p>
+<a href="https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64">https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org7adc18f" class="outline-4">
+<h4 id="org7adc18f"><span class="section-number-4">2.2.2.</span> 设置源</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+原因同上。
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/i686' /etc/pacman.d/mirrorlist.mingw32
+sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/x86_64' /etc/pacman.d/mirrorlist.mingw64
+sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc/pacman.d/mirrorlist.msys
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org21cac63" class="outline-2">
+<h2 id="org21cac63"><span class="section-number-2">3.</span> Emacs</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgef211ea" class="outline-3">
+<h3 id="orgef211ea"><span class="section-number-3">3.1.</span> 安装 gccemacs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org5767cec" class="outline-4">
+<h4 id="org5767cec"><span class="section-number-4">3.1.1.</span> 下载源</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<div class="org-src-container">
+<pre class="src src-bash">git clone -b feature/native-comp --depth=1 https://gitee.com/mirrors/emacs.git
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6b6571a" class="outline-4">
+<h4 id="org6b6571a"><span class="section-number-4">3.1.2.</span> 安装 MINGW64 依赖</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<div class="org-src-container">
+<pre class="src src-bash">$ pacman -S --needed base-devel \
+  mingw-w64-x86_64-toolchain \
+  mingw-w64-x86_64-xpm-nox \
+  mingw-w64-x86_64-libtiff \
+  mingw-w64-x86_64-giflib \
+  mingw-w64-x86_64-libpng \
+  mingw-w64-x86_64-libjpeg-turbo \
+  mingw-w64-x86_64-librsvg \
+  mingw-w64-x86_64-lcms2 \
+  mingw-w64-x86_64-jansson \
+  mingw-w64-x86_64-libxml2 \
+  mingw-w64-x86_64-gnutls \
+  mingw-w64-x86_64-zlib \
+  mingw-w64-x86_64-harfbuzz
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org43cc7b8" class="outline-4">
+<h4 id="org43cc7b8"><span class="section-number-4">3.1.3.</span> 编译</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<div class="org-src-container">
+<pre class="src src-bash">./autogen.sh
+./configure --without-dbus --without-pop --with-nativecomp --prefix=/your/install/path
+make -j$(nproc) # or make NATIVE_FULL_AOT=1 -j$(nproc) // longer
+make install
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org29ca2e0" class="outline-3">
+<h3 id="org29ca2e0"><span class="section-number-3">3.2.</span> 启动脚本</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-bat">@ECHO OFF
+TITLE Emacs - feature/native-comp
+SET HOME=C:\Users\yourname
+C: CD %HOME%
+IF EXIST .emacs.d\server\server DEL .emacs.d\server\server
+SET PATH=C:\msys64\mingw64\local\bin;C:\msys64\mingw64\bin;%PATH%
+C:\msys64\mingw64\bin\emacsclientw.exe -n -a C:\msys64\mingw64\bin\runemacs.exe -e "(make-frame-visible)"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2e5964" class="outline-3">
+<h3 id="orge2e5964"><span class="section-number-3">3.3.</span> 在任务栏创建快捷启动方式</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+在 Windows 下使用 Emacs daemon + Emacs client 的方式可能是最完美的方式了。因为每次启动一个 Client 显然要比启动完整的 Emacs 快很多，并且没带来其他方面的劣势。
+</p>
+
+<p>
+但是直接在任务栏上右键固定到任务栏的话，下次启动的是完整的 Emacs，而不是启动 Client。
+</p>
+
+<p>
+正确的方式是：
+</p>
+<ul class="org-ul">
+<li>右键已经启动的 Emacs 程序任务栏图标，并选择 <code>保存到任务栏</code></li>
+<li><code>Alt</code> + <code>Shift</code> + <code>Right Click</code> 任务栏上的已经保存的图标</li>
+<li>选择 <code>属性</code></li>
+<li>修改目标为 <code>C:\msys64\mingw64\bin\emacsclientw.exe -n -a C:\msys64\mingw64\bin\runemacs.exe -e "(make-frame-visible)"</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">windows</a> <a href="https://wangz.me/tag-emacs.html">emacs</a> <a href="https://wangz.me/tag-terminal.html">terminal</a> <a href="https://wangz.me/tag-autohotkey.html">autohotkey</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2021-06-27</div><div class="post-tags">联系邮箱：aeghn_at_outlook_dot_com</div></div></div>
+<div id="postamble" class="status">
+<center><span> Powered by Org-mode and</span> <a href="https://github.com/aeghn/org-static-blog"> a fork</a><span> of</span><a href="https://github.com/bastibe/org-static-blog"> org-static-blog</a> </center></div>
+</body>
+</html>
