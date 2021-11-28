@@ -4,7 +4,7 @@
 <title><![CDATA[wangz.me]]></title>
 <description><![CDATA[wangz.me]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Sun, 28 Nov 2021 23:50:48 +0800</lastBuildDate>
+<lastBuildDate>Mon, 29 Nov 2021 00:37:02 +0800</lastBuildDate>
 <item>
   <title><![CDATA[如何在无法显卡直通的 KVM 中愉快地使用 Windows]]></title>
   <description><![CDATA[
@@ -16,14 +16,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb65ca2c">1. 「引」</a></li>
-<li><a href="#org1e959b7">2. 在物理硬盘上安装 Windows</a></li>
-<li><a href="#org0a97c78">3. 直通硬盘中的 Windows 到 Qemu 中进行启动</a></li>
-<li><a href="#orgd5542ba">4. 使用 FreeRDP 链接</a></li>
-<li><a href="#orga73c2a8">5. 与 i3wm（或者其他 Window Manager） 交互</a>
+<li><a href="#orgc5ba7f6">1. 「引」</a></li>
+<li><a href="#org4f71087">2. 在物理硬盘上安装 Windows</a></li>
+<li><a href="#org4f71e0b">3. 直通硬盘中的 Windows 到 Qemu 中进行启动</a></li>
+<li><a href="#orgcf5eada">4. 使用 FreeRDP 链接</a></li>
+<li><a href="#orgc8091cf">5. 与 i3wm（或者其他 Window Manager） 交互</a>
 <ul>
-<li><a href="#orge72e382">5.1. xkeysnail 配置参考如下：</a></li>
-<li><a href="#org37c08a7">5.2. 使用 Super-Control-w 切换当前工作区和 Windows Guest 所在工作区</a></li>
+<li><a href="#orgdeb6bab">5.1. xkeysnail 配置参考如下：</a></li>
+<li><a href="#org9d15556">5.2. 切换当前工作区和 Windows Guest 所在工作区的脚本</a></li>
 </ul>
 </li>
 </ul>
@@ -35,8 +35,8 @@ Windows 就应该活在虚拟机里。
 </p>
 </blockquote>
 
-<div id="outline-container-orgb65ca2c" class="outline-2">
-<h2 id="orgb65ca2c"><span class="section-number-2">1.</span> 「引」</h2>
+<div id="outline-container-orgc5ba7f6" class="outline-2">
+<h2 id="orgc5ba7f6"><span class="section-number-2">1.</span> 「引」</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 本文简要地描述了怎么在 GNU/Linux 下愉快地使用无显卡直通的 Windows 虚拟机。
@@ -44,8 +44,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-org1e959b7" class="outline-2">
-<h2 id="org1e959b7"><span class="section-number-2">2.</span> 在物理硬盘上安装 Windows</h2>
+<div id="outline-container-org4f71087" class="outline-2">
+<h2 id="org4f71087"><span class="section-number-2">2.</span> 在物理硬盘上安装 Windows</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 网上有大把教程，不再赘述。
@@ -61,8 +61,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-org0a97c78" class="outline-2">
-<h2 id="org0a97c78"><span class="section-number-2">3.</span> 直通硬盘中的 Windows 到 Qemu 中进行启动</h2>
+<div id="outline-container-org4f71e0b" class="outline-2">
+<h2 id="org4f71e0b"><span class="section-number-2">3.</span> 直通硬盘中的 Windows 到 Qemu 中进行启动</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 启动命令如下
@@ -95,8 +95,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-orgd5542ba" class="outline-2">
-<h2 id="orgd5542ba"><span class="section-number-2">4.</span> 使用 FreeRDP 链接</h2>
+<div id="outline-container-orgcf5eada" class="outline-2">
+<h2 id="orgcf5eada"><span class="section-number-2">4.</span> 使用 FreeRDP 链接</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 由 Gentoo 群的部分群友提示，使用 rdp 链接要比直接使用 spice 更好一些，实际体验确实如此，spice 占用了更多的资源但是表现并不如 rdp 流程。
@@ -122,8 +122,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-orga73c2a8" class="outline-2">
-<h2 id="orga73c2a8"><span class="section-number-2">5.</span> 与 i3wm（或者其他 Window Manager） 交互</h2>
+<div id="outline-container-orgc8091cf" class="outline-2">
+<h2 id="orgc8091cf"><span class="section-number-2">5.</span> 与 i3wm（或者其他 Window Manager） 交互</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 在 X11 下有这样一个问题，就是因为 qemu 和 rdp 会抓住整个键盘，所以所有快捷键的直接操作对象都是虚拟机中的内容。
@@ -146,8 +146,8 @@ Windows 就应该活在虚拟机里。
 </p>
 </div>
 
-<div id="outline-container-orge72e382" class="outline-3">
-<h3 id="orge72e382"><span class="section-number-3">5.1.</span> xkeysnail 配置参考如下：</h3>
+<div id="outline-container-orgdeb6bab" class="outline-3">
+<h3 id="orgdeb6bab"><span class="section-number-3">5.1.</span> xkeysnail 配置参考如下：</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <pre class="src src-python">define_keymap(re.compile(".*"), {
@@ -175,8 +175,8 @@ define_keymap(re.compile("FOO_WINDOW_CLASS"), {
 </div>
 </div>
 
-<div id="outline-container-org37c08a7" class="outline-3">
-<h3 id="org37c08a7"><span class="section-number-3">5.2.</span> 使用 Super-Control-w 切换当前工作区和 Windows Guest 所在工作区</h3>
+<div id="outline-container-org9d15556" class="outline-3">
+<h3 id="org9d15556"><span class="section-number-3">5.2.</span> 切换当前工作区和 Windows Guest 所在工作区的脚本</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 以下的 bash 函数可以做到在 windows guest 工作区和当前工作区切换的功能。
@@ -186,7 +186,7 @@ define_keymap(re.compile("FOO_WINDOW_CLASS"), {
 <li>但是需要注意的是 i3wm 需要开启 <code>workspace_auto_back_and_forth yes</code></li>
 
 <li>将以下脚本保存到 <code>$HOME/.scripts/show_windows</code> 文件 <br>
-保存到什么位置都可以，只要和 xkeysnail 中的配置对应即可。</li>
+保存到什么位置都可以，只要和 xkeysnail 配置对应即可。</li>
 </ul>
 <div class="org-src-container">
 <pre class="src src-bash">#!/usr/bin/env bash
@@ -206,7 +206,7 @@ show_windows
 </div>
 </div>
 </div>
-<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">Windows</a> <a href="https://wangz.me/tag-linux.html">Linux</a> <a href="https://wangz.me/tag-kvm.html">KVM</a> <a href="https://wangz.me/tag-i3wm.html">i3wm</a> <a href="https://wangz.me/tag-xkeysnail.html">xkeysnail</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2021-11-24</div><div class="post-tags">联系邮箱：aeghnAToutlookDOTcom</div></div>
+<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">Windows</a> <a href="https://wangz.me/tag-linux.html">Linux</a> <a href="https://wangz.me/tag-kvm.html">KVM</a> <a href="https://wangz.me/tag-i3wm.html">i3wm</a> <a href="https://wangz.me/tag-xkeysnail.html">xkeysnail</a> </div><div class="post-date-published">最后更新：2021-11-29</div><div class="post-date-created">首次发布：2021-11-24</div><div class="post-tags">联系邮箱：aeghnAToutlookDOTcom</div></div>
 <div id="other-posts">
 <a href="https://wangz.me/index.html">其他帖子</a>
 </div>
