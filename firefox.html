@@ -30,25 +30,25 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org66d9378">1. 预览图</a></li>
-<li><a href="#orged57d7d">2. 插件推荐</a>
+<li><a href="#org067992f">1. 预览图</a></li>
+<li><a href="#org89b5a0f">2. 插件推荐</a>
 <ul>
-<li><a href="#org2e011fd">2.1. 树状标签栏</a></li>
-<li><a href="#orge1c6bb8">2.2. 暗色网页</a></li>
-<li><a href="#org18cdf88">2.3. rss 工具</a></li>
-<li><a href="#orgeb3ec71">2.4. 下载网页</a></li>
-<li><a href="#orgc708a06">2.5. 去广告</a></li>
-<li><a href="#orgb9249b2">2.6. 隐藏网页图片</a></li>
+<li><a href="#orgafc3856">2.1. 树状标签栏</a></li>
+<li><a href="#org6e3d5f4">2.2. 暗色网页</a></li>
+<li><a href="#orgfb23cbc">2.3. rss 工具</a></li>
+<li><a href="#org008e1a6">2.4. 下载网页</a></li>
+<li><a href="#org5872ec3">2.5. 去广告</a></li>
+<li><a href="#org6f4c492">2.6. 隐藏网页图片</a></li>
 </ul>
 </li>
-<li><a href="#orga92c468">3. 其他设置</a>
+<li><a href="#org160b3e1">3. 其他设置</a>
 <ul>
-<li><a href="#orgc336517">3.1. 窗口内全屏</a></li>
+<li><a href="#org318b40a">3.1. 窗口内全屏</a></li>
 </ul>
 </li>
-<li><a href="#org5ade930">4. 通过 onmi 来修改按键</a>
+<li><a href="#org82b54f9">4. 通过 onmi 来修改按键</a>
 <ul>
-<li><a href="#org8a6d61b">4.1. 编辑默认快捷键</a></li>
+<li><a href="#org917c67f">4.1. 编辑默认快捷键</a></li>
 </ul>
 </li>
 </ul>
@@ -56,24 +56,24 @@
 </nav>
 
 
-<div id="outline-container-org66d9378" class="outline-2">
-<h2 id="org66d9378"><span class="section-number-2">1.</span> 预览图</h2>
+<div id="outline-container-org067992f" class="outline-2">
+<h2 id="org067992f"><span class="section-number-2">1.</span> 预览图</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://wangz.me/pics/firefox_screenshot.png">firefox 截图</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orged57d7d" class="outline-2">
-<h2 id="orged57d7d"><span class="section-number-2">2.</span> 插件推荐</h2>
+<div id="outline-container-org89b5a0f" class="outline-2">
+<h2 id="org89b5a0f"><span class="section-number-2">2.</span> 插件推荐</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org2e011fd" class="outline-3">
-<h3 id="org2e011fd"><span class="section-number-3">2.1.</span> 树状标签栏</h3>
+<div id="outline-container-orgafc3856" class="outline-3">
+<h3 id="orgafc3856"><span class="section-number-3">2.1.</span> 树状标签栏</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgafcad27" class="outline-4">
-<h4 id="orgafcad27"><span class="section-number-4">2.1.1.</span> 依赖插件</h4>
+<div id="outline-container-org1c1b67f" class="outline-4">
+<h4 id="org1c1b67f"><span class="section-number-4">2.1.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 原来使用的 Tree Style Tabs, 现在发现 sidebery 更好看，操作也更友好一些。
@@ -88,15 +88,15 @@ sidebery 地址：<a href="https://github.com/mbnuqw/sidebery">https://github.co
 </p>
 </div>
 </div>
-<div id="outline-container-orgb1a97e5" class="outline-4">
-<h4 id="orgb1a97e5"><span class="section-number-4">2.1.2.</span> 隐藏 tabbar</h4>
+<div id="outline-container-org5f1bbf2" class="outline-4">
+<h4 id="org5f1bbf2"><span class="section-number-4">2.1.2.</span> 隐藏 tabbar</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 既然使用侧边树状标签栏，就没必要使用 tabbar 了，浪费空间不说，还难用，直接留给我的 i3bar。
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org21384e5"></a>配置 <code>about:config</code><br>
+<li><a id="org467c646"></a>配置 <code>about:config</code><br>
 <div class="outline-text-5" id="text-2-1-2-1">
 <pre class="example">
 toolkit.legacyUserProfileCustomizations.stylesheets // 改成 true, 修改此行配置后，才会读取 chrome 文件夹中的配置
@@ -104,7 +104,7 @@ browser.tabs.drawInTitlebar // 改为 true
 </pre>
 </div>
 </li>
-<li><a id="orgc5fe593"></a>修改文件 <code>userChrome.css</code><br>
+<li><a id="orgb4db2a5"></a>修改文件 <code>userChrome.css</code><br>
 <div class="outline-text-5" id="text-2-1-2-2">
 <p>
 隐藏标签栏主要是以下几行 css 在发挥作用，文件位于 <code>${FIREFOX_PROFILE}/chrome/userChrome.css</code>
@@ -139,12 +139,12 @@ browser.tabs.drawInTitlebar // 改为 true
 </ol>
 </div>
 </div>
-<div id="outline-container-orge1c6bb8" class="outline-3">
-<h3 id="orge1c6bb8"><span class="section-number-3">2.2.</span> 暗色网页</h3>
+<div id="outline-container-org6e3d5f4" class="outline-3">
+<h3 id="org6e3d5f4"><span class="section-number-3">2.2.</span> 暗色网页</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org2ce4727" class="outline-4">
-<h4 id="org2ce4727"><span class="section-number-4">2.2.1.</span> 依赖插件</h4>
+<div id="outline-container-org9487215" class="outline-4">
+<h4 id="org9487215"><span class="section-number-4">2.2.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以根据 firefox 主题自动切换亮暗色。
@@ -155,15 +155,15 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </p>
 </div>
 </div>
-<div id="outline-container-org4d3f3dd" class="outline-4">
-<h4 id="org4d3f3dd"><span class="section-number-4">2.2.2.</span> 修改 toolbar 颜色和 about:blank 颜色</h4>
+<div id="outline-container-orgf1a6065" class="outline-4">
+<h4 id="orgf1a6065"><span class="section-number-4">2.2.2.</span> 修改 toolbar 颜色和 about:blank 颜色</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 我用的火狐主题是继承的 GTK 主题，为了保持亮暗色下 toolbar 和 about:blank 页面的颜色统一，修改了以下文件，同样是在 chrome1 文件夹下。
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org1280a84"></a>配置 <code>userChrome.css</code><br>
+<li><a id="orga961002"></a>配置 <code>userChrome.css</code><br>
 <div class="outline-text-5" id="text-2-2-2-1">
 <div class="org-src-container">
 <pre class="src src-css">#urlbar #urlbar-background,
@@ -187,7 +187,7 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </div>
 </div>
 </li>
-<li><a id="org2aa941d"></a>配置 <code>userContent.css</code><br>
+<li><a id="org5ccd697"></a>配置 <code>userContent.css</code><br>
 <div class="outline-text-5" id="text-2-2-2-2">
 <div class="org-src-container">
 <pre class="src src-css">@media (prefers-color-scheme: dark) {
@@ -209,12 +209,12 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </div>
 </div>
 
-<div id="outline-container-org18cdf88" class="outline-3">
-<h3 id="org18cdf88"><span class="section-number-3">2.3.</span> rss 工具</h3>
+<div id="outline-container-orgfb23cbc" class="outline-3">
+<h3 id="orgfb23cbc"><span class="section-number-3">2.3.</span> rss 工具</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-org8416aae" class="outline-4">
-<h4 id="org8416aae"><span class="section-number-4">2.3.1.</span> 依赖插件</h4>
+<div id="outline-container-orgae10d51" class="outline-4">
+<h4 id="orgae10d51"><span class="section-number-4">2.3.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 rss 个人还是感觉和浏览器一直用方便，更新及时，还能直接搭配 ff 的其他插件。
@@ -230,12 +230,12 @@ rss 个人还是感觉和浏览器一直用方便，更新及时，还能直接�
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb3ec71" class="outline-3">
-<h3 id="orgeb3ec71"><span class="section-number-3">2.4.</span> 下载网页</h3>
+<div id="outline-container-org008e1a6" class="outline-3">
+<h3 id="org008e1a6"><span class="section-number-3">2.4.</span> 下载网页</h3>
 <div class="outline-text-3" id="text-2-4">
 </div>
-<div id="outline-container-orgfe4bc1a" class="outline-4">
-<h4 id="orgfe4bc1a"><span class="section-number-4">2.4.1.</span> 依赖插件</h4>
+<div id="outline-container-org232f57e" class="outline-4">
+<h4 id="org232f57e"><span class="section-number-4">2.4.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 singlefile，将整个网页下载到一个文件，适合我这样有收藏癖的人（不过现在主要用浏览器外的 monilith 了）。
@@ -247,12 +247,12 @@ singlefile，将整个网页下载到一个文件，适合我这样有收藏癖�
 </div>
 </div>
 </div>
-<div id="outline-container-orgc708a06" class="outline-3">
-<h3 id="orgc708a06"><span class="section-number-3">2.5.</span> 去广告</h3>
+<div id="outline-container-org5872ec3" class="outline-3">
+<h3 id="org5872ec3"><span class="section-number-3">2.5.</span> 去广告</h3>
 <div class="outline-text-3" id="text-2-5">
 </div>
-<div id="outline-container-org9a2722b" class="outline-4">
-<h4 id="org9a2722b"><span class="section-number-4">2.5.1.</span> 依赖插件</h4>
+<div id="outline-container-orge5e1dec" class="outline-4">
+<h4 id="orge5e1dec"><span class="section-number-4">2.5.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <p>
 ublock origin 简单好用，足够稳定。
@@ -264,12 +264,12 @@ ublock origin 简单好用，足够稳定。
 </div>
 </div>
 </div>
-<div id="outline-container-orgb9249b2" class="outline-3">
-<h3 id="orgb9249b2"><span class="section-number-3">2.6.</span> 隐藏网页图片</h3>
+<div id="outline-container-org6f4c492" class="outline-3">
+<h3 id="org6f4c492"><span class="section-number-3">2.6.</span> 隐藏网页图片</h3>
 <div class="outline-text-3" id="text-2-6">
 </div>
-<div id="outline-container-org7312a41" class="outline-4">
-<h4 id="org7312a41"><span class="section-number-4">2.6.1.</span> 依赖插件</h4>
+<div id="outline-container-org611b82d" class="outline-4">
+<h4 id="org611b82d"><span class="section-number-4">2.6.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-6-1">
 <p>
 hide-images 划水必备插件。
@@ -283,12 +283,12 @@ hide-images 划水必备插件。
 </div>
 </div>
 
-<div id="outline-container-orga92c468" class="outline-2">
-<h2 id="orga92c468"><span class="section-number-2">3.</span> 其他设置</h2>
+<div id="outline-container-org160b3e1" class="outline-2">
+<h2 id="org160b3e1"><span class="section-number-2">3.</span> 其他设置</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgc336517" class="outline-3">
-<h3 id="orgc336517"><span class="section-number-3">3.1.</span> 窗口内全屏</h3>
+<div id="outline-container-org318b40a" class="outline-3">
+<h3 id="org318b40a"><span class="section-number-3">3.1.</span> 窗口内全屏</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 如果需要在窗口内全屏的话，即隐藏 toolbar 和 tabbar 的话，那么可以使用以下 <code>about:config</code> 中的 flag:
@@ -298,19 +298,19 @@ hide-images 划水必备插件。
 </div>
 </div>
 </div>
-<div id="outline-container-org5ade930" class="outline-2">
-<h2 id="org5ade930"><span class="section-number-2">4.</span> 通过 onmi 来修改按键</h2>
+<div id="outline-container-org82b54f9" class="outline-2">
+<h2 id="org82b54f9"><span class="section-number-2">4.</span> 通过 onmi 来修改按键</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org8a6d61b" class="outline-3">
-<h3 id="org8a6d61b"><span class="section-number-3">4.1.</span> 编辑默认快捷键</h3>
+<div id="outline-container-org917c67f" class="outline-3">
+<h3 id="org917c67f"><span class="section-number-3">4.1.</span> 编辑默认快捷键</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 如果想要编辑 firefox 量子的默认快捷键，比较方便的是编辑 omni.ja 。
 </p>
 </div>
-<div id="outline-container-orgf3f9ffd" class="outline-4">
-<h4 id="orgf3f9ffd"><span class="section-number-4">4.1.1.</span> 得到 omni.ja 文件</h4>
+<div id="outline-container-orgba24906" class="outline-4">
+<h4 id="orgba24906"><span class="section-number-4">4.1.1.</span> 得到 omni.ja 文件</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
 在 Archlinux 下可以通过
@@ -326,8 +326,8 @@ firefox /usr/lib/firefox/omni.ja
 </p>
 </div>
 </div>
-<div id="outline-container-org40492a6" class="outline-4">
-<h4 id="org40492a6"><span class="section-number-4">4.1.2.</span> 解压 omni.ja 文件</h4>
+<div id="outline-container-org642f92d" class="outline-4">
+<h4 id="org642f92d"><span class="section-number-4">4.1.2.</span> 解压 omni.ja 文件</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <p>
 注意：请备份 omni.ja 文件
@@ -345,12 +345,12 @@ $ unzip ../omni.ja.bak
 </div>
 </div>
 </div>
-<div id="outline-container-orgf13a47c" class="outline-4">
-<h4 id="orgf13a47c"><span class="section-number-4">4.1.3.</span> 编辑快捷键</h4>
+<div id="outline-container-org87458a0" class="outline-4">
+<h4 id="org87458a0"><span class="section-number-4">4.1.3.</span> 编辑快捷键</h4>
 <div class="outline-text-4" id="text-4-1-3">
 </div>
 <ol class="org-ol">
-<li><a id="org07bf50c"></a>两个文件<br>
+<li><a id="org6bc4bd6"></a>两个文件<br>
 <div class="outline-text-5" id="text-4-1-3-1">
 <p>
 现在就进入了正题，要开始编辑快捷键了。
@@ -384,7 +384,7 @@ chrome/browser/content/browser/browser.xhtml
 </p>
 </div>
 </li>
-<li><a id="orgf15e6b5"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
+<li><a id="orgff6a735"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
 <div class="outline-text-5" id="text-4-1-3-2">
 <p>
 如果想使用 &lt;C-s&gt; 进行类似 Emacs 中的向下搜索，在 firefox 中这个动作的默认快捷键是 &lt;C-g&gt;, 既然 ff 中有还有字母的这个快捷键，那么在 <code>localization/en-US/browser/browserSets.ftl</code> 就应该有 <code>G</code> 这个定义，要做的就变成了中找到 <code>G</code> 并改成 <code>S</code>, 结果如下：
@@ -402,7 +402,7 @@ search-find-again-shortcut =
 </pre>
 </div>
 </li>
-<li><a id="org2dcf29f"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
+<li><a id="orgb3dc390"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
 <div class="outline-text-5" id="text-4-1-3-3">
 <p>
 这个例子相对就麻烦一些，因为在 <code>chrome/browser/content/browser/browser.xhtml</code> 中默认没有 &lt;M-j&gt; 类似的快捷键。就不能直接在 <code>localization/en-US/browser/browserSets.ftl</code> 直接修改定义来完成这个了。
@@ -436,7 +436,7 @@ window-new-shortcut =
 </p>
 </div>
 </li>
-<li><a id="org520e1eb"></a>其他<br>
+<li><a id="org633979d"></a>其他<br>
 <div class="outline-text-5" id="text-4-1-3-4">
 <p>
 不想要的直接注释掉就好了
@@ -449,8 +449,8 @@ window-new-shortcut =
 </li>
 </ol>
 </div>
-<div id="outline-container-orga350888" class="outline-4">
-<h4 id="orga350888"><span class="section-number-4">4.1.4.</span> 重新打包</h4>
+<div id="outline-container-org76c3ca6" class="outline-4">
+<h4 id="org76c3ca6"><span class="section-number-4">4.1.4.</span> 重新打包</h4>
 <div class="outline-text-4" id="text-4-1-4">
 <p>
 等到修改满意以后要做的就是怎么拿出来怎么送回去了。
@@ -463,8 +463,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 </div>
-<div id="outline-container-orge91ce3b" class="outline-4">
-<h4 id="orge91ce3b"><span class="section-number-4">4.1.5.</span> 启动 firefox</h4>
+<div id="outline-container-org4fc1552" class="outline-4">
+<h4 id="org4fc1552"><span class="section-number-4">4.1.5.</span> 启动 firefox</h4>
 <div class="outline-text-4" id="text-4-1-5">
 <p>
 首先需要使用 <code>firefox --purgecaches</code> 来重载 omni.ja, 这样修改的才会生效。
@@ -472,8 +472,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 
-<div id="outline-container-orgc27307d" class="outline-4">
-<h4 id="orgc27307d"><span class="section-number-4">4.1.6.</span> 配置 Vimium</h4>
+<div id="outline-container-orgf951ea2" class="outline-4">
+<h4 id="orgf951ea2"><span class="section-number-4">4.1.6.</span> 配置 Vimium</h4>
 <div class="outline-text-4" id="text-4-1-6">
 <p>
 页面内导航，我选用了 vimium, 然后将 Vimium 的快捷键修改了一下。
@@ -494,8 +494,8 @@ map &lt;a-j&gt; LinkHints.activateModeToOpenInNewTab
 </div>
 </div>
 
-<div id="outline-container-org7e24ff7" class="outline-4">
-<h4 id="org7e24ff7"><span class="section-number-4">4.1.7.</span> 后话</h4>
+<div id="outline-container-orgdb6c819" class="outline-4">
+<h4 id="orgdb6c819"><span class="section-number-4">4.1.7.</span> 后话</h4>
 <div class="outline-text-4" id="text-4-1-7">
 <p>
 firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快地使用了。
@@ -503,8 +503,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-orgcc86c1d" class="outline-4">
-<h4 id="orgcc86c1d"><span class="section-number-4">4.1.8.</span> 参考</h4>
+<div id="outline-container-orgf2fb790" class="outline-4">
+<h4 id="orgf2fb790"><span class="section-number-4">4.1.8.</span> 参考</h4>
 <div class="outline-text-4" id="text-4-1-8">
 <ul class="org-ul">
 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)</a></li>
@@ -515,7 +515,11 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 </div>
-<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-firefox.html">firefox</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2020-07-28</div><div class="post-tags">联系邮箱：aeghn_at_outlook_dot_com</div></div></div>
+<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-firefox.html">firefox</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2020-07-28</div><div class="post-tags">联系邮箱：aeghnAToutlookDOTcom</div></div>
+<div id="other-posts">
+<a href="https://wangz.me/index.html">其他帖子</a>
+</div>
+</div>
 <div id="postamble" class="status">
 <center><span> Powered by Org-mode and</span> <a href="https://github.com/aeghn/org-static-blog"> a fork</a><span> of</span><a href="https://github.com/bastibe/org-static-blog"> org-static-blog</a> </center></div>
 </body>

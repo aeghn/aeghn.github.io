@@ -4,9 +4,9 @@
 <title><![CDATA[wangz.me]]></title>
 <description><![CDATA[wangz.me]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Sun, 28 Nov 2021 19:27:12 +0800</lastBuildDate>
+<lastBuildDate>Sun, 28 Nov 2021 23:50:48 +0800</lastBuildDate>
 <item>
-  <title><![CDATA[如何在无法显卡直通的 KVM 使用愉快地使用 Windows]]></title>
+  <title><![CDATA[如何在无法显卡直通的 KVM 中愉快地使用 Windows]]></title>
   <description><![CDATA[
 
    <div class="post-tags"><a href="https://wangz.me/tag-windows.html">Windows</a> <a href="https://wangz.me/tag-linux.html">Linux</a> <a href="https://wangz.me/tag-kvm.html">KVM</a> <a href="https://wangz.me/tag-i3wm.html">i3wm</a> <a href="https://wangz.me/tag-xkeysnail.html">xkeysnail</a> </div>
@@ -16,14 +16,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge4b3a58">1. 「引」</a></li>
-<li><a href="#org9f5ad7f">2. 在物理硬盘上安装 Windows</a></li>
-<li><a href="#org6961d07">3. 直通硬盘中的 Windows 到 Qemu 中进行启动</a></li>
-<li><a href="#orgba98303">4. 使用 FreeRDP 链接</a></li>
-<li><a href="#orgc45cbb4">5. 与 i3wm（或者其他 Window Manager） 交互</a>
+<li><a href="#orgb65ca2c">1. 「引」</a></li>
+<li><a href="#org1e959b7">2. 在物理硬盘上安装 Windows</a></li>
+<li><a href="#org0a97c78">3. 直通硬盘中的 Windows 到 Qemu 中进行启动</a></li>
+<li><a href="#orgd5542ba">4. 使用 FreeRDP 链接</a></li>
+<li><a href="#orga73c2a8">5. 与 i3wm（或者其他 Window Manager） 交互</a>
 <ul>
-<li><a href="#org284812b">5.1. xkeysnail 配置参考如下：</a></li>
-<li><a href="#org4dc2c3b">5.2. 使用 Super-Control-w 切换当前工作区和 Windows Guest 所在工作区</a></li>
+<li><a href="#orge72e382">5.1. xkeysnail 配置参考如下：</a></li>
+<li><a href="#org37c08a7">5.2. 使用 Super-Control-w 切换当前工作区和 Windows Guest 所在工作区</a></li>
 </ul>
 </li>
 </ul>
@@ -35,8 +35,8 @@ Windows 就应该活在虚拟机里。
 </p>
 </blockquote>
 
-<div id="outline-container-orge4b3a58" class="outline-2">
-<h2 id="orge4b3a58"><span class="section-number-2">1.</span> 「引」</h2>
+<div id="outline-container-orgb65ca2c" class="outline-2">
+<h2 id="orgb65ca2c"><span class="section-number-2">1.</span> 「引」</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 本文简要地描述了怎么在 GNU/Linux 下愉快地使用无显卡直通的 Windows 虚拟机。
@@ -44,8 +44,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-org9f5ad7f" class="outline-2">
-<h2 id="org9f5ad7f"><span class="section-number-2">2.</span> 在物理硬盘上安装 Windows</h2>
+<div id="outline-container-org1e959b7" class="outline-2">
+<h2 id="org1e959b7"><span class="section-number-2">2.</span> 在物理硬盘上安装 Windows</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 网上有大把教程，不再赘述。
@@ -61,8 +61,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-org6961d07" class="outline-2">
-<h2 id="org6961d07"><span class="section-number-2">3.</span> 直通硬盘中的 Windows 到 Qemu 中进行启动</h2>
+<div id="outline-container-org0a97c78" class="outline-2">
+<h2 id="org0a97c78"><span class="section-number-2">3.</span> 直通硬盘中的 Windows 到 Qemu 中进行启动</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 启动命令如下
@@ -95,8 +95,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-orgba98303" class="outline-2">
-<h2 id="orgba98303"><span class="section-number-2">4.</span> 使用 FreeRDP 链接</h2>
+<div id="outline-container-orgd5542ba" class="outline-2">
+<h2 id="orgd5542ba"><span class="section-number-2">4.</span> 使用 FreeRDP 链接</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 由 Gentoo 群的部分群友提示，使用 rdp 链接要比直接使用 spice 更好一些，实际体验确实如此，spice 占用了更多的资源但是表现并不如 rdp 流程。
@@ -122,8 +122,8 @@ Windows 就应该活在虚拟机里。
 </div>
 </div>
 
-<div id="outline-container-orgc45cbb4" class="outline-2">
-<h2 id="orgc45cbb4"><span class="section-number-2">5.</span> 与 i3wm（或者其他 Window Manager） 交互</h2>
+<div id="outline-container-orga73c2a8" class="outline-2">
+<h2 id="orga73c2a8"><span class="section-number-2">5.</span> 与 i3wm（或者其他 Window Manager） 交互</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 在 X11 下有这样一个问题，就是因为 qemu 和 rdp 会抓住整个键盘，所以所有快捷键的直接操作对象都是虚拟机中的内容。
@@ -146,12 +146,18 @@ Windows 就应该活在虚拟机里。
 </p>
 </div>
 
-<div id="outline-container-org284812b" class="outline-3">
-<h3 id="org284812b"><span class="section-number-3">5.1.</span> xkeysnail 配置参考如下：</h3>
+<div id="outline-container-orge72e382" class="outline-3">
+<h3 id="orge72e382"><span class="section-number-3">5.1.</span> xkeysnail 配置参考如下：</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
-<pre class="src src-python">define_keymap(re.compile("w10ltscqemu|w10ltscrdp"), {
-    # Ctrl+Alt+j/k to switch next/previous tab
+<pre class="src src-python">define_keymap(re.compile(".*"), {
+    # 用来切换 windows guest 所在的工作区和其他工作区的热键
+    # 其中的 =/home/chin/.scripts= 是我的常用脚本目录
+    # 脚本在下节给出了
+    K("Super-ESC"): launch(["/home/chin/.scripts/show_windows"])
+}, "All windows")
+
+define_keymap(re.compile("FOO_WINDOW_CLASS"), {
     K("Super-KEY_1"): launch(["i3-msg", "workspace", "1"]),
     K("Super-KEY_2"): launch(["i3-msg", "workspace", "2"]),
     K("Super-KEY_3"): launch(["i3-msg", "workspace", "3"]),
@@ -161,20 +167,16 @@ Windows 就应该活在虚拟机里。
     K("Super-KEY_7"): launch(["i3-msg", "workspace", "7"]),
     K("Super-KEY_8"): launch(["i3-msg", "workspace", "8"]),
 
+    # 使用 Mod + Shift + q 直接关闭虚拟机内的程序，模拟 Alt+F4
     K("Super-Shift-q"): K("M-F4"),
-    K("Super-C-w"): launch(["/home/chin/.scripts/show_windows"])
 }, "Windows guest")
 </pre>
 </div>
-
-<p>
-其中的 <code>/home/chin</code> 是我的 home 目录。
-</p>
 </div>
 </div>
 
-<div id="outline-container-org4dc2c3b" class="outline-3">
-<h3 id="org4dc2c3b"><span class="section-number-3">5.2.</span> 使用 Super-Control-w 切换当前工作区和 Windows Guest 所在工作区</h3>
+<div id="outline-container-org37c08a7" class="outline-3">
+<h3 id="org37c08a7"><span class="section-number-3">5.2.</span> 使用 Super-Control-w 切换当前工作区和 Windows Guest 所在工作区</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 以下的 bash 函数可以做到在 windows guest 工作区和当前工作区切换的功能。
@@ -204,7 +206,11 @@ show_windows
 </div>
 </div>
 </div>
-<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">Windows</a> <a href="https://wangz.me/tag-linux.html">Linux</a> <a href="https://wangz.me/tag-kvm.html">KVM</a> <a href="https://wangz.me/tag-i3wm.html">i3wm</a> <a href="https://wangz.me/tag-xkeysnail.html">xkeysnail</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2021-11-24</div><div class="post-tags">联系邮箱：aeghn_at_outlook_dot_com</div></div>]]></description>
+<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">Windows</a> <a href="https://wangz.me/tag-linux.html">Linux</a> <a href="https://wangz.me/tag-kvm.html">KVM</a> <a href="https://wangz.me/tag-i3wm.html">i3wm</a> <a href="https://wangz.me/tag-xkeysnail.html">xkeysnail</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2021-11-24</div><div class="post-tags">联系邮箱：aeghnAToutlookDOTcom</div></div>
+<div id="other-posts">
+<a href="https://wangz.me/index.html">其他帖子</a>
+</div>
+]]></description>
   <category><![CDATA[Windows]]></category>
   <category><![CDATA[Linux]]></category>
   <category><![CDATA[KVM]]></category>
@@ -224,39 +230,39 @@ show_windows
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org883e990">1. 键位自定义</a>
+<li><a href="#org6bb2c7c">1. 键位自定义</a>
 <ul>
-<li><a href="#orgbfdb809">1.1. Auto Hot Key</a></li>
+<li><a href="#org1ed6eca">1.1. Auto Hot Key</a></li>
 </ul>
 </li>
-<li><a href="#org4417985">2. 终端</a>
+<li><a href="#orgbb57ba5">2. 终端</a>
 <ul>
-<li><a href="#orgd7bde42">2.1. 安装 Windows Terminal</a></li>
-<li><a href="#orgfc1018d">2.2. 安装 msys2</a></li>
+<li><a href="#org0a39369">2.1. 安装 Windows Terminal</a></li>
+<li><a href="#org80460d9">2.2. 安装 msys2</a></li>
 </ul>
 </li>
-<li><a href="#org9a8d2f5">3. Emacs</a>
+<li><a href="#org51e73f8">3. Emacs</a>
 <ul>
-<li><a href="#org87b6a09">3.1. 安装 gccemacs</a></li>
-<li><a href="#orgcde4830">3.2. 添加环境变量</a></li>
-<li><a href="#orgfbd4eb9">3.3. 启动脚本</a></li>
-<li><a href="#orgfb214f9">3.4. 在任务栏创建快捷启动方式</a></li>
+<li><a href="#orga350006">3.1. 安装 gccemacs</a></li>
+<li><a href="#org69e6f82">3.2. 添加环境变量</a></li>
+<li><a href="#orgbc5950a">3.3. 启动脚本</a></li>
+<li><a href="#orgdbb83b5">3.4. 在任务栏创建快捷启动方式</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org883e990" class="outline-2">
-<h2 id="org883e990"><span class="section-number-2">1.</span> 键位自定义</h2>
+<div id="outline-container-org6bb2c7c" class="outline-2">
+<h2 id="org6bb2c7c"><span class="section-number-2">1.</span> 键位自定义</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgbfdb809" class="outline-3">
-<h3 id="orgbfdb809"><span class="section-number-3">1.1.</span> Auto Hot Key</h3>
+<div id="outline-container-org1ed6eca" class="outline-3">
+<h3 id="org1ed6eca"><span class="section-number-3">1.1.</span> Auto Hot Key</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgdeffa11" class="outline-4">
-<h4 id="orgdeffa11"><span class="section-number-4">1.1.1.</span> 解决 ctrl-space 问题</h4>
+<div id="outline-container-orgf296688" class="outline-4">
+<h4 id="orgf296688"><span class="section-number-4">1.1.1.</span> 解决 ctrl-space 问题</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 如果使用 Emacs 但不能使用 <code>C-SPACE</code> 来选择
@@ -277,27 +283,27 @@ show_windows
 </div>
 </div>
 
-<div id="outline-container-org4417985" class="outline-2">
-<h2 id="org4417985"><span class="section-number-2">2.</span> 终端</h2>
+<div id="outline-container-orgbb57ba5" class="outline-2">
+<h2 id="orgbb57ba5"><span class="section-number-2">2.</span> 终端</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgd7bde42" class="outline-3">
-<h3 id="orgd7bde42"><span class="section-number-3">2.1.</span> 安装 Windows Terminal</h3>
+<div id="outline-container-org0a39369" class="outline-3">
+<h3 id="org0a39369"><span class="section-number-3">2.1.</span> 安装 Windows Terminal</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Windows Terminal 确实是 Windows 下颜值比较高的终端软件了。直接在 Windows Store 中就可以安装。
 </p>
 </div>
 </div>
-<div id="outline-container-orgfc1018d" class="outline-3">
-<h3 id="orgfc1018d"><span class="section-number-3">2.2.</span> 安装 msys2</h3>
+<div id="outline-container-org80460d9" class="outline-3">
+<h3 id="org80460d9"><span class="section-number-3">2.2.</span> 安装 msys2</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 不会用 Windows 下的 Cmd 和 powershell。使用 bash 对我来说还是更舒适一些。
 </p>
 </div>
-<div id="outline-container-org46e400a" class="outline-4">
-<h4 id="org46e400a"><span class="section-number-4">2.2.1.</span> 下载包</h4>
+<div id="outline-container-org03bc563" class="outline-4">
+<h4 id="org03bc563"><span class="section-number-4">2.2.1.</span> 下载包</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 下载 Msys2 安装包，国外下载太慢，万幸清华提供了该软件的镜像。
@@ -308,8 +314,8 @@ Windows Terminal 确实是 Windows 下颜值比较高的终端软件了。直接
 </p>
 </div>
 </div>
-<div id="outline-container-orgcc4b0d0" class="outline-4">
-<h4 id="orgcc4b0d0"><span class="section-number-4">2.2.2.</span> 设置源</h4>
+<div id="outline-container-orgbab892e" class="outline-4">
+<h4 id="orgbab892e"><span class="section-number-4">2.2.2.</span> 设置源</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 原因同上。
@@ -325,16 +331,16 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 </div>
 
-<div id="outline-container-org9a8d2f5" class="outline-2">
-<h2 id="org9a8d2f5"><span class="section-number-2">3.</span> Emacs</h2>
+<div id="outline-container-org51e73f8" class="outline-2">
+<h2 id="org51e73f8"><span class="section-number-2">3.</span> Emacs</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org87b6a09" class="outline-3">
-<h3 id="org87b6a09"><span class="section-number-3">3.1.</span> 安装 gccemacs</h3>
+<div id="outline-container-orga350006" class="outline-3">
+<h3 id="orga350006"><span class="section-number-3">3.1.</span> 安装 gccemacs</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org77505e0" class="outline-4">
-<h4 id="org77505e0"><span class="section-number-4">3.1.1.</span> 下载源</h4>
+<div id="outline-container-org0feb787" class="outline-4">
+<h4 id="org0feb787"><span class="section-number-4">3.1.1.</span> 下载源</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <div class="org-src-container">
 <pre class="src src-bash">git clone -b feature/native-comp --depth=1 https://gitee.com/mirrors/emacs.git
@@ -342,8 +348,8 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 </div>
 </div>
-<div id="outline-container-org64510e5" class="outline-4">
-<h4 id="org64510e5"><span class="section-number-4">3.1.2.</span> 安装 MINGW64 依赖</h4>
+<div id="outline-container-org96feeb3" class="outline-4">
+<h4 id="org96feeb3"><span class="section-number-4">3.1.2.</span> 安装 MINGW64 依赖</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <div class="org-src-container">
 <pre class="src src-bash">$ pacman -S --needed base-devel \
@@ -364,8 +370,8 @@ sed -i '1 i Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/msys/$arch' /etc
 </div>
 </div>
 </div>
-<div id="outline-container-org38d5e7f" class="outline-4">
-<h4 id="org38d5e7f"><span class="section-number-4">3.1.3.</span> 编译</h4>
+<div id="outline-container-org65521ac" class="outline-4">
+<h4 id="org65521ac"><span class="section-number-4">3.1.3.</span> 编译</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <div class="org-src-container">
 <pre class="src src-bash">./autogen.sh
@@ -377,8 +383,8 @@ make install
 </div>
 </div>
 </div>
-<div id="outline-container-orgcde4830" class="outline-3">
-<h3 id="orgcde4830"><span class="section-number-3">3.2.</span> 添加环境变量</h3>
+<div id="outline-container-org69e6f82" class="outline-3">
+<h3 id="org69e6f82"><span class="section-number-3">3.2.</span> 添加环境变量</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 将以下内容添加到
@@ -396,8 +402,8 @@ make install
 </div>
 </div>
 
-<div id="outline-container-orgfbd4eb9" class="outline-3">
-<h3 id="orgfbd4eb9"><span class="section-number-3">3.3.</span> 启动脚本</h3>
+<div id="outline-container-orgbc5950a" class="outline-3">
+<h3 id="orgbc5950a"><span class="section-number-3">3.3.</span> 启动脚本</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
 <pre class="src src-bat">@ECHO OFF
@@ -412,8 +418,8 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -a C:\msys64\mingw64\bin\runemacs.exe 
 </div>
 </div>
 
-<div id="outline-container-orgfb214f9" class="outline-3">
-<h3 id="orgfb214f9"><span class="section-number-3">3.4.</span> 在任务栏创建快捷启动方式</h3>
+<div id="outline-container-orgdbb83b5" class="outline-3">
+<h3 id="orgdbb83b5"><span class="section-number-3">3.4.</span> 在任务栏创建快捷启动方式</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 在 Windows 下使用 Emacs daemon + Emacs client 的方式可能是最完美的方式了。因为每次启动一个 Client 显然要比启动完整的 Emacs 快很多，并且没带来其他方面的劣势。
@@ -435,7 +441,11 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -a C:\msys64\mingw64\bin\runemacs.exe 
 </div>
 </div>
 </div>
-<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">windows</a> <a href="https://wangz.me/tag-emacs.html">emacs</a> <a href="https://wangz.me/tag-terminal.html">terminal</a> <a href="https://wangz.me/tag-autohotkey.html">autohotkey</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2021-06-27</div><div class="post-tags">联系邮箱：aeghn_at_outlook_dot_com</div></div>]]></description>
+<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-windows.html">windows</a> <a href="https://wangz.me/tag-emacs.html">emacs</a> <a href="https://wangz.me/tag-terminal.html">terminal</a> <a href="https://wangz.me/tag-autohotkey.html">autohotkey</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2021-06-27</div><div class="post-tags">联系邮箱：aeghnAToutlookDOTcom</div></div>
+<div id="other-posts">
+<a href="https://wangz.me/index.html">其他帖子</a>
+</div>
+]]></description>
   <category><![CDATA[windows]]></category>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[terminal]]></category>
@@ -454,25 +464,25 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -a C:\msys64\mingw64\bin\runemacs.exe 
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org66d9378">1. 预览图</a></li>
-<li><a href="#orged57d7d">2. 插件推荐</a>
+<li><a href="#org067992f">1. 预览图</a></li>
+<li><a href="#org89b5a0f">2. 插件推荐</a>
 <ul>
-<li><a href="#org2e011fd">2.1. 树状标签栏</a></li>
-<li><a href="#orge1c6bb8">2.2. 暗色网页</a></li>
-<li><a href="#org18cdf88">2.3. rss 工具</a></li>
-<li><a href="#orgeb3ec71">2.4. 下载网页</a></li>
-<li><a href="#orgc708a06">2.5. 去广告</a></li>
-<li><a href="#orgb9249b2">2.6. 隐藏网页图片</a></li>
+<li><a href="#orgafc3856">2.1. 树状标签栏</a></li>
+<li><a href="#org6e3d5f4">2.2. 暗色网页</a></li>
+<li><a href="#orgfb23cbc">2.3. rss 工具</a></li>
+<li><a href="#org008e1a6">2.4. 下载网页</a></li>
+<li><a href="#org5872ec3">2.5. 去广告</a></li>
+<li><a href="#org6f4c492">2.6. 隐藏网页图片</a></li>
 </ul>
 </li>
-<li><a href="#orga92c468">3. 其他设置</a>
+<li><a href="#org160b3e1">3. 其他设置</a>
 <ul>
-<li><a href="#orgc336517">3.1. 窗口内全屏</a></li>
+<li><a href="#org318b40a">3.1. 窗口内全屏</a></li>
 </ul>
 </li>
-<li><a href="#org5ade930">4. 通过 onmi 来修改按键</a>
+<li><a href="#org82b54f9">4. 通过 onmi 来修改按键</a>
 <ul>
-<li><a href="#org8a6d61b">4.1. 编辑默认快捷键</a></li>
+<li><a href="#org917c67f">4.1. 编辑默认快捷键</a></li>
 </ul>
 </li>
 </ul>
@@ -480,24 +490,24 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -a C:\msys64\mingw64\bin\runemacs.exe 
 </nav>
 
 
-<div id="outline-container-org66d9378" class="outline-2">
-<h2 id="org66d9378"><span class="section-number-2">1.</span> 预览图</h2>
+<div id="outline-container-org067992f" class="outline-2">
+<h2 id="org067992f"><span class="section-number-2">1.</span> 预览图</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://wangz.me/pics/firefox_screenshot.png">firefox 截图</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orged57d7d" class="outline-2">
-<h2 id="orged57d7d"><span class="section-number-2">2.</span> 插件推荐</h2>
+<div id="outline-container-org89b5a0f" class="outline-2">
+<h2 id="org89b5a0f"><span class="section-number-2">2.</span> 插件推荐</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org2e011fd" class="outline-3">
-<h3 id="org2e011fd"><span class="section-number-3">2.1.</span> 树状标签栏</h3>
+<div id="outline-container-orgafc3856" class="outline-3">
+<h3 id="orgafc3856"><span class="section-number-3">2.1.</span> 树状标签栏</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgafcad27" class="outline-4">
-<h4 id="orgafcad27"><span class="section-number-4">2.1.1.</span> 依赖插件</h4>
+<div id="outline-container-org1c1b67f" class="outline-4">
+<h4 id="org1c1b67f"><span class="section-number-4">2.1.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 原来使用的 Tree Style Tabs, 现在发现 sidebery 更好看，操作也更友好一些。
@@ -512,15 +522,15 @@ sidebery 地址：<a href="https://github.com/mbnuqw/sidebery">https://github.co
 </p>
 </div>
 </div>
-<div id="outline-container-orgb1a97e5" class="outline-4">
-<h4 id="orgb1a97e5"><span class="section-number-4">2.1.2.</span> 隐藏 tabbar</h4>
+<div id="outline-container-org5f1bbf2" class="outline-4">
+<h4 id="org5f1bbf2"><span class="section-number-4">2.1.2.</span> 隐藏 tabbar</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 既然使用侧边树状标签栏，就没必要使用 tabbar 了，浪费空间不说，还难用，直接留给我的 i3bar。
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org21384e5"></a>配置 <code>about:config</code><br>
+<li><a id="org467c646"></a>配置 <code>about:config</code><br>
 <div class="outline-text-5" id="text-2-1-2-1">
 <pre class="example">
 toolkit.legacyUserProfileCustomizations.stylesheets // 改成 true, 修改此行配置后，才会读取 chrome 文件夹中的配置
@@ -528,7 +538,7 @@ browser.tabs.drawInTitlebar // 改为 true
 </pre>
 </div>
 </li>
-<li><a id="orgc5fe593"></a>修改文件 <code>userChrome.css</code><br>
+<li><a id="orgb4db2a5"></a>修改文件 <code>userChrome.css</code><br>
 <div class="outline-text-5" id="text-2-1-2-2">
 <p>
 隐藏标签栏主要是以下几行 css 在发挥作用，文件位于 <code>${FIREFOX_PROFILE}/chrome/userChrome.css</code>
@@ -563,12 +573,12 @@ browser.tabs.drawInTitlebar // 改为 true
 </ol>
 </div>
 </div>
-<div id="outline-container-orge1c6bb8" class="outline-3">
-<h3 id="orge1c6bb8"><span class="section-number-3">2.2.</span> 暗色网页</h3>
+<div id="outline-container-org6e3d5f4" class="outline-3">
+<h3 id="org6e3d5f4"><span class="section-number-3">2.2.</span> 暗色网页</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org2ce4727" class="outline-4">
-<h4 id="org2ce4727"><span class="section-number-4">2.2.1.</span> 依赖插件</h4>
+<div id="outline-container-org9487215" class="outline-4">
+<h4 id="org9487215"><span class="section-number-4">2.2.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以根据 firefox 主题自动切换亮暗色。
@@ -579,15 +589,15 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </p>
 </div>
 </div>
-<div id="outline-container-org4d3f3dd" class="outline-4">
-<h4 id="org4d3f3dd"><span class="section-number-4">2.2.2.</span> 修改 toolbar 颜色和 about:blank 颜色</h4>
+<div id="outline-container-orgf1a6065" class="outline-4">
+<h4 id="orgf1a6065"><span class="section-number-4">2.2.2.</span> 修改 toolbar 颜色和 about:blank 颜色</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 我用的火狐主题是继承的 GTK 主题，为了保持亮暗色下 toolbar 和 about:blank 页面的颜色统一，修改了以下文件，同样是在 chrome1 文件夹下。
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org1280a84"></a>配置 <code>userChrome.css</code><br>
+<li><a id="orga961002"></a>配置 <code>userChrome.css</code><br>
 <div class="outline-text-5" id="text-2-2-2-1">
 <div class="org-src-container">
 <pre class="src src-css">#urlbar #urlbar-background,
@@ -611,7 +621,7 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </div>
 </div>
 </li>
-<li><a id="org2aa941d"></a>配置 <code>userContent.css</code><br>
+<li><a id="org5ccd697"></a>配置 <code>userContent.css</code><br>
 <div class="outline-text-5" id="text-2-2-2-2">
 <div class="org-src-container">
 <pre class="src src-css">@media (prefers-color-scheme: dark) {
@@ -633,12 +643,12 @@ Darkreader 开源插件，主要功能为全局使用暗色网页，并且可以
 </div>
 </div>
 
-<div id="outline-container-org18cdf88" class="outline-3">
-<h3 id="org18cdf88"><span class="section-number-3">2.3.</span> rss 工具</h3>
+<div id="outline-container-orgfb23cbc" class="outline-3">
+<h3 id="orgfb23cbc"><span class="section-number-3">2.3.</span> rss 工具</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-org8416aae" class="outline-4">
-<h4 id="org8416aae"><span class="section-number-4">2.3.1.</span> 依赖插件</h4>
+<div id="outline-container-orgae10d51" class="outline-4">
+<h4 id="orgae10d51"><span class="section-number-4">2.3.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 rss 个人还是感觉和浏览器一直用方便，更新及时，还能直接搭配 ff 的其他插件。
@@ -654,12 +664,12 @@ rss 个人还是感觉和浏览器一直用方便，更新及时，还能直接�
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb3ec71" class="outline-3">
-<h3 id="orgeb3ec71"><span class="section-number-3">2.4.</span> 下载网页</h3>
+<div id="outline-container-org008e1a6" class="outline-3">
+<h3 id="org008e1a6"><span class="section-number-3">2.4.</span> 下载网页</h3>
 <div class="outline-text-3" id="text-2-4">
 </div>
-<div id="outline-container-orgfe4bc1a" class="outline-4">
-<h4 id="orgfe4bc1a"><span class="section-number-4">2.4.1.</span> 依赖插件</h4>
+<div id="outline-container-org232f57e" class="outline-4">
+<h4 id="org232f57e"><span class="section-number-4">2.4.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 singlefile，将整个网页下载到一个文件，适合我这样有收藏癖的人（不过现在主要用浏览器外的 monilith 了）。
@@ -671,12 +681,12 @@ singlefile，将整个网页下载到一个文件，适合我这样有收藏癖�
 </div>
 </div>
 </div>
-<div id="outline-container-orgc708a06" class="outline-3">
-<h3 id="orgc708a06"><span class="section-number-3">2.5.</span> 去广告</h3>
+<div id="outline-container-org5872ec3" class="outline-3">
+<h3 id="org5872ec3"><span class="section-number-3">2.5.</span> 去广告</h3>
 <div class="outline-text-3" id="text-2-5">
 </div>
-<div id="outline-container-org9a2722b" class="outline-4">
-<h4 id="org9a2722b"><span class="section-number-4">2.5.1.</span> 依赖插件</h4>
+<div id="outline-container-orge5e1dec" class="outline-4">
+<h4 id="orge5e1dec"><span class="section-number-4">2.5.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <p>
 ublock origin 简单好用，足够稳定。
@@ -688,12 +698,12 @@ ublock origin 简单好用，足够稳定。
 </div>
 </div>
 </div>
-<div id="outline-container-orgb9249b2" class="outline-3">
-<h3 id="orgb9249b2"><span class="section-number-3">2.6.</span> 隐藏网页图片</h3>
+<div id="outline-container-org6f4c492" class="outline-3">
+<h3 id="org6f4c492"><span class="section-number-3">2.6.</span> 隐藏网页图片</h3>
 <div class="outline-text-3" id="text-2-6">
 </div>
-<div id="outline-container-org7312a41" class="outline-4">
-<h4 id="org7312a41"><span class="section-number-4">2.6.1.</span> 依赖插件</h4>
+<div id="outline-container-org611b82d" class="outline-4">
+<h4 id="org611b82d"><span class="section-number-4">2.6.1.</span> 依赖插件</h4>
 <div class="outline-text-4" id="text-2-6-1">
 <p>
 hide-images 划水必备插件。
@@ -707,12 +717,12 @@ hide-images 划水必备插件。
 </div>
 </div>
 
-<div id="outline-container-orga92c468" class="outline-2">
-<h2 id="orga92c468"><span class="section-number-2">3.</span> 其他设置</h2>
+<div id="outline-container-org160b3e1" class="outline-2">
+<h2 id="org160b3e1"><span class="section-number-2">3.</span> 其他设置</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgc336517" class="outline-3">
-<h3 id="orgc336517"><span class="section-number-3">3.1.</span> 窗口内全屏</h3>
+<div id="outline-container-org318b40a" class="outline-3">
+<h3 id="org318b40a"><span class="section-number-3">3.1.</span> 窗口内全屏</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 如果需要在窗口内全屏的话，即隐藏 toolbar 和 tabbar 的话，那么可以使用以下 <code>about:config</code> 中的 flag:
@@ -722,19 +732,19 @@ hide-images 划水必备插件。
 </div>
 </div>
 </div>
-<div id="outline-container-org5ade930" class="outline-2">
-<h2 id="org5ade930"><span class="section-number-2">4.</span> 通过 onmi 来修改按键</h2>
+<div id="outline-container-org82b54f9" class="outline-2">
+<h2 id="org82b54f9"><span class="section-number-2">4.</span> 通过 onmi 来修改按键</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org8a6d61b" class="outline-3">
-<h3 id="org8a6d61b"><span class="section-number-3">4.1.</span> 编辑默认快捷键</h3>
+<div id="outline-container-org917c67f" class="outline-3">
+<h3 id="org917c67f"><span class="section-number-3">4.1.</span> 编辑默认快捷键</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 如果想要编辑 firefox 量子的默认快捷键，比较方便的是编辑 omni.ja 。
 </p>
 </div>
-<div id="outline-container-orgf3f9ffd" class="outline-4">
-<h4 id="orgf3f9ffd"><span class="section-number-4">4.1.1.</span> 得到 omni.ja 文件</h4>
+<div id="outline-container-orgba24906" class="outline-4">
+<h4 id="orgba24906"><span class="section-number-4">4.1.1.</span> 得到 omni.ja 文件</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
 在 Archlinux 下可以通过
@@ -750,8 +760,8 @@ firefox /usr/lib/firefox/omni.ja
 </p>
 </div>
 </div>
-<div id="outline-container-org40492a6" class="outline-4">
-<h4 id="org40492a6"><span class="section-number-4">4.1.2.</span> 解压 omni.ja 文件</h4>
+<div id="outline-container-org642f92d" class="outline-4">
+<h4 id="org642f92d"><span class="section-number-4">4.1.2.</span> 解压 omni.ja 文件</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <p>
 注意：请备份 omni.ja 文件
@@ -769,12 +779,12 @@ $ unzip ../omni.ja.bak
 </div>
 </div>
 </div>
-<div id="outline-container-orgf13a47c" class="outline-4">
-<h4 id="orgf13a47c"><span class="section-number-4">4.1.3.</span> 编辑快捷键</h4>
+<div id="outline-container-org87458a0" class="outline-4">
+<h4 id="org87458a0"><span class="section-number-4">4.1.3.</span> 编辑快捷键</h4>
 <div class="outline-text-4" id="text-4-1-3">
 </div>
 <ol class="org-ol">
-<li><a id="org07bf50c"></a>两个文件<br>
+<li><a id="org6bc4bd6"></a>两个文件<br>
 <div class="outline-text-5" id="text-4-1-3-1">
 <p>
 现在就进入了正题，要开始编辑快捷键了。
@@ -808,7 +818,7 @@ chrome/browser/content/browser/browser.xhtml
 </p>
 </div>
 </li>
-<li><a id="orgf15e6b5"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
+<li><a id="orgff6a735"></a>一个例子，使用 &lt;C-s&gt; 搜索<br>
 <div class="outline-text-5" id="text-4-1-3-2">
 <p>
 如果想使用 &lt;C-s&gt; 进行类似 Emacs 中的向下搜索，在 firefox 中这个动作的默认快捷键是 &lt;C-g&gt;, 既然 ff 中有还有字母的这个快捷键，那么在 <code>localization/en-US/browser/browserSets.ftl</code> 就应该有 <code>G</code> 这个定义，要做的就变成了中找到 <code>G</code> 并改成 <code>S</code>, 结果如下：
@@ -826,7 +836,7 @@ search-find-again-shortcut =
 </pre>
 </div>
 </li>
-<li><a id="org2dcf29f"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
+<li><a id="orgb3dc390"></a>又一个例子，使用 &lt;M-n&gt; 到下一个标签<br>
 <div class="outline-text-5" id="text-4-1-3-3">
 <p>
 这个例子相对就麻烦一些，因为在 <code>chrome/browser/content/browser/browser.xhtml</code> 中默认没有 &lt;M-j&gt; 类似的快捷键。就不能直接在 <code>localization/en-US/browser/browserSets.ftl</code> 直接修改定义来完成这个了。
@@ -860,7 +870,7 @@ window-new-shortcut =
 </p>
 </div>
 </li>
-<li><a id="org520e1eb"></a>其他<br>
+<li><a id="org633979d"></a>其他<br>
 <div class="outline-text-5" id="text-4-1-3-4">
 <p>
 不想要的直接注释掉就好了
@@ -873,8 +883,8 @@ window-new-shortcut =
 </li>
 </ol>
 </div>
-<div id="outline-container-orga350888" class="outline-4">
-<h4 id="orga350888"><span class="section-number-4">4.1.4.</span> 重新打包</h4>
+<div id="outline-container-org76c3ca6" class="outline-4">
+<h4 id="org76c3ca6"><span class="section-number-4">4.1.4.</span> 重新打包</h4>
 <div class="outline-text-4" id="text-4-1-4">
 <p>
 等到修改满意以后要做的就是怎么拿出来怎么送回去了。
@@ -887,8 +897,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 </div>
-<div id="outline-container-orge91ce3b" class="outline-4">
-<h4 id="orge91ce3b"><span class="section-number-4">4.1.5.</span> 启动 firefox</h4>
+<div id="outline-container-org4fc1552" class="outline-4">
+<h4 id="org4fc1552"><span class="section-number-4">4.1.5.</span> 启动 firefox</h4>
 <div class="outline-text-4" id="text-4-1-5">
 <p>
 首先需要使用 <code>firefox --purgecaches</code> 来重载 omni.ja, 这样修改的才会生效。
@@ -896,8 +906,8 @@ $ sudo cp $HOME/omni.ja /usr/lib/firefox/browser/omni.ja
 </div>
 </div>
 
-<div id="outline-container-orgc27307d" class="outline-4">
-<h4 id="orgc27307d"><span class="section-number-4">4.1.6.</span> 配置 Vimium</h4>
+<div id="outline-container-orgf951ea2" class="outline-4">
+<h4 id="orgf951ea2"><span class="section-number-4">4.1.6.</span> 配置 Vimium</h4>
 <div class="outline-text-4" id="text-4-1-6">
 <p>
 页面内导航，我选用了 vimium, 然后将 Vimium 的快捷键修改了一下。
@@ -918,8 +928,8 @@ map &lt;a-j&gt; LinkHints.activateModeToOpenInNewTab
 </div>
 </div>
 
-<div id="outline-container-org7e24ff7" class="outline-4">
-<h4 id="org7e24ff7"><span class="section-number-4">4.1.7.</span> 后话</h4>
+<div id="outline-container-orgdb6c819" class="outline-4">
+<h4 id="orgdb6c819"><span class="section-number-4">4.1.7.</span> 后话</h4>
 <div class="outline-text-4" id="text-4-1-7">
 <p>
 firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快地使用了。
@@ -927,8 +937,8 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 
-<div id="outline-container-orgcc86c1d" class="outline-4">
-<h4 id="orgcc86c1d"><span class="section-number-4">4.1.8.</span> 参考</h4>
+<div id="outline-container-orgf2fb790" class="outline-4">
+<h4 id="orgf2fb790"><span class="section-number-4">4.1.8.</span> 参考</h4>
 <div class="outline-text-4" id="text-4-1-8">
 <ul class="org-ul">
 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)</a></li>
@@ -939,7 +949,11 @@ firefox 差不多就比较接近 vanilla emacs 的键位了，我也可以愉快
 </div>
 </div>
 </div>
-<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-firefox.html">firefox</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2020-07-28</div><div class="post-tags">联系邮箱：aeghn_at_outlook_dot_com</div></div>]]></description>
+<div id="post-meta"><div class="post-tags">相关标签：<a href="https://wangz.me/tag-firefox.html">firefox</a> </div><div class="post-date-published">最后更新：2021-11-28</div><div class="post-date-created">首次发布：2020-07-28</div><div class="post-tags">联系邮箱：aeghnAToutlookDOTcom</div></div>
+<div id="other-posts">
+<a href="https://wangz.me/index.html">其他帖子</a>
+</div>
+]]></description>
   <category><![CDATA[firefox]]></category>
   <link>https://wangz.me/firefox.html</link>
   <pubDate>Tue, 28 Jul 2020 15:54:00 +0800</pubDate>
