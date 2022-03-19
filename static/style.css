@@ -86,12 +86,6 @@ body {
     margin: -.1em 0;
 }
 
-#table-of-contents ul {
-    font-size: 95%;
-    list-style-type: none;
-    padding: 0 1em;
-}
-
 #preamble {
     font-size: 1.2em;
     padding: .5em 0 1em
@@ -123,7 +117,7 @@ h1.title {
     line-height: 1.1;
     margin: 1.5rem 0 .1rem;
     padding-top: .02em
-    margin: 1.5rem 0 3rem;
+                 margin: 1.5rem 0 3rem;
 }
 
 aside {
@@ -139,9 +133,19 @@ p {
     line-height: 1.45
 }
 
-ol,
-ul {
-    margin: 0
+
+#content ol,
+#content ul {
+    margin-left: 0.5em;
+    padding-left: 2em;
+    border-left: solid 1px #995555;
+}
+
+#table-of-contents ul {
+    font-size: 95%;
+    list-style-type: none;
+    padding: 0 1em;
+    border: 0;
 }
 
 li {
@@ -198,7 +202,9 @@ code,
 .section-number-3,
 .section-number-2 {
     font-weight: 700;
-    color: #aa0000;
+    color: #a00;
+
+    padding: 0.2em;
 }
 
 img {
