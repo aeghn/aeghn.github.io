@@ -2,10 +2,11 @@
 aside,
 body {
     font-family: serif;
+    font-size: 1.2em;
 }
 
 body {
-    max-width: 50em;
+    max-width: 40em;
     margin: auto;
     padding: 2em;
     line-height: 1.6;
@@ -136,8 +137,8 @@ p {
 
 #content ol,
 #content ul {
-    margin-left: 0.5em;
-    padding-left: 2em;
+    margin-left: 0.4em;
+    padding-left: 1.6em;
     border-left: solid 1px #995555;
 }
 
