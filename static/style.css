@@ -138,8 +138,8 @@ p {
 #content ol {
     list-style-position: outside;
     margin-left: 0em;
-    padding-left: 0.5em;
-    border-left: solid 1em rgba(100,50,50,0.1);
+    padding-left: -1em;
+    border-left: solid 0.1em rgba(100,50,50,0.2);
 }
 
 #table-of-contents ul {
