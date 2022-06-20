@@ -139,7 +139,7 @@ p {
     list-style-position: outside;
     margin-left: 0em;
     padding-left: -1em;
-    border-left: solid 0.1em rgba(100,50,50,0.2);
+    border-left: solid 1px rgba(8, 8, 8, 0.2);
 }
 
 #table-of-contents ul {
