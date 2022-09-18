@@ -26,42 +26,48 @@ body {
     margin: 2em 0 1em 0;
 }
 
-.post-item .post-title {
-    font-size: 1.5em;
-    padding: 0 0 0 0.5em;
-    border-left: solid 3px #aa0000;
-    margin: 0 0 0.5em 0;
+.post-item {
+    padding: 0 0 1em;
+    border-bottom: dashed 1px;
+    margin: 1.5em 0 1.5em 0;
 }
 
-.post-item .post-title::before {
-    color: #aa0000;
-    content: "✿";
+.post-item .post-title {
+    font-size: 1.5em;
+    margin: 0 0em 0.5em 0;
 }
 
 .post-item .post-date-and-tags {
-    margin-left: 1em;
+    padding: 0 0.5em;
+    border-left: solid 3px #aa0000;
+    margin-left: 0.1em;
     display: inline-flex;
 }
 
 .post-item .post-date {
     margin-right: 1em;
+    font-size: 1em;
 }
 
 .post-item .post-date-and-tags .post-tags a {
-    color: #666;
-    font-size: 1em;
     padding: 1px;
+    font-size: 1em;
 }
 
 .post-item .post-date-and-tags .post-tags a:before {
-    content: "◦";
-    font-size: 100%;
-    color: #aa0000;
+    content: "#";
+    color: #4169e1;
 }
 
-#text-table-of-contents {
-    padding: 0 1em;
-    margin: -.1em 0;
+#table-of-contents {
+    margin: 2em 1em;
+}
+
+#text-table-of-contents ul {
+    font-size: 90%;
+    list-style-type: none;
+    padding: 0 0em;
+    border: 0;
 }
 
 #preamble {
@@ -70,7 +76,7 @@ body {
 }
 
 #postamble {
-    padding: 1em 0 0
+    margin: 4em 0 0
 }
 
 #single-tag-list {
@@ -83,6 +89,11 @@ body {
     font-size: 100%;
     color: #aa0000;
 }
+
+#other-posts {
+    margin: 5em 0em 0em 0em;
+}
+
 
 #other-posts:after {
     content: ">";
@@ -135,13 +146,7 @@ p {
     content: none;
 }
 
-#table-of-contents ul {
-    font-size: 90%;
-    line-height: 1.5;
-    list-style-type: none;
-    padding: 0 0em;
-    border: 0;
-}
+
 
 li > p {
     display: inline;
@@ -255,6 +260,10 @@ a:visited {
     padding: 6px 6px 6px;
 }
 
+.org-svg {
+    width: auto;
+}
+
 code,
 .org-src-container {
     font-family: "Roboto Mono", monospace;
@@ -298,7 +307,6 @@ a.footref[href] {
     flex-direction: row;
     margin-bottom: 0.5em;
 }
-
 
 sup .footnum {
     margin-right: 0.5em;
