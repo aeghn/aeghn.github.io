@@ -209,6 +209,7 @@ code,
 .section-number-3,
 .section-number-2 {
     font-weight: 900;
+    line-height: 120%;
     color: #aa0000;
 }
 
