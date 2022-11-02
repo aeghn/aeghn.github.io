@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://wangz.me/rss.xml"
+      title="RSS feed for https://wangz.me/">
+<title>一些正在使用的字体</title>
+<meta name="author" content="Aeghn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href= "static/style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="static/favicon.ico"></head>
+<body>
+<div id="preamble" class="status"><div id="blog-nav">
+  <a href="/">wangz's blog </a>
+  <span>/ </span>
+  <a href="/tags.html">Tags </a>
+</div><hr/></div>
+<div id="content">
+<div class="post-item">
+   <h1 class="post-title"><a href="https://wangz.me/font-preview.html"> 一些正在使用的字体 </a></h1>
+
+   <div class="post-date-and-tags">
+   <div class="post-date">2022-11-02</div>
+   <div class="post-tags"><a href="https://wangz.me/tag-font.html">font</a> </div>
+   </div>
+   </div>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2b3012a">1. 预览脚本</a></li>
+<li><a href="#orgcae4376">2. IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org6ab3ab9">3. Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org90d01d2">4. LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#orgb5e364e">5. Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#orgc7b7bb1">6. Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org532b39e">7. Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#org2e0f18b">8. Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#org9431171">9. Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#orge870ed6">10. Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#org211762a">11. Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+<li><a href="#orgc4587cf">12. Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+</ul>
+</div>
+</nav>
+
+
+<div id="outline-container-org2b3012a" class="outline-2">
+<h2 id="org2b3012a"><span class="section-number-2">1.</span> 预览脚本</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #505050;">#</span><span style="color: #505050;">!/usr/bin/</span><span style="color: #5317ac;">env</span><span style="color: #505050;"> bash</span>
+
+<span style="color: #00538b;">font</span>=<span style="color: #2544bb;">"$1"</span>
+<span style="color: #00538b;">preview</span>=<span style="color: #2544bb;">"$(basename "$font" | sed 's/ /_/g')"</span>
+<span style="color: #00538b;">text</span>=<span style="color: #2544bb;">"ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]"</span>
+<span style="color: #5317ac;">if</span> [ <span style="color: #2544bb;">"x$2"</span> = <span style="color: #2544bb;">"x-c"</span>]; <span style="color: #5317ac;">then</span>
+    <span style="color: #00538b;">text</span>=<span style="color: #2544bb;">"&#38415;&#36898;&#12289;&#26051;&#33945;&#12289;&#26580;&#20806;&#12289;&#24378;&#22281;&#12289;&#33879;&#38605;\n&#23648;&#32500;&#12289;&#19978;&#31456;&#12289;&#37325;&#20809;&#12289;&#29572;&#40659;&#12289;&#26157;&#38451;\n&#22256;&#25958;&#12289;&#36196;&#22859;&#33509;&#12289;&#25668;&#25552;&#26684;\n&#21333;&#38415;&#12289;&#25191;&#24464;&#12289;&#22823;&#33618;&#33853;\n&#25958;&#29250;&#12289;&#21327;&#27965;&#12289;&#28050;&#28393;\n&#20316;&#22121;&#12289;&#38409;&#33538;&#12289;&#22823;&#28170;&#29486;"</span>
+<span style="color: #5317ac;">fi</span>
+
+touch <span style="color: #2544bb;">"$preview"</span> || <span style="color: #5317ac;">exit</span> 1
+
+convert -size 800x600 <span style="color: #2544bb;">\</span>
+        xc:#ffffff <span style="color: #2544bb;">\</span>
+        -font <span style="color: #2544bb;">"$font"</span> <span style="color: #2544bb;">\</span>
+        -pointsize 48 <span style="color: #2544bb;">\</span>
+        -gravity center <span style="color: #2544bb;">\</span>
+        -fill <span style="color: #2544bb;">"#000000"</span> <span style="color: #2544bb;">\</span>
+        -annotate +0+0  <span style="color: #2544bb;">\</span>
+        -flatten <span style="color: #2544bb;">"$preview"</span>
+
+<span style="color: #505050;"># </span><span style="color: #505050;">preview_font $(fc-list | fzf | awk -F':' '{print $1}')</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcae4376" class="outline-2">
+<h2 id="orgcae4376"><span class="section-number-2">2.</span> IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-2">
+
+<figure id="orgf0ed9ff">
+<img src="./files/font-preview-IBM_PLEX_MONO.png" alt="font-preview-IBM_PLEX_MONO.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org6ab3ab9" class="outline-2">
+<h2 id="org6ab3ab9"><span class="section-number-2">3.</span> Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+<figure id="org26f9fd5">
+<img src="./files/font-preview-RobotoMono.png" alt="font-preview-RobotoMono.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org90d01d2" class="outline-2">
+<h2 id="org90d01d2"><span class="section-number-2">4.</span> LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<figure id="org587feda">
+<img src="./files/font-preview-LXGWWenKai-Regular.png" alt="font-preview-LXGWWenKai-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgb5e364e" class="outline-2">
+<h2 id="orgb5e364e"><span class="section-number-2">5.</span> Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+<figure id="orgaac5939">
+<img src="./files/font-preview-Literata.png" alt="font-preview-Literata.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc7b7bb1" class="outline-2">
+<h2 id="orgc7b7bb1"><span class="section-number-2">6.</span> Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<figure id="orgb6d8d41">
+<img src="./files/font-preview-NotoSansMono-Regular.png" alt="font-preview-NotoSansMono-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org532b39e" class="outline-2">
+<h2 id="org532b39e"><span class="section-number-2">7.</span> Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+<figure id="org237040e">
+<img src="./files/font-preview-NotoSansCJK-Regular.png" alt="font-preview-NotoSansCJK-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org2e0f18b" class="outline-2">
+<h2 id="org2e0f18b"><span class="section-number-2">8.</span> Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<figure id="org8af29b4">
+<img src="./files/font-preview-NotoSerifCJK-Regular.png" alt="font-preview-NotoSerifCJK-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org9431171" class="outline-2">
+<h2 id="org9431171"><span class="section-number-2">9.</span> Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-9">
+
+<figure id="org8472051">
+<img src="./files/font-preview-Charter.png" alt="font-preview-Charter.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orge870ed6" class="outline-2">
+<h2 id="orge870ed6"><span class="section-number-2">10.</span> Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-10">
+
+<figure id="org40a3deb">
+<img src="./files/font-preview-Alegreya.png" alt="font-preview-Alegreya.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org211762a" class="outline-2">
+<h2 id="org211762a"><span class="section-number-2">11.</span> Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-11">
+
+<figure id="org77bd367">
+<img src="./files/font-preview-Roboto-Regular.png" alt="font-preview-Roboto-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc4587cf" class="outline-2">
+<h2 id="orgc4587cf"><span class="section-number-2">12.</span> Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-12">
+
+<figure id="org77f383b">
+<img src="./files/font-preview-NimbusSansL.png" alt="font-preview-NimbusSansL.png">
+
+</figure>
+</div>
+</div>
+
+<div id="other-posts">
+<a href="https://wangz.me/index.html">Other posts</a>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="blog-tail">
+<center><span> Powered by Org-mode and</span> <a href="https://github.com/aeghn/org-static-blog"> a fork</a><span> of</span><a href="https://github.com/bastibe/org-static-blog"> org-static-blog</a> </center>
+</div></div>
+</body>
+</html>

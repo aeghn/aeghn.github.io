@@ -4,7 +4,308 @@
 <title><![CDATA[wangz.me]]></title>
 <description><![CDATA[wangz.me]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Sun, 18 Sep 2022 20:24:10 +0800</lastBuildDate>
+<lastBuildDate>Wed, 02 Nov 2022 20:11:04 +0800</lastBuildDate>
+<item>
+  <title><![CDATA[一些正在使用的字体]]></title>
+  <description><![CDATA[
+
+   <div class="post-date-and-tags">
+   <div class="post-date">2022-11-02</div>
+   <div class="post-tags"><a href="https://wangz.me/tag-font.html">font</a> </div>
+   </div>
+   </div>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2b3012a">1. 预览脚本</a></li>
+<li><a href="#orgcae4376">2. IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org6ab3ab9">3. Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org90d01d2">4. LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#orgb5e364e">5. Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#orgc7b7bb1">6. Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org532b39e">7. Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#org2e0f18b">8. Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#org9431171">9. Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#orge870ed6">10. Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#org211762a">11. Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+<li><a href="#orgc4587cf">12. Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+</ul>
+</div>
+</nav>
+
+
+<div id="outline-container-org2b3012a" class="outline-2">
+<h2 id="org2b3012a"><span class="section-number-2">1.</span> 预览脚本</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #505050;">#</span><span style="color: #505050;">!/usr/bin/</span><span style="color: #5317ac;">env</span><span style="color: #505050;"> bash</span>
+
+<span style="color: #00538b;">font</span>=<span style="color: #2544bb;">"$1"</span>
+<span style="color: #00538b;">preview</span>=<span style="color: #2544bb;">"$(basename "$font" | sed 's/ /_/g')"</span>
+<span style="color: #00538b;">text</span>=<span style="color: #2544bb;">"ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]"</span>
+<span style="color: #5317ac;">if</span> [ <span style="color: #2544bb;">"x$2"</span> = <span style="color: #2544bb;">"x-c"</span>]; <span style="color: #5317ac;">then</span>
+    <span style="color: #00538b;">text</span>=<span style="color: #2544bb;">"&#38415;&#36898;&#12289;&#26051;&#33945;&#12289;&#26580;&#20806;&#12289;&#24378;&#22281;&#12289;&#33879;&#38605;\n&#23648;&#32500;&#12289;&#19978;&#31456;&#12289;&#37325;&#20809;&#12289;&#29572;&#40659;&#12289;&#26157;&#38451;\n&#22256;&#25958;&#12289;&#36196;&#22859;&#33509;&#12289;&#25668;&#25552;&#26684;\n&#21333;&#38415;&#12289;&#25191;&#24464;&#12289;&#22823;&#33618;&#33853;\n&#25958;&#29250;&#12289;&#21327;&#27965;&#12289;&#28050;&#28393;\n&#20316;&#22121;&#12289;&#38409;&#33538;&#12289;&#22823;&#28170;&#29486;"</span>
+<span style="color: #5317ac;">fi</span>
+
+touch <span style="color: #2544bb;">"$preview"</span> || <span style="color: #5317ac;">exit</span> 1
+
+convert -size 800x600 <span style="color: #2544bb;">\</span>
+        xc:#ffffff <span style="color: #2544bb;">\</span>
+        -font <span style="color: #2544bb;">"$font"</span> <span style="color: #2544bb;">\</span>
+        -pointsize 48 <span style="color: #2544bb;">\</span>
+        -gravity center <span style="color: #2544bb;">\</span>
+        -fill <span style="color: #2544bb;">"#000000"</span> <span style="color: #2544bb;">\</span>
+        -annotate +0+0  <span style="color: #2544bb;">\</span>
+        -flatten <span style="color: #2544bb;">"$preview"</span>
+
+<span style="color: #505050;"># </span><span style="color: #505050;">preview_font $(fc-list | fzf | awk -F':' '{print $1}')</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcae4376" class="outline-2">
+<h2 id="orgcae4376"><span class="section-number-2">2.</span> IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-2">
+
+<figure id="orgf0ed9ff">
+<img src="./files/font-preview-IBM_PLEX_MONO.png" alt="font-preview-IBM_PLEX_MONO.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org6ab3ab9" class="outline-2">
+<h2 id="org6ab3ab9"><span class="section-number-2">3.</span> Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+<figure id="org26f9fd5">
+<img src="./files/font-preview-RobotoMono.png" alt="font-preview-RobotoMono.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org90d01d2" class="outline-2">
+<h2 id="org90d01d2"><span class="section-number-2">4.</span> LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<figure id="org587feda">
+<img src="./files/font-preview-LXGWWenKai-Regular.png" alt="font-preview-LXGWWenKai-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgb5e364e" class="outline-2">
+<h2 id="orgb5e364e"><span class="section-number-2">5.</span> Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+<figure id="orgaac5939">
+<img src="./files/font-preview-Literata.png" alt="font-preview-Literata.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc7b7bb1" class="outline-2">
+<h2 id="orgc7b7bb1"><span class="section-number-2">6.</span> Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<figure id="orgb6d8d41">
+<img src="./files/font-preview-NotoSansMono-Regular.png" alt="font-preview-NotoSansMono-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org532b39e" class="outline-2">
+<h2 id="org532b39e"><span class="section-number-2">7.</span> Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+<figure id="org237040e">
+<img src="./files/font-preview-NotoSansCJK-Regular.png" alt="font-preview-NotoSansCJK-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org2e0f18b" class="outline-2">
+<h2 id="org2e0f18b"><span class="section-number-2">8.</span> Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<figure id="org8af29b4">
+<img src="./files/font-preview-NotoSerifCJK-Regular.png" alt="font-preview-NotoSerifCJK-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org9431171" class="outline-2">
+<h2 id="org9431171"><span class="section-number-2">9.</span> Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-9">
+
+<figure id="org8472051">
+<img src="./files/font-preview-Charter.png" alt="font-preview-Charter.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orge870ed6" class="outline-2">
+<h2 id="orge870ed6"><span class="section-number-2">10.</span> Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-10">
+
+<figure id="org40a3deb">
+<img src="./files/font-preview-Alegreya.png" alt="font-preview-Alegreya.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org211762a" class="outline-2">
+<h2 id="org211762a"><span class="section-number-2">11.</span> Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-11">
+
+<figure id="org77bd367">
+<img src="./files/font-preview-Roboto-Regular.png" alt="font-preview-Roboto-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgc4587cf" class="outline-2">
+<h2 id="orgc4587cf"><span class="section-number-2">12.</span> Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-12">
+
+<figure id="org77f383b">
+<img src="./files/font-preview-NimbusSansL.png" alt="font-preview-NimbusSansL.png">
+
+</figure>
+</div>
+</div>
+
+<div id="other-posts">
+<a href="https://wangz.me/index.html">Other posts</a>
+</div>
+]]></description>
+  <category><![CDATA[font]]></category>
+  <link>https://wangz.me/font-preview.html</link>
+  <guid>https://wangz.me/font-preview.html</guid>
+  <pubDate>Wed, 02 Nov 2022 00:00:00 +0800</pubDate>
+</item>
+<item>
+  <title><![CDATA[使用 org-static-blog 导出含有 LaTeX 公式的博客]]></title>
+  <description><![CDATA[
+
+   <div class="post-date-and-tags">
+   <div class="post-date">2022-10-30</div>
+   <div class="post-tags"><a href="https://wangz.me/tag-latex.html">latex</a> <a href="https://wangz.me/tag-blog.html">blog</a> <a href="https://wangz.me/tag-org.html">org</a> </div>
+   </div>
+   </div>
+<p>
+<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPCEtLSBUaGlzIGZpbGUgd2Fz
+IGdlbmVyYXRlZCBieSBkdmlzdmdtIDIuMTMuMyAtLT4KPHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5z
+PSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMu
+b3JnLzE5OTkveGxpbmsnIHdpZHRoPSc1Mi40MjgzODJwdCcgaGVpZ2h0PScxMi4xNjQ0MzNwdCcg
+dmlld0JveD0nLTIxLjgwNDI1OSAxMy44NTE5ODEgNTIuNDI4MzgyIDEyLjE2NDQzMyc+CjxkZWZz
+Pgo8cGF0aCBpZD0nZzItNTAnIGQ9J00zLjUyMTc5My0xLjI2OTI0SDMuMjg0NjgyQzMuMjYzNzYx
+LTEuMTE1ODE2IDMuMTk0MDIyLS43MDQzNTkgMy4xMDMzNjItLjYzNDYyQzMuMDQ3NTcyLS41OTI3
+NzcgMi41MTA1ODUtLjU5Mjc3NyAyLjQxMjk1MS0uNTkyNzc3SDEuMTI5NzYzQzEuODYyMDE3LTEu
+MjQxMzQ1IDIuMTA2MTAyLTEuNDM2NjEzIDIuNTI0NTMzLTEuNzY0Mzg0QzMuMDQwNTk4LTIuMTc1
+ODQxIDMuNTIxNzkzLTIuNjA4MjE5IDMuNTIxNzkzLTMuMjcwNzM1QzMuNTIxNzkzLTQuMTE0NTcg
+Mi43ODI1NjUtNC42MzA2MzUgMS44ODk5MTMtNC42MzA2MzVDMS4wMjUxNTYtNC42MzA2MzUgLjQz
+OTM1Mi00LjAyMzkxIC40MzkzNTItMy4zODIzMTZDLjQzOTM1Mi0zLjAyNjY1IC43MzkyMjgtMi45
+OTE3ODEgLjgwODk2Ni0yLjk5MTc4MUMuOTc2MzM5LTIuOTkxNzgxIDEuMTc4NTgtMy4xMTAzMzYg
+MS4xNzg1OC0zLjM2MTM5NUMxLjE3ODU4LTMuNDg2OTI0IDEuMTI5NzYzLTMuNzMxMDA5IC43Njcx
+MjMtMy43MzEwMDlDLjk4MzMxMy00LjIyNjE1MiAxLjQ1NzUzNC00LjM3OTU3NyAxLjc4NTMwNS00
+LjM3OTU3N0MyLjQ4MjY5LTQuMzc5NTc3IDIuODQ1MzMtMy44MzU2MTYgMi44NDUzMy0zLjI3MDcz
+NUMyLjg0NTMzLTIuNjY0MDEgMi40MTI5NTEtMi4xODI4MTQgMi4xODk3ODgtMS45MzE3NTZMLjUw
+OTA5MS0uMjcxOThDLjQzOTM1Mi0uMjA5MjE1IC40MzkzNTItLjE5NTI2OCAuNDM5MzUyIDBIMy4z
+MTI1NzhMMy41MjE3OTMtMS4yNjkyNFonLz4KPHBhdGggaWQ9J2cxLTYxJyBkPSdNNi44NDQzMzQt
+My4yNTc3ODNDNi45OTM3NzMtMy4yNTc3ODMgNy4xODMwNjQtMy4yNTc3ODMgNy4xODMwNjQtMy40
+NTcwMzZTNi45OTM3NzMtMy42NTYyODkgNi44NTQyOTYtMy42NTYyODlILjg4NjY3NUMuNzQ3MTk4
+LTMuNjU2Mjg5IC41NTc5MDgtMy42NTYyODkgLjU1NzkwOC0zLjQ1NzAzNlMuNzQ3MTk4LTMuMjU3
+NzgzIC44OTY2MzgtMy4yNTc3ODNINi44NDQzMzRaTTYuODU0Mjk2LTEuMzI1MDMxQzYuOTkzNzcz
+LTEuMzI1MDMxIDcuMTgzMDY0LTEuMzI1MDMxIDcuMTgzMDY0LTEuNTI0Mjg0UzYuOTkzNzczLTEu
+NzIzNTM3IDYuODQ0MzM0LTEuNzIzNTM3SC44OTY2MzhDLjc0NzE5OC0xLjcyMzUzNyAuNTU3OTA4
+LTEuNzIzNTM3IC41NTc5MDgtMS41MjQyODRTLjc0NzE5OC0xLjMyNTAzMSAuODg2Njc1LTEuMzI1
+MDMxSDYuODU0Mjk2WicvPgo8cGF0aCBpZD0nZzAtOTknIGQ9J00zLjk0NTIwNS0zLjc4NTgwM0Mz
+Ljc4NTgwMy0zLjc4NTgwMyAzLjY0NjMyNi0zLjc4NTgwMyAzLjUwNjg0OS0zLjY0NjMyNkMzLjM0
+NzQ0Ny0zLjQ5Njg4NyAzLjMyNzUyMi0zLjMyNzUyMiAzLjMyNzUyMi0zLjI1Nzc4M0MzLjMyNzUy
+Mi0zLjAxODY4IDMuNTA2ODQ5LTIuOTA5MDkxIDMuNjk2MTM5LTIuOTA5MDkxQzMuOTg1MDU2LTIu
+OTA5MDkxIDQuMjU0MDQ3LTMuMTQ4MTk0IDQuMjU0MDQ3LTMuNTQ2N0M0LjI1NDA0Ny00LjAzNDg2
+OSAzLjc4NTgwMy00LjQwMzQ4NyAzLjA3ODQ1Ni00LjQwMzQ4N0MxLjczMzQ5OS00LjQwMzQ4NyAu
+NDA4NDY4LTIuOTc4ODI5IC40MDg0NjgtMS41NzQwOTdDLjQwODQ2OC0uNjc3NDYgLjk4NjMwMSAu
+MTA5NTg5IDIuMDIyNDE2IC4xMDk1ODlDMy40NDcwNzMgLjEwOTU4OSA0LjI4MzkzNS0uOTQ2NDUx
+IDQuMjgzOTM1LTEuMDY2MDAyQzQuMjgzOTM1LTEuMTI1Nzc4IDQuMjI0MTU5LTEuMTk1NTE3IDQu
+MTY0Mzg0LTEuMTk1NTE3QzQuMTE0NTctMS4xOTU1MTcgNC4wOTQ2NDUtMS4xNzU1OTIgNC4wMzQ4
+NjktMS4wOTU4OUMzLjI0NzgyMS0uMTA5NTg5IDIuMTYxODkzLS4xMDk1ODkgMi4wNDIzNDEtLjEw
+OTU4OUMxLjQxNDY5NS0uMTA5NTg5IDEuMTQ1NzA0LS41OTc3NTggMS4xNDU3MDQtMS4xOTU1MTdD
+MS4xNDU3MDQtMS42MDM5ODUgMS4zNDQ5NTYtMi41NzAzNjEgMS42ODM2ODYtMy4xODgwNDVDMS45
+OTI1MjgtMy43NTU5MTUgMi41NDA0NzMtNC4xODQzMDkgMy4wODg0MTgtNC4xODQzMDlDMy40Mjcx
+NDgtNC4xODQzMDkgMy44MDU3MjktNC4wNTQ3OTUgMy45NDUyMDUtMy43ODU4MDNaJy8+CjxwYXRo
+IGlkPSdnMC0xMDEnIGQ9J00xLjg2MzAxNC0yLjMwMTM3QzIuMTUxOTMtMi4zMDEzNyAyLjg4OTE2
+Ni0yLjMyMTI5NSAzLjM4NzI5OC0yLjUzMDUxMUM0LjA4NDY4Mi0yLjgyOTM5IDQuMTM0NDk2LTMu
+NDE3MTg2IDQuMTM0NDk2LTMuNTU2NjYzQzQuMTM0NDk2LTMuOTk1MDE5IDMuNzU1OTE1LTQuNDAz
+NDg3IDMuMDY4NDkzLTQuNDAzNDg3QzEuOTYyNjQtNC40MDM0ODcgLjQ1ODI4MS0zLjQzNzExMSAu
+NDU4MjgxLTEuNjkzNjQ5Qy40NTgyODEtLjY3NzQ2IDEuMDQ2MDc3IC4xMDk1ODkgMi4wMjI0MTYg
+LjEwOTU4OUMzLjQ0NzA3MyAuMTA5NTg5IDQuMjgzOTM1LS45NDY0NTEgNC4yODM5MzUtMS4wNjYw
+MDJDNC4yODM5MzUtMS4xMjU3NzggNC4yMjQxNTktMS4xOTU1MTcgNC4xNjQzODQtMS4xOTU1MTdD
+NC4xMTQ1Ny0xLjE5NTUxNyA0LjA5NDY0NS0xLjE3NTU5MiA0LjAzNDg2OS0xLjA5NTg5QzMuMjQ3
+ODIxLS4xMDk1ODkgMi4xNjE4OTMtLjEwOTU4OSAyLjA0MjM0MS0uMTA5NTg5QzEuMjY1MjU1LS4x
+MDk1ODkgMS4xNzU1OTItLjk0NjQ1MSAxLjE3NTU5Mi0xLjI2NTI1NUMxLjE3NTU5Mi0xLjM4NDgw
+NyAxLjE4NTU1NC0xLjY5MzY0OSAxLjMzNDk5NC0yLjMwMTM3SDEuODYzMDE0Wk0xLjM5NDc3LTIu
+NTIwNTQ4QzEuNzgzMzEzLTQuMDM0ODY5IDIuODA5NDY1LTQuMTg0MzA5IDMuMDY4NDkzLTQuMTg0
+MzA5QzMuNTM2NzM3LTQuMTg0MzA5IDMuODA1NzI5LTMuODk1MzkyIDMuODA1NzI5LTMuNTU2NjYz
+QzMuODA1NzI5LTIuNTIwNTQ4IDIuMjExNzA2LTIuNTIwNTQ4IDEuODAzMjM4LTIuNTIwNTQ4SDEu
+Mzk0NzdaJy8+CjxwYXRoIGlkPSdnMC0xMDknIGQ9J00uODc2NzEyLS41ODc3OTZDLjg0NjgyNC0u
+NDM4MzU2IC43ODcwNDktLjIwOTIxNSAuNzg3MDQ5LS4xNTk0MDJDLjc4NzA0OSAuMDE5OTI1IC45
+MjY1MjYgLjEwOTU4OSAxLjA3NTk2NSAuMTA5NTg5QzEuMTk1NTE3IC4xMDk1ODkgMS4zNzQ4NDQg
+LjAyOTg4OCAxLjQ0NDU4My0uMTY5MzY1QzEuNDU0NTQ1LS4xODkyOSAxLjU3NDA5Ny0uNjU3NTM0
+IDEuNjMzODczLS45MDY2TDEuODUzMDUxLTEuODAzMjM4QzEuOTEyODI3LTIuMDIyNDE2IDEuOTcy
+NjAzLTIuMjQxNTk0IDIuMDIyNDE2LTIuNDcwNzM1QzIuMDYyMjY3LTIuNjQwMSAyLjE0MTk2OC0y
+LjkyOTAxNiAyLjE1MTkzLTIuOTY4ODY3QzIuMzAxMzctMy4yNzc3MDkgMi44MjkzOS00LjE4NDMw
+OSAzLjc3NTg0MS00LjE4NDMwOUM0LjIyNDE1OS00LjE4NDMwOSA0LjMxMzgyMy0zLjgxNTY5MSA0
+LjMxMzgyMy0zLjQ4NjkyNEM0LjMxMzgyMy0zLjIzNzg1OCA0LjI0NDA4NS0yLjk1ODkwNCA0LjE2
+NDM4NC0yLjY2MDAyNUwzLjg4NTQzLTEuNTA0MzU5TDMuNjg2MTc3LS43NDcxOThDMy42NDYzMjYt
+LjU0Nzk0NSAzLjU1NjY2My0uMjA5MjE1IDMuNTU2NjYzLS4xNTk0MDJDMy41NTY2NjMgLjAxOTky
+NSAzLjY5NjEzOSAuMTA5NTg5IDMuODQ1NTc5IC4xMDk1ODlDNC4xNTQ0MjEgLjEwOTU4OSA0LjIx
+NDE5Ny0uMTM5NDc3IDQuMjkzODk4LS40NTgyODFDNC40MzMzNzUtMS4wMTYxODkgNC44MDE5OTMt
+Mi40NzA3MzUgNC44OTE2NTYtMi44NTkyNzhDNC45MjE1NDQtMi45ODg3OTIgNS40NDk1NjQtNC4x
+ODQzMDkgNi41MzU0OTItNC4xODQzMDlDNi45NjM4ODUtNC4xODQzMDkgNy4wNzM0NzQtMy44NDU1
+NzkgNy4wNzM0NzQtMy40ODY5MjRDNy4wNzM0NzQtMi45MTkwNTQgNi42NTUwNDQtMS43ODMzMTMg
+Ni40NTU3OTEtMS4yNTUyOTNDNi4zNjYxMjctMS4wMTYxODkgNi4zMjYyNzYtLjkwNjYgNi4zMjYy
+NzYtLjcwNzM0N0M2LjMyNjI3Ni0uMjM5MTAzIDYuNjc0OTY5IC4xMDk1ODkgNy4xNDMyMTMgLjEw
+OTU4OUM4LjA3OTcwMSAuMTA5NTg5IDguNDQ4MzE5LTEuMzQ0OTU2IDguNDQ4MzE5LTEuNDI0NjU4
+QzguNDQ4MzE5LTEuNTI0Mjg0IDguMzU4NjU1LTEuNTI0Mjg0IDguMzI4NzY3LTEuNTI0Mjg0Qzgu
+MjI5MTQxLTEuNTI0Mjg0IDguMjI5MTQxLTEuNDk0Mzk2IDguMTc5MzI4LTEuMzQ0OTU2QzguMDI5
+ODg4LS44MTY5MzYgNy43MTEwODMtLjEwOTU4OSA3LjE2MzEzOC0uMTA5NTg5QzYuOTkzNzczLS4x
+MDk1ODkgNi45MjQwMzUtLjIwOTIxNSA2LjkyNDAzNS0uNDM4MzU2QzYuOTI0MDM1LS42ODc0MjIg
+Ny4wMTM2OTktLjkyNjUyNiA3LjEwMzM2Mi0xLjE0NTcwNEM3LjI5MjY1My0xLjY2Mzc2MSA3Ljcx
+MTA4My0yLjc2OTYxNCA3LjcxMTA4My0zLjMzNzQ4NEM3LjcxMTA4My0zLjk4NTA1NiA3LjMxMjU3
+OC00LjQwMzQ4NyA2LjU2NTM4LTQuNDAzNDg3UzUuMzEwMDg3LTMuOTY1MTMxIDQuOTQxNDY5LTMu
+NDM3MTExQzQuOTMxNTA3LTMuNTY2NjI1IDQuOTAxNjE5LTMuOTA1MzU1IDQuNjIyNjY1LTQuMTQ0
+NDU4QzQuMzczNTk5LTQuMzUzNjc0IDQuMDU0Nzk1LTQuNDAzNDg3IDMuODA1NzI5LTQuNDAzNDg3
+QzIuOTA5MDkxLTQuNDAzNDg3IDIuNDIwOTIyLTMuNzY1ODc4IDIuMjUxNTU3LTMuNTM2NzM3QzIu
+MjAxNzQzLTQuMTA0NjA4IDEuNzgzMzEzLTQuNDAzNDg3IDEuMzM0OTk0LTQuNDAzNDg3Qy44NzY3
+MTItNC40MDM0ODcgLjY4NzQyMi00LjAxNDk0NCAuNTk3NzU4LTMuODM1NjE2Qy40MTg0MzEtMy40
+ODY5MjQgLjI4ODkxNy0yLjg5OTEyOCAuMjg4OTE3LTIuODY5MjRDLjI4ODkxNy0yLjc2OTYxNCAu
+Mzg4NTQzLTIuNzY5NjE0IC40MDg0NjgtMi43Njk2MTRDLjUwODA5NS0yLjc2OTYxNCAuNTE4MDU3
+LTIuNzc5NTc3IC41Nzc4MzMtMi45OTg3NTVDLjc0NzE5OC0zLjcwNjEwMiAuOTQ2NDUxLTQuMTg0
+MzA5IDEuMzA1MTA2LTQuMTg0MzA5QzEuNDY0NTA4LTQuMTg0MzA5IDEuNjEzOTQ4LTQuMTA0NjA4
+IDEuNjEzOTQ4LTMuNzI2MDI3QzEuNjEzOTQ4LTMuNTE2ODEyIDEuNTg0MDYtMy40MDcyMjMgMS40
+NTQ1NDUtMi44ODkxNjZMLjg3NjcxMi0uNTg3Nzk2WicvPgo8L2RlZnM+CjxnIGlkPSdwYWdlMScg
+dHJhbnNmb3JtPSdtYXRyaXgoMS41IDAgMCAxLjUgMCAwKSc+Cjx1c2UgeD0nLTE0LjUzNjE3Micg
+eT0nMTcuMzQ0Mjc2JyB4bGluazpocmVmPScjZzAtMTAxJy8+Cjx1c2UgeD0nLTcuMTI5OTY4JyB5
+PScxNy4zNDQyNzYnIHhsaW5rOmhyZWY9JyNnMS02MScvPgo8dXNlIHg9JzMuMzg2MTEyJyB5PScx
+Ny4zNDQyNzYnIHhsaW5rOmhyZWY9JyNnMC0xMDknLz4KPHVzZSB4PScxMi4xMzM0NDUnIHk9JzE3
+LjM0NDI3NicgeGxpbms6aHJlZj0nI2cwLTk5Jy8+Cjx1c2UgeD0nMTYuNDQ0ODQyJyB5PScxMy43
+Mjg5MTInIHhsaW5rOmhyZWY9JyNnMi01MCcvPgo8L2c+Cjwvc3ZnPg==" alt="latexhDWSxE_4717167e62ebc25ce3883f5b1b6518d413a6fccf.svg" class="org-svg">
+</p>
+
+<div id="other-posts">
+<a href="https://wangz.me/index.html">Other posts</a>
+</div>
+]]></description>
+  <category><![CDATA[latex]]></category>
+  <category><![CDATA[blog]]></category>
+  <category><![CDATA[org]]></category>
+  <link>https://wangz.me/export-with-latex.html</link>
+  <guid>https://wangz.me/export-with-latex.html</guid>
+  <pubDate>Sun, 30 Oct 2022 00:00:00 +0800</pubDate>
+</item>
 <item>
   <title><![CDATA[Windows Environment]]></title>
   <description><![CDATA[
@@ -18,93 +319,93 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org780c9d9">1. Emacs 相关配置</a>
+<li><a href="#org5121ae0">1. Emacs 相关配置</a>
 <ul>
-<li><a href="#org461608d">1.1. 使用 Msys2 安装依赖</a></li>
-<li><a href="#orgecbdf70">1.2. 编译 Emacs 并安装</a></li>
-<li><a href="#orga281ba7">1.3. 其他设置</a></li>
+<li><a href="#org1eda086">1.1. 使用 Msys2 安装依赖</a></li>
+<li><a href="#orgbdf66fa">1.2. 编译 Emacs 并安装</a></li>
+<li><a href="#org1234212">1.3. 其他设置</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<figure id="org20efde2">
+<figure id="orga4962b2">
 <img src="./files/windows-environment-shadow.png" alt="windows-environment-shadow.png">
 
 </figure>
 
-<div id="outline-container-org780c9d9" class="outline-2">
-<h2 id="org780c9d9"><span class="section-number-2">1.</span> Emacs 相关配置</h2>
+<div id="outline-container-org5121ae0" class="outline-2">
+<h2 id="org5121ae0"><span class="section-number-2">1.</span> Emacs 相关配置</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org461608d" class="outline-3">
-<h3 id="org461608d"><span class="section-number-3">1.1.</span> 使用 Msys2 安装依赖</h3>
+<div id="outline-container-org1eda086" class="outline-3">
+<h3 id="org1eda086"><span class="section-number-3">1.1.</span> 使用 Msys2 安装依赖</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
-<pre class="src src-shell">$ pacman -S --needed base-devel <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-toolchain <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-xpm-nox <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libtiff <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-giflib <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libpng <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libjpeg-turbo <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-librsvg <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-lcms2 <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-jansson <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libxml2 <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-gnutls <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-zlib <span style="color: #2544bb;">\</span>
+<pre class="src src-shell">$ pacman -S --needed base-devel \
+  mingw-w64-x86_64-toolchain \
+  mingw-w64-x86_64-xpm-nox \
+  mingw-w64-x86_64-libtiff \
+  mingw-w64-x86_64-giflib \
+  mingw-w64-x86_64-libpng \
+  mingw-w64-x86_64-libjpeg-turbo \
+  mingw-w64-x86_64-librsvg \
+  mingw-w64-x86_64-lcms2 \
+  mingw-w64-x86_64-jansson \
+  mingw-w64-x86_64-libxml2 \
+  mingw-w64-x86_64-gnutls \
+  mingw-w64-x86_64-zlib \
   mingw-w64-x86_64-harfbuzz
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgecbdf70" class="outline-3">
-<h3 id="orgecbdf70"><span class="section-number-3">1.2.</span> 编译 Emacs 并安装</h3>
+<div id="outline-container-orgbdf66fa" class="outline-3">
+<h3 id="orgbdf66fa"><span class="section-number-3">1.2.</span> 编译 Emacs 并安装</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 笔者写了个脚本，用来编译 Emacs 并安装
 </p>
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #505050;">#</span><span style="color: #505050;">!/usr/bin/</span><span style="color: #5317ac;">env</span><span style="color: #505050;"> bash</span>
+<pre class="src src-shell">#!/usr/bin/env bash
 
-<span style="color: #8f0075;">set</span> -e
+set -e
 
-<span style="color: #00538b;">SCRIPT_PATH</span>=<span style="color: #2544bb;">"$0"</span>
-<span style="color: #00538b;">DIR_PATH</span>=<span style="color: #2544bb;">"${SCRIPT_PATH%/*}"</span>
-<span style="color: #00538b;">EMACS_SRC_DIR</span>=<span style="color: #2544bb;">"/e/repos/emacs"</span>
+SCRIPT_PATH="$0"
+DIR_PATH="${SCRIPT_PATH%/*}"
+EMACS_SRC_DIR="/e/repos/emacs"
 
-<span style="color: #8f0075;">cd</span> <span style="color: #2544bb;">"$EMACS_SRC_DIR"</span>
+cd "$EMACS_SRC_DIR"
 
 ./autogen.sh
-./configure <span style="color: #2544bb;">\</span>
-    --without-pop <span style="color: #2544bb;">\</span>
-    --with-native-compilation <span style="color: #2544bb;">\</span>
-    --enable-link-time-optimization <span style="color: #2544bb;">\</span>
-    --with-dbus <span style="color: #2544bb;">\</span>
+./configure \
+    --without-pop \
+    --with-native-compilation \
+    --enable-link-time-optimization \
+    --with-dbus \
     --with-sound=no
 
-make <span style="color: #00538b;">NATIVE_FULL_AOT</span>=1 -j$(nproc)
+make NATIVE_FULL_AOT=1 -j$(nproc)
 make install
 
-<span style="color: #505050;"># </span><span style="color: #505050;">&#25105;&#32479;&#19968;&#22312;&#19968;&#20010;&#30446;&#24405;&#20013;&#31649;&#29702;&#25105;&#30340;&#25152;&#26377;&#37197;&#32622;&#25991;&#20214;&#65292;&#20294;&#26159; Windows &#32570;&#20047;&#23545;&#24212;&#36719;&#38142;&#25509;&#24037;&#20855;&#65292;&#25152;&#20197;&#22312;&#21021;&#22987;&#21270; Emacs &#37197;&#32622;&#20043;&#21069;&#65292;&#25105;&#38656;&#35201;&#25351;&#23450;&#30495;&#27491;&#30340;&#37197;&#32622;&#25991;&#20214;&#20301;&#32622;</span>
-cat &lt;&lt;EOF &gt; <span style="color: #2544bb;">"C:/msys64/mingw64/share/emacs/site-lisp/site-start.el"</span>
-<span style="color: #2544bb;">(setenv "HOME" (concat "C:/msys64/home/" (getenv "USER")))</span>
-<span style="color: #2544bb;">(setq user-init-file "$DIR_PATH/init.el")</span>
-<span style="color: #2544bb;">(load user-init-file)</span>
-<span style="color: #2544bb;">EOF</span>
+# 我统一在一个目录中管理我的所有配置文件，但是 Windows 缺乏对应软链接工具，所以在初始化 Emacs 配置之前，我需要指定真正的配置文件位置
+cat &lt;&lt;EOF &gt; "C:/msys64/mingw64/share/emacs/site-lisp/site-start.el"
+(setenv "HOME" (concat "C:/msys64/home/" (getenv "USER")))
+(setq user-init-file "$DIR_PATH/init.el")
+(load user-init-file)
+EOF
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga281ba7" class="outline-3">
-<h3 id="orga281ba7"><span class="section-number-3">1.3.</span> 其他设置</h3>
+<div id="outline-container-org1234212" class="outline-3">
+<h3 id="org1234212"><span class="section-number-3">1.3.</span> 其他设置</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org7d07b1c" class="outline-4">
-<h4 id="org7d07b1c"><span class="section-number-4">1.3.1.</span> 创建快捷方式</h4>
+<div id="outline-container-org8d4e05b" class="outline-4">
+<h4 id="org8d4e05b"><span class="section-number-4">1.3.1.</span> 创建快捷方式</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <ol class="org-ol">
 <li>任务栏固定 emacs.exe</li>
@@ -118,8 +419,8 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -c -a ""
 </div>
 </div>
 
-<div id="outline-container-org01dee8b" class="outline-4">
-<h4 id="org01dee8b"><span class="section-number-4">1.3.2.</span> 禁用 Ctrl-Space</h4>
+<div id="outline-container-org1585580" class="outline-4">
+<h4 id="org1585580"><span class="section-number-4">1.3.2.</span> 禁用 Ctrl-Space</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 Ctrl-Space 在 Windows 中默认用来切换输入法，但是笔者更习惯使用它来切换选择标记。网上提供了很多方法来对其进行切换，包括使用 AutoHotKey 等软件，但是 Windows 10 中提供设置禁用切换输入法这个功能。
@@ -139,8 +440,8 @@ Ctrl-Space 在 Windows 中默认用来切换输入法，但是笔者更习惯使
 </p>
 </div>
 </div>
-<div id="outline-container-org0f7aa5d" class="outline-4">
-<h4 id="org0f7aa5d"><span class="section-number-4">1.3.3.</span> 绑定 <code>s-x</code> 启动 Emacs</h4>
+<div id="outline-container-org3955039" class="outline-4">
+<h4 id="org3955039"><span class="section-number-4">1.3.3.</span> 绑定 <code>s-x</code> 启动 Emacs</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 使用 autoHotKey

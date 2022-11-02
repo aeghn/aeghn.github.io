@@ -30,93 +30,93 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org780c9d9">1. Emacs 相关配置</a>
+<li><a href="#org5121ae0">1. Emacs 相关配置</a>
 <ul>
-<li><a href="#org461608d">1.1. 使用 Msys2 安装依赖</a></li>
-<li><a href="#orgecbdf70">1.2. 编译 Emacs 并安装</a></li>
-<li><a href="#orga281ba7">1.3. 其他设置</a></li>
+<li><a href="#org1eda086">1.1. 使用 Msys2 安装依赖</a></li>
+<li><a href="#orgbdf66fa">1.2. 编译 Emacs 并安装</a></li>
+<li><a href="#org1234212">1.3. 其他设置</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<figure id="org20efde2">
+<figure id="orga4962b2">
 <img src="./files/windows-environment-shadow.png" alt="windows-environment-shadow.png">
 
 </figure>
 
-<div id="outline-container-org780c9d9" class="outline-2">
-<h2 id="org780c9d9"><span class="section-number-2">1.</span> Emacs 相关配置</h2>
+<div id="outline-container-org5121ae0" class="outline-2">
+<h2 id="org5121ae0"><span class="section-number-2">1.</span> Emacs 相关配置</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org461608d" class="outline-3">
-<h3 id="org461608d"><span class="section-number-3">1.1.</span> 使用 Msys2 安装依赖</h3>
+<div id="outline-container-org1eda086" class="outline-3">
+<h3 id="org1eda086"><span class="section-number-3">1.1.</span> 使用 Msys2 安装依赖</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
-<pre class="src src-shell">$ pacman -S --needed base-devel <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-toolchain <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-xpm-nox <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libtiff <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-giflib <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libpng <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libjpeg-turbo <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-librsvg <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-lcms2 <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-jansson <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-libxml2 <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-gnutls <span style="color: #2544bb;">\</span>
-  mingw-w64-x86_64-zlib <span style="color: #2544bb;">\</span>
+<pre class="src src-shell">$ pacman -S --needed base-devel \
+  mingw-w64-x86_64-toolchain \
+  mingw-w64-x86_64-xpm-nox \
+  mingw-w64-x86_64-libtiff \
+  mingw-w64-x86_64-giflib \
+  mingw-w64-x86_64-libpng \
+  mingw-w64-x86_64-libjpeg-turbo \
+  mingw-w64-x86_64-librsvg \
+  mingw-w64-x86_64-lcms2 \
+  mingw-w64-x86_64-jansson \
+  mingw-w64-x86_64-libxml2 \
+  mingw-w64-x86_64-gnutls \
+  mingw-w64-x86_64-zlib \
   mingw-w64-x86_64-harfbuzz
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgecbdf70" class="outline-3">
-<h3 id="orgecbdf70"><span class="section-number-3">1.2.</span> 编译 Emacs 并安装</h3>
+<div id="outline-container-orgbdf66fa" class="outline-3">
+<h3 id="orgbdf66fa"><span class="section-number-3">1.2.</span> 编译 Emacs 并安装</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 笔者写了个脚本，用来编译 Emacs 并安装
 </p>
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #505050;">#</span><span style="color: #505050;">!/usr/bin/</span><span style="color: #5317ac;">env</span><span style="color: #505050;"> bash</span>
+<pre class="src src-shell">#!/usr/bin/env bash
 
-<span style="color: #8f0075;">set</span> -e
+set -e
 
-<span style="color: #00538b;">SCRIPT_PATH</span>=<span style="color: #2544bb;">"$0"</span>
-<span style="color: #00538b;">DIR_PATH</span>=<span style="color: #2544bb;">"${SCRIPT_PATH%/*}"</span>
-<span style="color: #00538b;">EMACS_SRC_DIR</span>=<span style="color: #2544bb;">"/e/repos/emacs"</span>
+SCRIPT_PATH="$0"
+DIR_PATH="${SCRIPT_PATH%/*}"
+EMACS_SRC_DIR="/e/repos/emacs"
 
-<span style="color: #8f0075;">cd</span> <span style="color: #2544bb;">"$EMACS_SRC_DIR"</span>
+cd "$EMACS_SRC_DIR"
 
 ./autogen.sh
-./configure <span style="color: #2544bb;">\</span>
-    --without-pop <span style="color: #2544bb;">\</span>
-    --with-native-compilation <span style="color: #2544bb;">\</span>
-    --enable-link-time-optimization <span style="color: #2544bb;">\</span>
-    --with-dbus <span style="color: #2544bb;">\</span>
+./configure \
+    --without-pop \
+    --with-native-compilation \
+    --enable-link-time-optimization \
+    --with-dbus \
     --with-sound=no
 
-make <span style="color: #00538b;">NATIVE_FULL_AOT</span>=1 -j$(nproc)
+make NATIVE_FULL_AOT=1 -j$(nproc)
 make install
 
-<span style="color: #505050;"># </span><span style="color: #505050;">&#25105;&#32479;&#19968;&#22312;&#19968;&#20010;&#30446;&#24405;&#20013;&#31649;&#29702;&#25105;&#30340;&#25152;&#26377;&#37197;&#32622;&#25991;&#20214;&#65292;&#20294;&#26159; Windows &#32570;&#20047;&#23545;&#24212;&#36719;&#38142;&#25509;&#24037;&#20855;&#65292;&#25152;&#20197;&#22312;&#21021;&#22987;&#21270; Emacs &#37197;&#32622;&#20043;&#21069;&#65292;&#25105;&#38656;&#35201;&#25351;&#23450;&#30495;&#27491;&#30340;&#37197;&#32622;&#25991;&#20214;&#20301;&#32622;</span>
-cat &lt;&lt;EOF &gt; <span style="color: #2544bb;">"C:/msys64/mingw64/share/emacs/site-lisp/site-start.el"</span>
-<span style="color: #2544bb;">(setenv "HOME" (concat "C:/msys64/home/" (getenv "USER")))</span>
-<span style="color: #2544bb;">(setq user-init-file "$DIR_PATH/init.el")</span>
-<span style="color: #2544bb;">(load user-init-file)</span>
-<span style="color: #2544bb;">EOF</span>
+# 我统一在一个目录中管理我的所有配置文件，但是 Windows 缺乏对应软链接工具，所以在初始化 Emacs 配置之前，我需要指定真正的配置文件位置
+cat &lt;&lt;EOF &gt; "C:/msys64/mingw64/share/emacs/site-lisp/site-start.el"
+(setenv "HOME" (concat "C:/msys64/home/" (getenv "USER")))
+(setq user-init-file "$DIR_PATH/init.el")
+(load user-init-file)
+EOF
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga281ba7" class="outline-3">
-<h3 id="orga281ba7"><span class="section-number-3">1.3.</span> 其他设置</h3>
+<div id="outline-container-org1234212" class="outline-3">
+<h3 id="org1234212"><span class="section-number-3">1.3.</span> 其他设置</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org7d07b1c" class="outline-4">
-<h4 id="org7d07b1c"><span class="section-number-4">1.3.1.</span> 创建快捷方式</h4>
+<div id="outline-container-org8d4e05b" class="outline-4">
+<h4 id="org8d4e05b"><span class="section-number-4">1.3.1.</span> 创建快捷方式</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <ol class="org-ol">
 <li>任务栏固定 emacs.exe</li>
@@ -130,8 +130,8 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -c -a ""
 </div>
 </div>
 
-<div id="outline-container-org01dee8b" class="outline-4">
-<h4 id="org01dee8b"><span class="section-number-4">1.3.2.</span> 禁用 Ctrl-Space</h4>
+<div id="outline-container-org1585580" class="outline-4">
+<h4 id="org1585580"><span class="section-number-4">1.3.2.</span> 禁用 Ctrl-Space</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 Ctrl-Space 在 Windows 中默认用来切换输入法，但是笔者更习惯使用它来切换选择标记。网上提供了很多方法来对其进行切换，包括使用 AutoHotKey 等软件，但是 Windows 10 中提供设置禁用切换输入法这个功能。
@@ -151,8 +151,8 @@ Ctrl-Space 在 Windows 中默认用来切换输入法，但是笔者更习惯使
 </p>
 </div>
 </div>
-<div id="outline-container-org0f7aa5d" class="outline-4">
-<h4 id="org0f7aa5d"><span class="section-number-4">1.3.3.</span> 绑定 <code>s-x</code> 启动 Emacs</h4>
+<div id="outline-container-org3955039" class="outline-4">
+<h4 id="org3955039"><span class="section-number-4">1.3.3.</span> 绑定 <code>s-x</code> 启动 Emacs</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 使用 autoHotKey

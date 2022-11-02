@@ -34,7 +34,7 @@ body {
 
 .post-item .post-title {
     font-size: 1.5em;
-    margin: 0 0em 0.5em 0;
+    margin: 0 0em 0.7em 0;
 }
 
 .post-item .post-date-and-tags {
@@ -56,7 +56,7 @@ body {
 
 .post-item .post-date-and-tags .post-tags a:before {
     content: "#";
-    color: #4169e1;
+    color: #808080;
 }
 
 #table-of-contents {
@@ -209,6 +209,13 @@ code,
 .section-number-2 {
     font-weight: 900;
     color: #aa0000;
+}
+
+.tag {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 80%;
+    border: 1px;
 }
 
 img {
