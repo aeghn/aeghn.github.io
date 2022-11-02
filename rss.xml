@@ -4,7 +4,7 @@
 <title><![CDATA[wangz.me]]></title>
 <description><![CDATA[wangz.me]]></description>
 <link>https://wangz.me/</link>
-<lastBuildDate>Wed, 02 Nov 2022 20:11:04 +0800</lastBuildDate>
+<lastBuildDate>Wed, 02 Nov 2022 20:29:30 +0800</lastBuildDate>
 <item>
   <title><![CDATA[一些正在使用的字体]]></title>
   <description><![CDATA[
@@ -18,25 +18,29 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2b3012a">1. 预览脚本</a></li>
-<li><a href="#orgcae4376">2. IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
-<li><a href="#org6ab3ab9">3. Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
-<li><a href="#org90d01d2">4. LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
-<li><a href="#orgb5e364e">5. Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
-<li><a href="#orgc7b7bb1">6. Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
-<li><a href="#org532b39e">7. Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
-<li><a href="#org2e0f18b">8. Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
-<li><a href="#org9431171">9. Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
-<li><a href="#orge870ed6">10. Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
-<li><a href="#org211762a">11. Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
-<li><a href="#orgc4587cf">12. Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+<li><a href="#orgc9e15c0">1. 预览脚本</a></li>
+<li><a href="#org4982310">2. Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#org1622e4b">3. Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#orgd05ca84">4. Iosevka&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org529ef8f">5. IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org0395095">6. Jetbrains Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org91d1bf0">7. Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></a></li>
+<li><a href="#org53eaa08">8. LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#orgbe1502f">9. Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+<li><a href="#orgb1c420d">10. Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#org7a7c823">11. Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
+<li><a href="#org11a3ca0">12. Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></a></li>
+<li><a href="#org116e653">13. Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></a></li>
+<li><a href="#org58c3b22">14. Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></a></li>
 </ul>
 </div>
 </nav>
 
 
-<div id="outline-container-org2b3012a" class="outline-2">
-<h2 id="org2b3012a"><span class="section-number-2">1.</span> 预览脚本</h2>
+
+
+<div id="outline-container-orgc9e15c0" class="outline-2">
+<h2 id="orgc9e15c0"><span class="section-number-2">1.</span> 预览脚本</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #505050;">#</span><span style="color: #505050;">!/usr/bin/</span><span style="color: #5317ac;">env</span><span style="color: #505050;"> bash</span>
@@ -65,112 +69,134 @@ convert -size 800x600 <span style="color: #2544bb;">\</span>
 </div>
 </div>
 
-<div id="outline-container-orgcae4376" class="outline-2">
-<h2 id="orgcae4376"><span class="section-number-2">2.</span> IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+
+
+<div id="outline-container-org4982310" class="outline-2">
+<h2 id="org4982310"><span class="section-number-2">2.</span> Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
 <div class="outline-text-2" id="text-2">
 
-<figure id="orgf0ed9ff">
-<img src="./files/font-preview-IBM_PLEX_MONO.png" alt="font-preview-IBM_PLEX_MONO.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-org6ab3ab9" class="outline-2">
-<h2 id="org6ab3ab9"><span class="section-number-2">3.</span> Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
-<div class="outline-text-2" id="text-3">
-
-<figure id="org26f9fd5">
-<img src="./files/font-preview-RobotoMono.png" alt="font-preview-RobotoMono.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-org90d01d2" class="outline-2">
-<h2 id="org90d01d2"><span class="section-number-2">4.</span> LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
-<div class="outline-text-2" id="text-4">
-
-<figure id="org587feda">
-<img src="./files/font-preview-LXGWWenKai-Regular.png" alt="font-preview-LXGWWenKai-Regular.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-orgb5e364e" class="outline-2">
-<h2 id="orgb5e364e"><span class="section-number-2">5.</span> Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
-<div class="outline-text-2" id="text-5">
-
-<figure id="orgaac5939">
-<img src="./files/font-preview-Literata.png" alt="font-preview-Literata.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-orgc7b7bb1" class="outline-2">
-<h2 id="orgc7b7bb1"><span class="section-number-2">6.</span> Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
-<div class="outline-text-2" id="text-6">
-
-<figure id="orgb6d8d41">
-<img src="./files/font-preview-NotoSansMono-Regular.png" alt="font-preview-NotoSansMono-Regular.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-org532b39e" class="outline-2">
-<h2 id="org532b39e"><span class="section-number-2">7.</span> Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></h2>
-<div class="outline-text-2" id="text-7">
-
-<figure id="org237040e">
-<img src="./files/font-preview-NotoSansCJK-Regular.png" alt="font-preview-NotoSansCJK-Regular.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-org2e0f18b" class="outline-2">
-<h2 id="org2e0f18b"><span class="section-number-2">8.</span> Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
-<div class="outline-text-2" id="text-8">
-
-<figure id="org8af29b4">
-<img src="./files/font-preview-NotoSerifCJK-Regular.png" alt="font-preview-NotoSerifCJK-Regular.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-org9431171" class="outline-2">
-<h2 id="org9431171"><span class="section-number-2">9.</span> Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
-<div class="outline-text-2" id="text-9">
-
-<figure id="org8472051">
-<img src="./files/font-preview-Charter.png" alt="font-preview-Charter.png">
-
-</figure>
-</div>
-</div>
-<div id="outline-container-orge870ed6" class="outline-2">
-<h2 id="orge870ed6"><span class="section-number-2">10.</span> Alegreya&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
-<div class="outline-text-2" id="text-10">
-
-<figure id="org40a3deb">
+<figure id="org501dbc2">
 <img src="./files/font-preview-Alegreya.png" alt="font-preview-Alegreya.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-org211762a" class="outline-2">
-<h2 id="org211762a"><span class="section-number-2">11.</span> Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div id="outline-container-org1622e4b" class="outline-2">
+<h2 id="org1622e4b"><span class="section-number-2">3.</span> Charter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+<figure id="orge3b5f8f">
+<img src="./files/font-preview-Charter.png" alt="font-preview-Charter.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgd05ca84" class="outline-2">
+<h2 id="orgd05ca84"><span class="section-number-2">4.</span> Iosevka&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<figure id="orgbdd0290">
+<img src="./files/font-preview-iosevka-regular.png" alt="font-preview-iosevka-regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org529ef8f" class="outline-2">
+<h2 id="org529ef8f"><span class="section-number-2">5.</span> IBM Plex Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+<figure id="orgedbe76d">
+<img src="./files/font-preview-IBM_PLEX_MONO.png" alt="font-preview-IBM_PLEX_MONO.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org0395095" class="outline-2">
+<h2 id="org0395095"><span class="section-number-2">6.</span> Jetbrains Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+<figure id="orgd0ba4bf">
+<img src="./files/font-preview-JetBrainsMono-Regular.png" alt="font-preview-JetBrainsMono-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org91d1bf0" class="outline-2">
+<h2 id="org91d1bf0"><span class="section-number-2">7.</span> Literata&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span></span></h2>
+<div class="outline-text-2" id="text-7">
+
+<figure id="org0c0048f">
+<img src="./files/font-preview-Literata.png" alt="font-preview-Literata.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org53eaa08" class="outline-2">
+<h2 id="org53eaa08"><span class="section-number-2">8.</span> LXGW WenKai&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-8">
+
+<figure id="orgc90d6fb">
+<img src="./files/font-preview-LXGWWenKai-Regular.png" alt="font-preview-LXGWWenKai-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgbe1502f" class="outline-2">
+<h2 id="orgbe1502f"><span class="section-number-2">9.</span> Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-9">
+
+<figure id="org1d68908">
+<img src="./files/font-preview-NimbusSansL.png" alt="font-preview-NimbusSansL.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-orgb1c420d" class="outline-2">
+<h2 id="orgb1c420d"><span class="section-number-2">10.</span> Noto Sans CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-10">
+
+<figure id="orge0805dc">
+<img src="./files/font-preview-NotoSansCJK-Regular.png" alt="font-preview-NotoSansCJK-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org7a7c823" class="outline-2">
+<h2 id="org7a7c823"><span class="section-number-2">11.</span> Noto Sans Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
 <div class="outline-text-2" id="text-11">
 
-<figure id="org77bd367">
+<figure id="org01c7293">
+<img src="./files/font-preview-NotoSansMono-Regular.png" alt="font-preview-NotoSansMono-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org11a3ca0" class="outline-2">
+<h2 id="org11a3ca0"><span class="section-number-2">12.</span> Noto Serif CJK SC&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Serif">Serif</span>&#xa0;<span class="CJK">CJK</span></span></h2>
+<div class="outline-text-2" id="text-12">
+
+<figure id="orgb8a4ed0">
+<img src="./files/font-preview-NotoSerifCJK-Regular.png" alt="font-preview-NotoSerifCJK-Regular.png">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org116e653" class="outline-2">
+<h2 id="org116e653"><span class="section-number-2">13.</span> Roboto&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-13">
+
+<figure id="org3593790">
 <img src="./files/font-preview-Roboto-Regular.png" alt="font-preview-Roboto-Regular.png">
 
 </figure>
 </div>
 </div>
-<div id="outline-container-orgc4587cf" class="outline-2">
-<h2 id="orgc4587cf"><span class="section-number-2">12.</span> Nimbus Sans L&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Sans">Sans</span></span></h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org58c3b22" class="outline-2">
+<h2 id="org58c3b22"><span class="section-number-2">14.</span> Roboto Mono&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mono">Mono</span>&#xa0;<span class="Sans">Sans</span></span></h2>
+<div class="outline-text-2" id="text-14">
 
-<figure id="org77f383b">
-<img src="./files/font-preview-NimbusSansL.png" alt="font-preview-NimbusSansL.png">
+<figure id="orgc376ac2">
+<img src="./files/font-preview-RobotoMono.png" alt="font-preview-RobotoMono.png">
 
 </figure>
 </div>
