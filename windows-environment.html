@@ -30,28 +30,29 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org08ce4a4">1. Emacs 相关配置</a>
+<li><a href="#orgddd3117">1. Emacs 相关配置&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Emacs">Emacs</span></span></a>
 <ul>
-<li><a href="#org294ff12">1.1. 使用 Msys2 安装依赖</a></li>
-<li><a href="#org2774ca2">1.2. 编译 Emacs 并安装</a></li>
-<li><a href="#org579d9ff">1.3. 其他设置</a></li>
+<li><a href="#orgaeaa3c9">1.1. 使用 Msys2 安装依赖</a></li>
+<li><a href="#orgf0bec33">1.2. 编译 Emacs 并安装</a></li>
+<li><a href="#org57da540">1.3. 其他设置</a></li>
 </ul>
 </li>
+<li><a href="#org02940ab">2. WezTerm 相关配置&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Wezterm">Wezterm</span></span></a></li>
 </ul>
 </div>
 </nav>
 
-<figure id="orgb4b8a46">
+<figure id="org6770693">
 <img src="./files/windows-environment-22-11-09_20.26.57.png" alt="windows-environment-22-11-09_20.26.57.png">
 
 </figure>
 
-<div id="outline-container-org08ce4a4" class="outline-2">
-<h2 id="org08ce4a4"><span class="section-number-2">1.</span> Emacs 相关配置</h2>
+<div id="outline-container-orgddd3117" class="outline-2">
+<h2 id="orgddd3117"><span class="section-number-2">1.</span> Emacs 相关配置&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Emacs">Emacs</span></span></h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org294ff12" class="outline-3">
-<h3 id="org294ff12"><span class="section-number-3">1.1.</span> 使用 Msys2 安装依赖</h3>
+<div id="outline-container-orgaeaa3c9" class="outline-3">
+<h3 id="orgaeaa3c9"><span class="section-number-3">1.1.</span> 使用 Msys2 安装依赖</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <pre class="src src-shell">$ pacman -S --needed base-devel <span style="color: #2544bb;">\</span>
@@ -72,8 +73,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org2774ca2" class="outline-3">
-<h3 id="org2774ca2"><span class="section-number-3">1.2.</span> 编译 Emacs 并安装</h3>
+<div id="outline-container-orgf0bec33" class="outline-3">
+<h3 id="orgf0bec33"><span class="section-number-3">1.2.</span> 编译 Emacs 并安装</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 笔者写了个脚本，用来编译 Emacs 并安装
@@ -111,12 +112,12 @@ cat &lt;&lt;EOF &gt; <span style="color: #2544bb;">"C:/msys64/mingw64/share/emac
 </div>
 </div>
 
-<div id="outline-container-org579d9ff" class="outline-3">
-<h3 id="org579d9ff"><span class="section-number-3">1.3.</span> 其他设置</h3>
+<div id="outline-container-org57da540" class="outline-3">
+<h3 id="org57da540"><span class="section-number-3">1.3.</span> 其他设置</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org3538072" class="outline-4">
-<h4 id="org3538072"><span class="section-number-4">1.3.1.</span> 创建快捷方式</h4>
+<div id="outline-container-org8a66fcb" class="outline-4">
+<h4 id="org8a66fcb"><span class="section-number-4">1.3.1.</span> 创建快捷方式</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <ol class="org-ol">
 <li>任务栏固定 emacs.exe</li>
@@ -130,8 +131,8 @@ C:\msys64\mingw64\bin\emacsclientw.exe -n -c -a ""
 </div>
 </div>
 
-<div id="outline-container-org51fce84" class="outline-4">
-<h4 id="org51fce84"><span class="section-number-4">1.3.2.</span> 禁用 Ctrl-Space</h4>
+<div id="outline-container-org52443d4" class="outline-4">
+<h4 id="org52443d4"><span class="section-number-4">1.3.2.</span> 禁用 Ctrl-Space</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 Ctrl-Space 在 Windows 中默认用来切换输入法，但是笔者更习惯使用它来切换选择标记。网上提供了很多方法来对其进行切换，包括使用 AutoHotKey 等软件，但是 Windows 10 中提供设置禁用切换输入法这个功能。
@@ -151,19 +152,39 @@ Ctrl-Space 在 Windows 中默认用来切换输入法，但是笔者更习惯使
 </p>
 </div>
 </div>
-<div id="outline-container-orgb80fa5e" class="outline-4">
-<h4 id="orgb80fa5e"><span class="section-number-4">1.3.3.</span> 绑定 <code>s-x</code> 启动 Emacs</h4>
+<div id="outline-container-orga34ca7f" class="outline-4">
+<h4 id="orga34ca7f"><span class="section-number-4">1.3.3.</span> 绑定 <code>s-x</code> 启动 Emacs</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 使用 autoHotKey
 </p>
 <div class="org-src-container">
 <pre class="src src-ahk"><span style="color: #0000c0;">LWin &amp; x</span>::
-  emacsclient <span style="color: #8f0075;">--</span><span style="color: #5317ac;">no</span><span style="color: #8f0075;">-</span><span style="color: #5317ac;">wait</span> <span style="color: #8f0075;">-</span>a <span style="color: #2544bb;">""</span> <span style="color: #8f0075;">-</span>e <span style="color: #2544bb;">"(if (frame-focus-state) (lower-frame) (raise-frame))"</span>
+emacsclient <span style="color: #8f0075;">--</span><span style="color: #5317ac;">no</span><span style="color: #8f0075;">-</span><span style="color: #5317ac;">wait</span> <span style="color: #8f0075;">-</span>a <span style="color: #2544bb;">""</span> <span style="color: #8f0075;">-</span>e <span style="color: #2544bb;">"(if (frame-focus-state) (lower-frame) (raise-frame))"</span>
 <span style="color: #813e00;">Return</span>
 </pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div id="outline-container-org02940ab" class="outline-2">
+<h2 id="org02940ab"><span class="section-number-2">2.</span> WezTerm 相关配置&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Wezterm">Wezterm</span></span></h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-lua"><span style="color: #5317ac;">local</span> <span style="color: #00538b;">wezterm</span> = <span style="color: #8f0075;">require</span> <span style="color: #2544bb;">'wezterm'</span>
+
+<span style="color: #5317ac;">return</span> {
+   default_prog = { <span style="color: #2544bb;">'C:\\msys64\\usr\\bin\\zsh.exe'</span>, <span style="color: #2544bb;">'-l'</span> },
+   font = wezterm.font <span style="color: #2544bb;">'JetBrains Mono'</span>,
+   color_scheme = <span style="color: #2544bb;">'zenbones'</span>,
+   set_environment_variables = {
+      CHERE_INVOKING = <span style="color: #2544bb;">'enabled_from_arguments'</span>,
+      HOME = <span style="color: #2544bb;">'E:\\Litter'</span>,
+      WENV = <span style="color: #2544bb;">'D:\\wenv'</span>
+   }
+}
+</pre>
 </div>
 </div>
 </div>

@@ -194,7 +194,7 @@ code,
 .example,
 .src {
     font-size: 90%;
-    font-family: "Sarasa Mono SC", monospace;
+    font-family: monospace;
     background-color: #fafafa;
     border: solid 1px #dadada;
 }
