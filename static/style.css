@@ -215,9 +215,10 @@ code,
 
 .tag {
     font-weight: 400;
-    font-style: italic;
     font-size: 80%;
     border: 1px;
+    padding: 4px;
+    background: #ffebeb;
 }
 
 img {
